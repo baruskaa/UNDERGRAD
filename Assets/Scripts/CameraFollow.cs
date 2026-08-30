@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;           // Drag your Player GameObject here
-    public float smoothSpeed = 5f;      // Higher = snappier, lower = more delayed/floaty
-    public Vector3 offset = new Vector3(0f, 0f, -10f); // Keep Z at -10 for 2D so camera stays in front
+    public Transform target;
+    public float smoothSpeed = 5f;
+    public Vector3 offset = new Vector3(0f, 0f, -10f);
+
+    [Header("Camera Bounds")]
+    public bool useBounds = true;
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
 
     void LateUpdate()
     {
@@ -12,6 +17,20 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 desiredPosition = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+
+        if (useBounds)
+        {
+            smoothedPosition.x = Mathf.Clamp(smoothedPosition.x, minBounds.x, maxBounds.x);
+            smoothedPosition.y = Mathf.Clamp(smoothedPosition.y, minBounds.y, maxBounds.y);
+        }
+
         transform.position = smoothedPosition;
+    }
+
+    // Called by AreaTransition when the player enters a new area
+    public void SetBounds(Vector2 newMin, Vector2 newMax)
+    {
+        minBounds = newMin;
+        maxBounds = newMax;
     }
 }
