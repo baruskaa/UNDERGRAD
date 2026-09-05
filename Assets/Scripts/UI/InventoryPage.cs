@@ -15,25 +15,21 @@ public class InventoryPage : MonoBehaviour
     [SerializeField]
     private InventoryDescription itemDescription;
 
-
     [SerializeField]
     private Animator animator;
 
     List<InventoryItem> listOfUIItems = new List<InventoryItem>();
 
-    public Sprite image;
-    public string title, description;
-
     private bool isOpen = false;
 
+    public event Action<int> OnDescriptionRequested;
+    public event Action<int> OnItemActionRequested;
 
     private void Awake()
     {
         Idle();
         itemDescription.ResetDescription();
     }
-
-
 
     public void InitializeInventoryUI(int inventorysize)
     {
@@ -44,48 +40,79 @@ public class InventoryPage : MonoBehaviour
             uiItem.transform.SetParent(contentPanel);
             listOfUIItems.Add(uiItem);
             uiItem.OnItemClicked += HandleItemSelection;
-            uiItem.OnItemBeginDrag += HandleBeginDrag;
-            uiItem.OnItemDroppedOn += HandleSwap;
-            uiItem.OnItemEndDrag += HandleEndDrag;
             uiItem.OnRightMouseBtnClick += HandleShowItemActions;
         }
     }
 
-    private void HandleShowItemActions(InventoryItem item)
+    // Called by whatever owns the actual inventory data,
+    // to push a sprite/quantity into a specific slot.
+    public void UpdateData(int itemIndex, Sprite itemImage)
     {
+        if (listOfUIItems.Count > itemIndex)
+        {
+            listOfUIItems[itemIndex].SetData(itemImage);
+        }
     }
 
-    private void HandleEndDrag(InventoryItem item)
+    // Called by whatever owns the actual inventory data,
+    // to show the description panel for a specific slot.
+    public void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
     {
+        itemDescription.SetDescription(itemImage, name, description);
+        DeselectAllItems();
+        listOfUIItems[itemIndex].Select();
     }
 
-    private void HandleSwap(InventoryItem item)
+    public void ResetAllItems()
     {
+        foreach (var item in listOfUIItems)
+        {
+            item.ResetData();
+            item.Deselect();
+        }
     }
 
-    private void HandleBeginDrag(InventoryItem item)
+    private void DeselectAllItems()
     {
+        foreach (var item in listOfUIItems)
+        {
+            item.Deselect();
+        }
     }
 
     private void HandleItemSelection(InventoryItem item)
     {
-        itemDescription.SetDescription(image, title, description);
-        listOfUIItems[0].Select();
+        int index = listOfUIItems.IndexOf(item);
+        if (index == -1)
+            return;
+        OnDescriptionRequested?.Invoke(index);
+    }
+
+    private void HandleShowItemActions(InventoryItem item)
+    {
+        int index = listOfUIItems.IndexOf(item);
+        if (index == -1)
+            return;
+        OnItemActionRequested?.Invoke(index);
+    }
+
+    public void ResetSelection()
+    {
+        itemDescription.ResetDescription();
+        DeselectAllItems();
     }
 
     public void Show()
     {
         isOpen = true;
         itemDescription.ResetDescription();
-
-        listOfUIItems[0].SetData(image);
         animator.Play("Show");
     }
 
     public void Hide()
     {
         isOpen = false;
-        animator.Play("Hide"); 
+        animator.Play("Hide");
     }
 
     public void Idle()

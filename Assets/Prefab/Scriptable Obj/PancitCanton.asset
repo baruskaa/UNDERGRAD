@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
+  m_Name: PancitCanton
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Pancit Canton
+  <Description>k__BackingField: pantet canton hate tau mahal quoohhh
+  <ItemImage>k__BackingField: {fileID: -4552770127603750836, guid: 228e615e67362354da12510872bacc35, type: 3}
