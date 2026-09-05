@@ -18,6 +18,10 @@ public class AreaTransition : MonoBehaviour
     public bool requireKeyPress = false;
     public KeyCode activationKey = KeyCode.Q;
 
+    [Header("ALERT (for doors)")]
+    public bool isUsingAlert = false;
+    public GameObject alertObject;
+
     private CameraFollow cam;
     private bool isTransitioning = false;
     private bool playerInZone = false;
@@ -26,6 +30,11 @@ public class AreaTransition : MonoBehaviour
     void Start()
     {
         cam = FindAnyObjectByType<CameraFollow>();
+
+        if (isUsingAlert && alertObject != null)
+        {
+            alertObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -43,6 +52,11 @@ public class AreaTransition : MonoBehaviour
         playerInZone = true;
         playerRef = other.gameObject;
 
+        if (isUsingAlert && alertObject != null)
+        {
+            alertObject.SetActive(true);
+        }
+
         if (!requireKeyPress && !isTransitioning)
         {
             await DoTransition(other.gameObject);
@@ -55,6 +69,11 @@ public class AreaTransition : MonoBehaviour
 
         playerInZone = false;
         playerRef = null;
+
+        if (isUsingAlert && alertObject != null)
+        {
+            alertObject.SetActive(false);
+        }
     }
 
     private async Task DoTransition(GameObject player)
