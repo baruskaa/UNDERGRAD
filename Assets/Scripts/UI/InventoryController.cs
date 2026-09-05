@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField]
+    private InventoryPage inventoryUI;
+
+    public int inventorySize = 10;
+
+    private void Start()
     {
-        
+        inventoryUI.InitializeInventoryUI(inventorySize);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (inventoryUI.IsOpen() == false)
+            {
+                inventoryUI.Show();
+            }
+            else
+            {
+                inventoryUI.Hide();
+            }
+        }
     }
 }

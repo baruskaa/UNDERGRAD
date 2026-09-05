@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1757509080772114760}
   - component: {fileID: 1178599580170019146}
   - component: {fileID: 4152925470107610947}
+  - component: {fileID: 6197569214724711213}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -210,6 +211,18 @@ MonoBehaviour:
     _usePolygonMap: 0
   wasConverted: 0
   preConvertedScale: {x: 0, y: 0, z: 0}
+--- !u!114 &6197569214724711213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727038835052074491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2d47039a3cb9f42baa3a7c16e80761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5965312446457153962
 GameObject:
   m_ObjectHideFlags: 0
