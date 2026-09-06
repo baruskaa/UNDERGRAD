@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+
 public class PlayerManager : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] public int maxHealth = 20;
     [SerializeField] public int currentHealth;
+
     [Header("Hunger")]
     [SerializeField] public int maxHunger = 20;
     [SerializeField] public int currentHunger;
@@ -30,6 +32,7 @@ public class PlayerManager : MonoBehaviour
             bar.SetHunger(currentHunger);
         }
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
@@ -41,6 +44,27 @@ public class PlayerManager : MonoBehaviour
             TakeHunger(1);
         }
     }
+
+    public void RestoreHealth(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+
+        foreach (HealthBar bar in healthBars)
+        {
+            bar.SetHealth(currentHealth);
+        }
+    }
+
+    public void RestoreHunger(int amount)
+    {
+        currentHunger = Mathf.Min(currentHunger + amount, maxHunger);
+
+        foreach (Hungerbar bar in hungerbars)
+        {
+            bar.SetHunger(currentHunger);
+        }
+    }
+
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -50,6 +74,7 @@ public class PlayerManager : MonoBehaviour
             bar.SetHealth(currentHealth);
         }
     }
+
     void TakeHunger(int hunger)
     {
         currentHunger -= hunger;
