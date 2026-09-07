@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
   m_Name: PancitCanton
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Pancit Canton
-  <Description>k__BackingField: pantet canton hate tau mahal quoohhh
+  <Name>k__BackingField: Ticnap Notnac
+  <Description>k__BackingField: usto mouh pantet cantun? ouhm.. dalawa? ouhm.. ubuten
+    mouh? hate tau mahal quouhh...
   <ItemImage>k__BackingField: {fileID: -4552770127603750836, guid: 228e615e67362354da12510872bacc35, type: 3}
+  itemType: 0
+  restoreAmount: 5
