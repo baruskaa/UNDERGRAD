@@ -23,13 +23,13 @@ public class NoteInteract : MonoBehaviour
 
     void Start()
     {
-        // Siguraduhing nakatago ang Alert Icon sa simula ng game
+
         if (alertObject != null)
         {
             alertObject.SetActive(false);
         }
 
-        // Siguraduhing nakatago ang Note UI Overlay sa simula
+
         if (noteImagePopup != null)
         {
             noteImagePopup.SetActive(false);
@@ -119,13 +119,13 @@ public class NoteInteract : MonoBehaviour
         {
             isPlayerInZone = false;
 
-            // Kapag lumayo ang player, isara ang note at ituloy ang time scale
+
             if (noteImagePopup != null && noteImagePopup.activeSelf)
             {
                 CloseNote();
             }
 
-            // Itago ang Alert Icon kapag umalis sa zone
+
             if (isUsingAlert && alertObject != null)
             {
                 alertObject.SetActive(false);
@@ -135,7 +135,7 @@ public class NoteInteract : MonoBehaviour
 
     private void OnDisable()
     {
-        // Siguraduhing maibabalik ang Time.timeScale sa 1f sakaling ma-disable ang object
+
         Time.timeScale = 1f;
     }
 }
