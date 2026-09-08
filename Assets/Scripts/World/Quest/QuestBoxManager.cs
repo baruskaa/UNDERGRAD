@@ -84,9 +84,12 @@ public class QuestBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
-        {
+        // Don't run logic unless dialogue is active and has lines
+        if (!dialogueActive || dialogueLines == null || dialogueLines.Length == 0)
+            return;
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             currentLine++;
         }
 
@@ -94,6 +97,7 @@ public class QuestBoxManager : MonoBehaviour
         {
             HideBox();
             currentLine = 0;
+            return;
         }
 
         dText.text = dialogueLines[currentLine];
