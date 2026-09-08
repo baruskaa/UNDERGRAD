@@ -4,7 +4,8 @@ using UnityEngine;
 public enum ItemType
 {
     Food,
-    Medkit
+    Medkit,
+    NonConsumable
 }
 
 [CreateAssetMenu]
@@ -22,6 +23,9 @@ public class ItemSO : ScriptableObject
     [field: SerializeField]
     public Sprite ItemImage { get; set; }
 
+    
+    public bool IsConsumable => itemType != ItemType.NonConsumable;
+
     [Header("Item Category")]
     public ItemType itemType;
 
@@ -30,6 +34,9 @@ public class ItemSO : ScriptableObject
 
     public void Eat(PlayerManager player)
     {
+        // Guard clause: ignore if not Food
+        if (itemType != ItemType.Food) return;
+
         if (player != null)
         {
             player.RestoreHunger(restoreAmount);
@@ -38,9 +45,29 @@ public class ItemSO : ScriptableObject
 
     public void Heal(PlayerManager player)
     {
+        // Guard clause: ignore if not Medkit
+        if (itemType != ItemType.Medkit) return;
+
         if (player != null)
         {
             player.RestoreHealth(restoreAmount);
+        }
+    }
+
+    // Unified action helper to handle usage from inventory UI
+    public void Use(PlayerManager player)
+    {
+        switch (itemType)
+        {
+            case ItemType.Food:
+                Eat(player);
+                break;
+            case ItemType.Medkit:
+                Heal(player);
+                break;
+            case ItemType.NonConsumable:
+                Debug.Log($"{Name} cannot be consumed.");
+                break;
         }
     }
 }

@@ -68,9 +68,31 @@ namespace Inventory.Model
                 if (inventoryItems[itemIndex].IsEmpty)
                     return;
 
+                // Guard clause: prevent removing items marked as NonConsumable
+                if (inventoryItems[itemIndex].item != null &&
+                    inventoryItems[itemIndex].item.itemType == ItemType.NonConsumable)
+                {
+                    Debug.Log($"[Inventory] '{inventoryItems[itemIndex].item.Name}' is NonConsumable and will not be removed.");
+                    return;
+                }
+
                 inventoryItems[itemIndex] = InventoryItem.GetEmptyItem();
                 InformAboutChange();
             }
+        }
+
+        public bool HasItem(ItemSO item)
+        {
+            if (item == null) return false;
+            return inventoryItems.Any(slot => !slot.IsEmpty && slot.item == item);
+        }
+
+        public bool HasItemByName(string itemName)
+        {
+            if (string.IsNullOrEmpty(itemName)) return false;
+            return inventoryItems.Any(slot => !slot.IsEmpty && slot.item != null &&
+                (slot.item.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase) ||
+                 slot.item.name.Equals(itemName, StringComparison.OrdinalIgnoreCase)));
         }
 
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()

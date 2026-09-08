@@ -16,6 +16,10 @@ public class DialogueLine
     public DialogueCharacter character;
     [TextArea(3, 10)]
     public string line;
+
+    [Header("FULLSCREEN IMAGE SETTINGS")]
+    public bool hasImage; // Boolean toggle in Inspector
+    public Sprite fullscreenImage;
 }
 
 [System.Serializable]
