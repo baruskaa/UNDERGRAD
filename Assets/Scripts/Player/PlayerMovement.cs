@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    [HideInInspector] public float speedPenalty = 0f; // Adjusted by PlayerManager
+
     private Rigidbody2D rb;
     private float speedX;
     private float speedY;
@@ -56,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        rb.linearVelocity = new Vector2(speedX * moveSpeed, speedY * moveSpeed);
+        // Apply speed penalty directly during physics movement
+        float currentSpeed = Mathf.Max(1f, moveSpeed - speedPenalty);
+        rb.linearVelocity = new Vector2(speedX * currentSpeed, speedY * currentSpeed);
     }
 }

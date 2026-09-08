@@ -1,4 +1,5 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -11,12 +12,36 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public int maxHunger = 20;
     [SerializeField] public int currentHunger;
 
+    [Header("Flash Feedback")]
+    public SpriteRenderer spriteRenderer;
+    public Material flashMaterial;
+    public float flashDuration = 0.15f;
+
     [Header("Bars")]
     public HealthBar[] healthBars;
     public Hungerbar[] hungerbars;
 
+    private PlayerMovement playerMovement;
+    private Material originalMaterial;
+    private Coroutine flashCoroutine;
+    private float starvationTimer = 0f;
+    private const float STARVATION_INTERVAL = 5f;
+
     void Start()
     {
+        playerMovement = GetComponent<PlayerMovement>();
+
+        // Cache original material and SpriteRenderer
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if (spriteRenderer != null)
+        {
+            originalMaterial = spriteRenderer.material;
+        }
+
         currentHealth = maxHealth;
         currentHunger = maxHunger;
 
@@ -31,6 +56,8 @@ public class PlayerManager : MonoBehaviour
             bar.SetMaxHunger(maxHunger);
             bar.SetHunger(currentHunger);
         }
+
+        UpdateHungerPenalties();
     }
 
     void Update()
@@ -42,6 +69,20 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             TakeHunger(1);
+        }
+
+        if (currentHunger <= 6 && currentHealth > 0)
+        {
+            starvationTimer += Time.deltaTime;
+            if (starvationTimer >= STARVATION_INTERVAL)
+            {
+                TakeDamage(1);
+                starvationTimer = 0f;
+            }
+        }
+        else
+        {
+            starvationTimer = 0f;
         }
     }
 
@@ -63,25 +104,62 @@ public class PlayerManager : MonoBehaviour
         {
             bar.SetHunger(currentHunger);
         }
+
+        UpdateHungerPenalties();
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        currentHealth = Mathf.Max(0, currentHealth - damage);
 
         foreach (HealthBar bar in healthBars)
         {
             bar.SetHealth(currentHealth);
         }
+
+        // Trigger flash effect
+        if (spriteRenderer != null && flashMaterial != null)
+        {
+            if (flashCoroutine != null) StopCoroutine(flashCoroutine);
+            flashCoroutine = StartCoroutine(FlashWhite());
+        }
     }
 
-    void TakeHunger(int hunger)
+    private IEnumerator FlashWhite()
     {
-        currentHunger -= hunger;
+        spriteRenderer.material = flashMaterial;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.material = originalMaterial;
+        flashCoroutine = null;
+    }
+
+    public void TakeHunger(int hunger)
+    {
+        currentHunger = Mathf.Max(0, currentHunger - hunger);
 
         foreach (Hungerbar bar in hungerbars)
         {
             bar.SetHunger(currentHunger);
+        }
+
+        UpdateHungerPenalties();
+    }
+
+    private void UpdateHungerPenalties()
+    {
+        if (playerMovement == null) return;
+
+        if (currentHunger <= 5)
+        {
+            playerMovement.speedPenalty = 2f;
+        }
+        else if (currentHunger <= 10)
+        {
+            playerMovement.speedPenalty = 1f;
+        }
+        else
+        {
+            playerMovement.speedPenalty = 0f;
         }
     }
 }
