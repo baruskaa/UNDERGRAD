@@ -5,14 +5,14 @@ using Inventory.Model;
 public class ItemQuest : MonoBehaviour
 {
     [Header("Quest Settings")]
-    public int questNumber;
+    public int questNumber = 1;
 
     [Header("Inventory Data")]
-    public ItemSO itemData;           // ScriptableObject asset for this item
-    public InventorySO inventoryData;  // ScriptableObject asset for the player's inventory
+    public ItemSO itemData;
+    public InventorySO inventoryData;
 
     [Header("UI Prompt")]
-    public GameObject alertIcon;      // Assign your "Q" key prompt / alert icon here
+    public GameObject alertIcon;
 
     private QuestManager theQM;
     private bool isPlayerInRange = false;
@@ -20,36 +20,28 @@ public class ItemQuest : MonoBehaviour
     void Start()
     {
         theQM = FindAnyObjectByType<QuestManager>();
-
-        if (alertIcon != null)
-        {
-            alertIcon.SetActive(false);
-        }
+        if (alertIcon != null) alertIcon.SetActive(false);
     }
 
     void Update()
     {
         if (!isPlayerInRange) return;
 
-        // Reads 'Q' key press (supports New Input System and Legacy Input)
         bool qKeyPressed = (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame) || Input.GetKeyDown(KeyCode.Q);
 
         if (qKeyPressed)
         {
+            Debug.Log($"[ItemQuest] 'Q' pressed near '{gameObject.name}'. Attempting pickup...");
             TryPickUpItem();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Show alert icon only if the quest is active and not finished
-            if (theQM != null && !theQM.questCompleted[questNumber] && theQM.quests[questNumber].gameObject.activeSelf)
-            {
-                isPlayerInRange = true;
-                if (alertIcon != null) alertIcon.SetActive(true);
-            }
+            isPlayerInRange = true;
+            if (alertIcon != null) alertIcon.SetActive(true);
         }
     }
 
@@ -64,23 +56,28 @@ public class ItemQuest : MonoBehaviour
 
     private void TryPickUpItem()
     {
-        if (inventoryData == null || itemData == null)
+        if (itemData == null)
         {
-            Debug.LogError("Missing InventorySO or ItemSO on " + gameObject.name);
+            Debug.LogError($"[ItemQuest Error] 'Item Data' (ItemSO) is missing on '{gameObject.name}' in the Inspector!");
             return;
         }
 
-        bool addedSuccessfully = inventoryData.AddItem(itemData);
+        if (theQM == null) theQM = FindAnyObjectByType<QuestManager>();
 
-        if (addedSuccessfully)
+        // Attempt inventory addition if scriptable object exists
+        if (inventoryData != null)
+        {
+            inventoryData.AddItem(itemData);
+        }
+
+        // Send asset name directly to QuestManager
+        if (theQM != null)
         {
             theQM.itemCollected = itemData.name;
-            if (alertIcon != null) alertIcon.SetActive(false);
-            gameObject.SetActive(false);
+            Debug.Log($"[ItemQuest Success] Assigned '{itemData.name}' to QuestManager.itemCollected!");
         }
-        else
-        {
-            Debug.Log("Inventory is full! Item cannot be picked up.");
-        }
+
+        if (alertIcon != null) alertIcon.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
