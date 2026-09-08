@@ -31,9 +31,6 @@ public class AIChase : MonoBehaviour
             // Adjust direction if an obstacle is ahead
             Vector2 moveDirection = GetAvoidanceDirection(targetDirection);
 
-            // Rotate toward movement direction
-            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
             // Move AI
             transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
