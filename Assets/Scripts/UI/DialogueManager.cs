@@ -19,6 +19,10 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("The Image UI component on the RIGHT (for Main Character)")]
     public Image rightCharacterIcon;
 
+    [Header("FULLSCREEN IMAGE UI")]
+    public GameObject fullscreenImageContainer; // Parent panel or GameObject holding the Image
+    public Image fullscreenImageDisplay;        // UI Image component showing the sprite
+
     [Header("TEXT SETTINGS")]
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
@@ -68,7 +72,10 @@ public class DialogueManager : MonoBehaviour
         DialogueBox.SetActive(true);
         isDialogueActive = true;
 
-        animator.Play("show");
+        if (animator != null)
+        {
+            animator.Play("show");
+        }
 
         lines.Clear();
 
@@ -90,7 +97,28 @@ public class DialogueManager : MonoBehaviour
 
         DialogueLine currentLine = lines.Dequeue();
 
-        // Handle Speaker Portraits (Left vs Right)
+        // 1. Handle Fullscreen Image per line
+        if (currentLine.hasImage && currentLine.fullscreenImage != null)
+        {
+            if (fullscreenImageDisplay != null)
+            {
+                fullscreenImageDisplay.sprite = currentLine.fullscreenImage;
+            }
+
+            if (fullscreenImageContainer != null)
+            {
+                fullscreenImageContainer.SetActive(true);
+            }
+        }
+        else
+        {
+            if (fullscreenImageContainer != null)
+            {
+                fullscreenImageContainer.SetActive(false);
+            }
+        }
+
+        // 2. Handle Speaker Portraits (Left vs Right)
         if (currentLine.character.isPlayer)
         {
             // Show Right Portrait (Player), Hide Left
@@ -142,6 +170,12 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator EndDialogueRoutine()
     {
         isDialogueActive = false;
+
+        // Hide full-screen cutscene panel immediately when dialogue concludes
+        if (fullscreenImageContainer != null)
+        {
+            fullscreenImageContainer.SetActive(false);
+        }
 
         // 1. Play the slide-down animation while portraits are still visible
         if (animator != null)
