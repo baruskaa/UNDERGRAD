@@ -1,0 +1,2860 @@
+fileFormatVersion: 2
+guid: 2dc70b68126f2ed4b9abc7795440cf4b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5645421639178154313
+    second: HALLWAY_0
+  - first:
+      213: -6819576949195651535
+    second: HALLWAY_1
+  - first:
+      213: 6500254696487425516
+    second: HALLWAY_2
+  - first:
+      213: -1550107126076158766
+    second: HALLWAY_3
+  - first:
+      213: -4062330502266824174
+    second: HALLWAY_4
+  - first:
+      213: 6160062329687981548
+    second: HALLWAY_5
+  - first:
+      213: 2174416994878836144
+    second: HALLWAY_6
+  - first:
+      213: -8572545278547355254
+    second: HALLWAY_7
+  - first:
+      213: -8536611000449227817
+    second: HALLWAY_8
+  - first:
+      213: -4456530941292372291
+    second: HALLWAY_9
+  - first:
+      213: -6257637150507204108
+    second: HALLWAY_10
+  - first:
+      213: -6707927921603563961
+    second: HALLWAY_11
+  - first:
+      213: 7246543196564255829
+    second: HALLWAY_12
+  - first:
+      213: 3579604491454053079
+    second: HALLWAY_13
+  - first:
+      213: 8966989873652647195
+    second: HALLWAY_14
+  - first:
+      213: 3382855029732106798
+    second: HALLWAY_15
+  - first:
+      213: 9136580553356933272
+    second: HALLWAY_16
+  - first:
+      213: 5022812825676207329
+    second: HALLWAY_17
+  - first:
+      213: 9176622788840767107
+    second: HALLWAY_18
+  - first:
+      213: -2097908999034343952
+    second: HALLWAY_19
+  - first:
+      213: -4268084858350145134
+    second: HALLWAY_20
+  - first:
+      213: 9200650334776606297
+    second: HALLWAY_21
+  - first:
+      213: 6131618032154163851
+    second: HALLWAY_22
+  - first:
+      213: 2167020120217030888
+    second: HALLWAY_23
+  - first:
+      213: -5794012017378535862
+    second: HALLWAY_24
+  - first:
+      213: -7862835807683356309
+    second: HALLWAY_25
+  - first:
+      213: 4100060772161655822
+    second: HALLWAY_26
+  - first:
+      213: 6880831589413442913
+    second: HALLWAY_27
+  - first:
+      213: -2369189565502675674
+    second: HALLWAY_28
+  - first:
+      213: -8617150352348047766
+    second: HALLWAY_29
+  - first:
+      213: -8054552124642906946
+    second: HALLWAY_30
+  - first:
+      213: -1878847223400027070
+    second: HALLWAY_31
+  - first:
+      213: -5388921890138255124
+    second: HALLWAY_32
+  - first:
+      213: -8844714566905076911
+    second: HALLWAY_33
+  - first:
+      213: 5207689687281244793
+    second: HALLWAY_34
+  - first:
+      213: 7857643289520683293
+    second: HALLWAY_35
+  - first:
+      213: -1847646272586878979
+    second: HALLWAY_36
+  - first:
+      213: -7669772843070908810
+    second: HALLWAY_37
+  - first:
+      213: 8699123308427323239
+    second: HALLWAY_38
+  - first:
+      213: 4619239736649596796
+    second: HALLWAY_39
+  - first:
+      213: -3336061431256237430
+    second: HALLWAY_40
+  - first:
+      213: 2791836161024841502
+    second: HALLWAY_41
+  - first:
+      213: 435183273824960858
+    second: HALLWAY_42
+  - first:
+      213: 5144970636771656249
+    second: HALLWAY_43
+  - first:
+      213: 8741746512413029922
+    second: HALLWAY_44
+  - first:
+      213: 5661102404530357828
+    second: HALLWAY_45
+  - first:
+      213: 7071058714658065898
+    second: HALLWAY_46
+  - first:
+      213: 8723477749242738758
+    second: HALLWAY_47
+  - first:
+      213: 8343682175694085534
+    second: HALLWAY_48
+  - first:
+      213: 6403187421040805587
+    second: HALLWAY_49
+  - first:
+      213: -8997819093991543986
+    second: HALLWAY_50
+  - first:
+      213: -7337573116724246654
+    second: HALLWAY_51
+  - first:
+      213: 2354598731484641296
+    second: HALLWAY_52
+  - first:
+      213: 5497486079950245271
+    second: HALLWAY_53
+  - first:
+      213: -2628943800523561522
+    second: HALLWAY_54
+  - first:
+      213: 8707218826288144585
+    second: HALLWAY_55
+  - first:
+      213: 870537040364093823
+    second: HALLWAY_56
+  - first:
+      213: 4456571475395048684
+    second: HALLWAY_57
+  - first:
+      213: 561771591219225589
+    second: HALLWAY_58
+  - first:
+      213: -3133880844971506674
+    second: HALLWAY_59
+  - first:
+      213: -2878996387570462455
+    second: HALLWAY_60
+  - first:
+      213: 5088034015392688265
+    second: HALLWAY_61
+  - first:
+      213: 5905024335131190983
+    second: HALLWAY_62
+  - first:
+      213: -6549933626928927642
+    second: HALLWAY_63
+  - first:
+      213: 331439222937785655
+    second: HALLWAY_64
+  - first:
+      213: 6080346601956337628
+    second: HALLWAY_65
+  - first:
+      213: 6141520202176560592
+    second: HALLWAY_66
+  - first:
+      213: -1456393776369072052
+    second: HALLWAY_67
+  - first:
+      213: 827919755872920996
+    second: HALLWAY_68
+  - first:
+      213: 8284171053648085195
+    second: HALLWAY_69
+  - first:
+      213: -4327710304353279704
+    second: HALLWAY_70
+  - first:
+      213: -160539929960353579
+    second: HALLWAY_71
+  - first:
+      213: -835500573624372463
+    second: HALLWAY_72
+  - first:
+      213: 8316740405813874004
+    second: HALLWAY_73
+  - first:
+      213: 7681952729493846335
+    second: HALLWAY_74
+  - first:
+      213: 3471718234282045157
+    second: HALLWAY_75
+  - first:
+      213: -7201043335551165678
+    second: HALLWAY_76
+  - first:
+      213: 1335488546493940424
+    second: HALLWAY_77
+  - first:
+      213: -2338900158614536072
+    second: HALLWAY_78
+  - first:
+      213: 1985587624602525309
+    second: HALLWAY_79
+  - first:
+      213: 727055897650357618
+    second: HALLWAY_80
+  - first:
+      213: 6660153487193478853
+    second: HALLWAY_81
+  - first:
+      213: -4802371507125749442
+    second: HALLWAY_82
+  - first:
+      213: 414896328425587017
+    second: HALLWAY_83
+  - first:
+      213: -1599107334392565188
+    second: HALLWAY_84
+  - first:
+      213: -1918398180692305237
+    second: HALLWAY_85
+  - first:
+      213: -5697722820822287598
+    second: HALLWAY_86
+  - first:
+      213: 6932628324576022398
+    second: HALLWAY_87
+  - first:
+      213: 5893895467360239579
+    second: HALLWAY_88
+  - first:
+      213: -5275996204934295360
+    second: HALLWAY_89
+  - first:
+      213: 736827651587916913
+    second: HALLWAY_90
+  - first:
+      213: 2481639947226334620
+    second: HALLWAY_91
+  - first:
+      213: -4366205701683816261
+    second: HALLWAY_92
+  - first:
+      213: -9204329403297863254
+    second: HALLWAY_93
+  - first:
+      213: 4359175216665899952
+    second: HALLWAY_94
+  - first:
+      213: -6852407850650869986
+    second: HALLWAY_95
+  - first:
+      213: -6594404856505696572
+    second: HALLWAY_96
+  - first:
+      213: -2237808752139232709
+    second: HALLWAY_97
+  - first:
+      213: 7343345054048348220
+    second: HALLWAY_98
+  - first:
+      213: -1042750308619214226
+    second: HALLWAY_99
+  - first:
+      213: -301775465710239168
+    second: HALLWAY_100
+  - first:
+      213: 429252210856487630
+    second: HALLWAY_101
+  - first:
+      213: -6927951017056429693
+    second: HALLWAY_102
+  - first:
+      213: -749031288086051194
+    second: HALLWAY_103
+  - first:
+      213: -3050845487406480071
+    second: HALLWAY_104
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HALLWAY_0
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 3489
+        width: 122
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be8b7d0eee67a1b0800000000000000
+      internalID: -5645421639178154313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_1
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 3499
+        width: 102
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13640c875eefb51a0800000000000000
+      internalID: -6819576949195651535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_2
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 3579
+        width: 102
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce592b5e43b853a50800000000000000
+      internalID: 6500254696487425516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_3
+      rect:
+        serializedVersion: 2
+        x: 4589
+        y: 3569
+        width: 112
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dccd6a18c9ec7ae0800000000000000
+      internalID: -1550107126076158766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_4
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 3569
+        width: 102
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ad62c6ee3bf97c0800000000000000
+      internalID: -4062330502266824174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_5
+      rect:
+        serializedVersion: 2
+        x: 4929
+        y: 3599
+        width: 112
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced315b2d00fc7550800000000000000
+      internalID: 6160062329687981548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_6
+      rect:
+        serializedVersion: 2
+        x: 5069
+        y: 3609
+        width: 102
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd435d7cb41d2e10800000000000000
+      internalID: 2174416994878836144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_7
+      rect:
+        serializedVersion: 2
+        x: 5179
+        y: 3619
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a899b3b0d73380980800000000000000
+      internalID: -8572545278547355254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_8
+      rect:
+        serializedVersion: 2
+        x: 5289
+        y: 3629
+        width: 82
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d32884268dd78980800000000000000
+      internalID: -8536611000449227817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_9
+      rect:
+        serializedVersion: 2
+        x: 5399
+        y: 3629
+        width: 112
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe1bb978b83722c0800000000000000
+      internalID: -4456530941292372291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_10
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 3619
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f10bbe7a286829a0800000000000000
+      internalID: -6257637150507204108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_11
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 3759
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e25ed6817a8e2a0800000000000000
+      internalID: -6707927921603563961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_12
+      rect:
+        serializedVersion: 2
+        x: 5669
+        y: 3619
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5547cb8b4a4e09460800000000000000
+      internalID: 7246543196564255829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 3439
+        width: 102
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7daf285c15f4da130800000000000000
+      internalID: 3579604491454053079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_14
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 3459
+        width: 122
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15479be7c5217c70800000000000000
+      internalID: 8966989873652647195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_15
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 3479
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2263d5f9b052fe20800000000000000
+      internalID: 3382855029732106798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_16
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 3479
+        width: 142
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898f4980b97abce70800000000000000
+      internalID: 9136580553356933272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_17
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 3479
+        width: 142
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4d4b727ad94b540800000000000000
+      internalID: 5022812825676207329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_18
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 3459
+        width: 162
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ebb9e7ec9e95f70800000000000000
+      internalID: 9176622788840767107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_19
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 3469
+        width: 122
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd667d61eab2e2e0800000000000000
+      internalID: -2097908999034343952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_20
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 3479
+        width: 112
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291f0d24f67b4c4c0800000000000000
+      internalID: -4268084858350145134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_21
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 3469
+        width: 142
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e30fa7bb64faf70800000000000000
+      internalID: 9200650334776606297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_22
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 3509
+        width: 142
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8abde01d12e71550800000000000000
+      internalID: 6131618032154163851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_23
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 3509
+        width: 102
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e019a6615dc21e10800000000000000
+      internalID: 2167020120217030888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_24
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 3499
+        width: 92
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46dec7a4c8879fa0800000000000000
+      internalID: -5794012017378535862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_25
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 3499
+        width: 82
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69dfc3fd7891e290800000000000000
+      internalID: -7862835807683356309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_26
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 3499
+        width: 172
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04953a9c8756e830800000000000000
+      internalID: 4100060772161655822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_27
+      rect:
+        serializedVersion: 2
+        x: 2979
+        y: 3489
+        width: 122
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1655646dfdf9d7f50800000000000000
+      internalID: 6880831589413442913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_28
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 3509
+        width: 182
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625a6a684a2fe1fd0800000000000000
+      internalID: -2369189565502675674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_29
+      rect:
+        serializedVersion: 2
+        x: 3399
+        y: 3519
+        width: 122
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a669920096bb96880800000000000000
+      internalID: -8617150352348047766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_30
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3519
+        width: 102
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcaac9748b783090800000000000000
+      internalID: -8054552124642906946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_31
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 3519
+        width: 102
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c2306a76efce5e0800000000000000
+      internalID: -1878847223400027070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_32
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 3509
+        width: 112
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce09bf7b714b635b0800000000000000
+      internalID: -5388921890138255124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_33
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 3199
+        width: 552
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15366e376f2414580800000000000000
+      internalID: -8844714566905076911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_34
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 3239
+        width: 102
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a1dd6dd2e654840800000000000000
+      internalID: 5207689687281244793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_35
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 3229
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19bc93b0f4fb0d60800000000000000
+      internalID: 7857643289520683293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_36
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 3249
+        width: 132
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff62eb1187db56e0800000000000000
+      internalID: -1847646272586878979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_37
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 3229
+        width: 112
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67612d44c3e7f8590800000000000000
+      internalID: -7669772843070908810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_38
+      rect:
+        serializedVersion: 2
+        x: 2689
+        y: 3249
+        width: 132
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767a1202f8e79b870800000000000000
+      internalID: 8699123308427323239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_39
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 3239
+        width: 182
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f3e531116da1040800000000000000
+      internalID: 4619239736649596796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_40
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 3259
+        width: 132
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a3711bdcde3b1d0800000000000000
+      internalID: -3336061431256237430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_41
+      rect:
+        serializedVersion: 2
+        x: 3319
+        y: 3219
+        width: 142
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17d9f852389eb620800000000000000
+      internalID: 2791836161024841502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_42
+      rect:
+        serializedVersion: 2
+        x: 3479
+        y: 3229
+        width: 112
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a514780c1e41a0600800000000000000
+      internalID: 435183273824960858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_43
+      rect:
+        serializedVersion: 2
+        x: 3619
+        y: 3249
+        width: 142
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9320790f88b966740800000000000000
+      internalID: 5144970636771656249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_44
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 3259
+        width: 142
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22673e4232ce05970800000000000000
+      internalID: 8741746512413029922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_45
+      rect:
+        serializedVersion: 2
+        x: 4639
+        y: 3269
+        width: 112
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4464423a4a6409e40800000000000000
+      internalID: 5661102404530357828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_46
+      rect:
+        serializedVersion: 2
+        x: 4779
+        y: 3289
+        width: 132
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedcf19df62712260800000000000000
+      internalID: 7071058714658065898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_47
+      rect:
+        serializedVersion: 2
+        x: 4989
+        y: 3269
+        width: 122
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64833a14bc4001970800000000000000
+      internalID: 8723477749242738758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_48
+      rect:
+        serializedVersion: 2
+        x: 5109
+        y: 3279
+        width: 152
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d11096bb6bac370800000000000000
+      internalID: 8343682175694085534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_49
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 3279
+        width: 122
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6036da801bcd850800000000000000
+      internalID: 6403187421040805587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_50
+      rect:
+        serializedVersion: 2
+        x: 5399
+        y: 3249
+        width: 132
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b286dd433512380800000000000000
+      internalID: -8997819093991543986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_51
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 2229
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28702306024bb2a90800000000000000
+      internalID: -7337573116724246654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_52
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2519
+        width: 142
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0183ab232173da020800000000000000
+      internalID: 2354598731484641296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_53
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 2519
+        width: 142
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79dc619767efa4c40800000000000000
+      internalID: 5497486079950245271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_54
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 2549
+        width: 482
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5e35bca8d148bd0800000000000000
+      internalID: -2628943800523561522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_55
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 2519
+        width: 392
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0af72c36146d870800000000000000
+      internalID: 8707218826288144585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_56
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2069
+        width: 152
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71c8be63d4c41c00800000000000000
+      internalID: 870537040364093823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_57
+      rect:
+        serializedVersion: 2
+        x: 2409
+        y: 2069
+        width: 152
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce47f0b152ce8dd30800000000000000
+      internalID: 4456571475395048684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_58
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 2229
+        width: 272
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3278b2940dbc700800000000000000
+      internalID: 561771591219225589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_59
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1889
+        width: 152
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04821bb9f73284d0800000000000000
+      internalID: -3133880844971506674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_60
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1939
+        width: 312
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901da310a00cb08d0800000000000000
+      internalID: -2878996387570462455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_61
+      rect:
+        serializedVersion: 2
+        x: 4319
+        y: 1589
+        width: 812
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988e59cbaf35c9640800000000000000
+      internalID: 5088034015392688265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_62
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1779
+        width: 162
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6288db85cd2f150800000000000000
+      internalID: 5905024335131190983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_63
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 1779
+        width: 162
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ce380c116f915a0800000000000000
+      internalID: -6549933626928927642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_64
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1429
+        width: 322
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73596db9732899400800000000000000
+      internalID: 331439222937785655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_65
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 1429
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd76cd8f40bb16450800000000000000
+      internalID: 6080346601956337628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_66
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 1749
+        width: 302
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd7e9fa5101b3550800000000000000
+      internalID: 6141520202176560592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_67
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1109
+        width: 482
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c488e62a399d9cbe0800000000000000
+      internalID: -1456393776369072052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_68
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 1639
+        width: 302
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a56557a1ac5d7b00800000000000000
+      internalID: 827919755872920996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_69
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1479
+        width: 162
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0844f8ea947f270800000000000000
+      internalID: 8284171053648085195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_70
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1479
+        width: 162
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821a93a4862e0f3c0800000000000000
+      internalID: -4327710304353279704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_71
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 1439
+        width: 302
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d07276c8c5a5cdf0800000000000000
+      internalID: -160539929960353579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_72
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 789
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113fb7ba7a4b764f0800000000000000
+      internalID: -835500573624372463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_73
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 789
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d8ca9c55ffa6370800000000000000
+      internalID: 8316740405813874004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_74
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 1109
+        width: 212
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39b2d68e47cb9a60800000000000000
+      internalID: 7681952729493846335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_75
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 1169
+        width: 142
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eea0a217550e2030800000000000000
+      internalID: 3471718234282045157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_76
+      rect:
+        serializedVersion: 2
+        x: 3269
+        y: 979
+        width: 272
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b57443d31c01c90800000000000000
+      internalID: -7201043335551165678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_77
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 1009
+        width: 82
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2cf5fd1cb988210800000000000000
+      internalID: 1335488546493940424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_78
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 1009
+        width: 142
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8700da0a2be8a8fd0800000000000000
+      internalID: -2338900158614536072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_79
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 969
+        width: 72
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e58daac693e8b10800000000000000
+      internalID: 1985587624602525309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_80
+      rect:
+        serializedVersion: 2
+        x: 4319
+        y: 949
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2756d4f9c75071a00800000000000000
+      internalID: 727055897650357618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_81
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 949
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c61fb14f4e9d6c50800000000000000
+      internalID: 6660153487193478853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_82
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 629
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39ff4eee8c8a5db0800000000000000
+      internalID: -4802371507125749442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_83
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 629
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941cb62330202c500800000000000000
+      internalID: 414896328425587017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_84
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 789
+        width: 212
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c323fcf0a54dec9e0800000000000000
+      internalID: -1599107334392565188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_85
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 839
+        width: 142
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa541ec40b7065e0800000000000000
+      internalID: -1918398180692305237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_86
+      rect:
+        serializedVersion: 2
+        x: 4359
+        y: 789
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b3044484f9de0b0800000000000000
+      internalID: -5697722820822287598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_87
+      rect:
+        serializedVersion: 2
+        x: 4529
+        y: 789
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f4a260bb4a53060800000000000000
+      internalID: 6932628324576022398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_88
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 679
+        width: 142
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfba4b43b25bc150800000000000000
+      internalID: 5893895467360239579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_89
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 599
+        width: 272
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c01590b765e7c6b0800000000000000
+      internalID: -5275996204934295360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_90
+      rect:
+        serializedVersion: 2
+        x: 3489
+        y: 659
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174459168dcb93a00800000000000000
+      internalID: 736827651587916913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_91
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 619
+        width: 122
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9548da326e807220800000000000000
+      internalID: 2481639947226334620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_92
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 149
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8d9d62c0f1863c0800000000000000
+      internalID: -4366205701683816261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_93
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 149
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa96fb0ac27a34080800000000000000
+      internalID: -9204329403297863254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_94
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 149
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3be0f73c6ee7c30800000000000000
+      internalID: 4359175216665899952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_95
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 149
+        width: 302
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f5bdd8d5b57e0a0800000000000000
+      internalID: -6852407850650869986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_96
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 469
+        width: 212
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cefddeb8b7fb74a0800000000000000
+      internalID: -6594404856505696572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_97
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 299
+        width: 262
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a1b7ddbc4b1f0e0800000000000000
+      internalID: -2237808752139232709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_98
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 149
+        width: 212
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c386ca18b6dc8e560800000000000000
+      internalID: 7343345054048348220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_99
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 169
+        width: 162
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62a2597e186781f0800000000000000
+      internalID: -1042750308619214226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_100
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 149
+        width: 202
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042c96410d0efcbf0800000000000000
+      internalID: -301775465710239168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_101
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 309
+        width: 482
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecae62b8c9205f500800000000000000
+      internalID: 429252210856487630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_102
+      rect:
+        serializedVersion: 2
+        x: 3559
+        y: 39
+        width: 122
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3899b0f7149fadf90800000000000000
+      internalID: -6927951017056429693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_103
+      rect:
+        serializedVersion: 2
+        x: 3699
+        y: 109
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6864af31308ea95f0800000000000000
+      internalID: -749031288086051194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY_104
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 29
+        width: 272
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935888a713839a5d0800000000000000
+      internalID: -3050845487406480071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HALLWAY_0: -5645421639178154313
+      HALLWAY_1: -6819576949195651535
+      HALLWAY_10: -6257637150507204108
+      HALLWAY_100: -301775465710239168
+      HALLWAY_101: 429252210856487630
+      HALLWAY_102: -6927951017056429693
+      HALLWAY_103: -749031288086051194
+      HALLWAY_104: -3050845487406480071
+      HALLWAY_11: -6707927921603563961
+      HALLWAY_12: 7246543196564255829
+      HALLWAY_13: 3579604491454053079
+      HALLWAY_14: 8966989873652647195
+      HALLWAY_15: 3382855029732106798
+      HALLWAY_16: 9136580553356933272
+      HALLWAY_17: 5022812825676207329
+      HALLWAY_18: 9176622788840767107
+      HALLWAY_19: -2097908999034343952
+      HALLWAY_2: 6500254696487425516
+      HALLWAY_20: -4268084858350145134
+      HALLWAY_21: 9200650334776606297
+      HALLWAY_22: 6131618032154163851
+      HALLWAY_23: 2167020120217030888
+      HALLWAY_24: -5794012017378535862
+      HALLWAY_25: -7862835807683356309
+      HALLWAY_26: 4100060772161655822
+      HALLWAY_27: 6880831589413442913
+      HALLWAY_28: -2369189565502675674
+      HALLWAY_29: -8617150352348047766
+      HALLWAY_3: -1550107126076158766
+      HALLWAY_30: -8054552124642906946
+      HALLWAY_31: -1878847223400027070
+      HALLWAY_32: -5388921890138255124
+      HALLWAY_33: -8844714566905076911
+      HALLWAY_34: 5207689687281244793
+      HALLWAY_35: 7857643289520683293
+      HALLWAY_36: -1847646272586878979
+      HALLWAY_37: -7669772843070908810
+      HALLWAY_38: 8699123308427323239
+      HALLWAY_39: 4619239736649596796
+      HALLWAY_4: -4062330502266824174
+      HALLWAY_40: -3336061431256237430
+      HALLWAY_41: 2791836161024841502
+      HALLWAY_42: 435183273824960858
+      HALLWAY_43: 5144970636771656249
+      HALLWAY_44: 8741746512413029922
+      HALLWAY_45: 5661102404530357828
+      HALLWAY_46: 7071058714658065898
+      HALLWAY_47: 8723477749242738758
+      HALLWAY_48: 8343682175694085534
+      HALLWAY_49: 6403187421040805587
+      HALLWAY_5: 6160062329687981548
+      HALLWAY_50: -8997819093991543986
+      HALLWAY_51: -7337573116724246654
+      HALLWAY_52: 2354598731484641296
+      HALLWAY_53: 5497486079950245271
+      HALLWAY_54: -2628943800523561522
+      HALLWAY_55: 8707218826288144585
+      HALLWAY_56: 870537040364093823
+      HALLWAY_57: 4456571475395048684
+      HALLWAY_58: 561771591219225589
+      HALLWAY_59: -3133880844971506674
+      HALLWAY_6: 2174416994878836144
+      HALLWAY_60: -2878996387570462455
+      HALLWAY_61: 5088034015392688265
+      HALLWAY_62: 5905024335131190983
+      HALLWAY_63: -6549933626928927642
+      HALLWAY_64: 331439222937785655
+      HALLWAY_65: 6080346601956337628
+      HALLWAY_66: 6141520202176560592
+      HALLWAY_67: -1456393776369072052
+      HALLWAY_68: 827919755872920996
+      HALLWAY_69: 8284171053648085195
+      HALLWAY_7: -8572545278547355254
+      HALLWAY_70: -4327710304353279704
+      HALLWAY_71: -160539929960353579
+      HALLWAY_72: -835500573624372463
+      HALLWAY_73: 8316740405813874004
+      HALLWAY_74: 7681952729493846335
+      HALLWAY_75: 3471718234282045157
+      HALLWAY_76: -7201043335551165678
+      HALLWAY_77: 1335488546493940424
+      HALLWAY_78: -2338900158614536072
+      HALLWAY_79: 1985587624602525309
+      HALLWAY_8: -8536611000449227817
+      HALLWAY_80: 727055897650357618
+      HALLWAY_81: 6660153487193478853
+      HALLWAY_82: -4802371507125749442
+      HALLWAY_83: 414896328425587017
+      HALLWAY_84: -1599107334392565188
+      HALLWAY_85: -1918398180692305237
+      HALLWAY_86: -5697722820822287598
+      HALLWAY_87: 6932628324576022398
+      HALLWAY_88: 5893895467360239579
+      HALLWAY_89: -5275996204934295360
+      HALLWAY_9: -4456530941292372291
+      HALLWAY_90: 736827651587916913
+      HALLWAY_91: 2481639947226334620
+      HALLWAY_92: -4366205701683816261
+      HALLWAY_93: -9204329403297863254
+      HALLWAY_94: 4359175216665899952
+      HALLWAY_95: -6852407850650869986
+      HALLWAY_96: -6594404856505696572
+      HALLWAY_97: -2237808752139232709
+      HALLWAY_98: 7343345054048348220
+      HALLWAY_99: -1042750308619214226
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

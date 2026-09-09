@@ -9,7 +9,6 @@ public class InventoryItem : MonoBehaviour
     [SerializeField]
     private Image itemImage;
 
-
     [SerializeField]
     private Image borderImage;
 
@@ -24,27 +23,44 @@ public class InventoryItem : MonoBehaviour
         Deselect();
     }
 
+    // --- ADDED THIS METHOD TO PREVENT MISSING REFERENCE EXCEPTIONS ---
+    private void OnDestroy()
+    {
+        OnItemClicked = null;
+        OnItemDroppedOn = null;
+        OnItemBeginDrag = null;
+        OnItemEndDrag = null;
+        OnRightMouseBtnClick = null;
+    }
+
     public void ResetData()
     {
-        this.itemImage.gameObject.SetActive(false);
+        if (itemImage != null)
+            this.itemImage.gameObject.SetActive(false);
+
         empty = true;
     }
 
     public void Deselect()
     {
-        borderImage.enabled = false;
+        if (borderImage != null)
+            borderImage.enabled = false;
     }
 
     public void SetData(Sprite sprite)
     {
-        this.itemImage.gameObject.SetActive(true);
-        this.itemImage.sprite = sprite;
+        if (itemImage != null)
+        {
+            this.itemImage.gameObject.SetActive(true);
+            this.itemImage.sprite = sprite;
+        }
         empty = false;
     }
 
     public void Select()
     {
-        borderImage.enabled = true;
+        if (borderImage != null)
+            borderImage.enabled = true;
     }
 
     public void OnBeginDrag(BaseEventData eventData)

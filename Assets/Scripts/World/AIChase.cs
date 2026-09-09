@@ -1,30 +1,42 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(AudioSource))]
 public class AIChase : MonoBehaviour
 {
     [Header("Target Settings")]
     public GameObject player;
     public float detectionDistance = 7f;
-    public LayerMask obstacleLayer; // Set this to your Wall / Obstacle layer
+    public LayerMask obstacleLayer;
 
     [Header("Movement Speeds")]
     public float walkSpeed = 2f;
     public float runSpeed = 4.5f;
 
     [Header("Hallway Roaming")]
-    public BoxCollider2D hallwayArea; // Assign a BoxCollider2D covering the rectangular hallway
-    public float roamRadius = 5f;      // Fallback if no hallwayArea is assigned
+    public BoxCollider2D hallwayArea;
+    public float roamRadius = 5f;
     public float roamWaitTime = 3f;
 
     [Header("Reach Trigger")]
     public float reachDistance = 0.5f;
     public List<GameObject> objectsToActivate;
 
+    [Header("Jumpscare & GameOver")]
+    public GameObject jumpscareUI;             // Assign your Jumpscare Image/Canvas object
+    public GameOverManager gameOverManager;   // Reference to your GameOverManager script
+    public float delayBeforeGameOver = 2f;     // Delay time in seconds
+
+    [Header("Audio Settings")]
+    public AudioClip reachPlayerSound;
+    [Range(0f, 1f)] public float soundVolume = 1f;
+
     private NavMeshAgent agent;
     private Animator animator;
+    private AudioSource audioSource;
     private float roamTimer;
     private bool hasReachedPlayer = false;
 
@@ -32,16 +44,23 @@ public class AIChase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
+        // Hide jumpscare object on start
+        if (jumpscareUI != null) jumpscareUI.SetActive(false);
 
         // Lock agent rotation to 2D XY plane
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
-        roamTimer = roamWaitTime; // Force immediate initial location pick
+        roamTimer = roamWaitTime;
     }
 
     void Update()
     {
+        // Stop updating behavior once player is caught
+        if (hasReachedPlayer) return;
+
         // Freeze AI movement during active dialogue
         if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
         {
@@ -65,11 +84,11 @@ public class AIChase : MonoBehaviour
             agent.isStopped = false;
             agent.SetDestination(player.transform.position);
 
-            // Trigger action when reaching the player
+            // Trigger sequence when reaching the player
             if (distanceToPlayer <= reachDistance && !hasReachedPlayer)
             {
                 hasReachedPlayer = true;
-                ActivateObjects();
+                StartCoroutine(TriggerJumpscareSequence());
             }
         }
         else
@@ -83,15 +102,39 @@ public class AIChase : MonoBehaviour
         UpdateAnimations();
     }
 
+    private IEnumerator TriggerJumpscareSequence()
+    {
+        // 1. Freeze enemy movement and animation immediately
+        StopAgent();
+
+        // 2. Play the jumpscare audio clip
+        PlayReachSound();
+
+        // 3. Show jumpscare UI and activate any designated GameObjects
+        if (jumpscareUI != null) jumpscareUI.SetActive(true);
+        ActivateObjects();
+
+        // 4. Wait for the specified delay (e.g., 2 seconds) with the jumpscare visible
+        yield return new WaitForSeconds(delayBeforeGameOver);
+
+        // 5. Fade in the Game Over UI OVER the jumpscare (jumpscare stays active underneath)
+        if (gameOverManager != null)
+        {
+            gameOverManager.TriggerGameOver();
+        }
+        else
+        {
+            Debug.LogWarning("GameOverManager reference missing on AIChase script.");
+        }
+    }
+
     private bool HasLineOfSight(float distanceToPlayer)
     {
         if (distanceToPlayer > detectionDistance) return false;
 
-        // Cast ray toward player to check if walls block vision
         Vector2 direction = (player.transform.position - transform.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceToPlayer, obstacleLayer);
 
-        // Line of sight is clear if the ray hits nothing on the obstacle layer
         return hit.collider == null;
     }
 
@@ -99,7 +142,6 @@ public class AIChase : MonoBehaviour
     {
         roamTimer += Time.deltaTime;
 
-        // Pick a new location when wait timer expires or destination is reached
         if (roamTimer >= roamWaitTime || (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance))
         {
             Vector2 randomPoint = GetRandomRoamPosition();
@@ -111,7 +153,6 @@ public class AIChase : MonoBehaviour
 
     private Vector2 GetRandomRoamPosition()
     {
-        // Option 1: Sample point inside rectangular BoxCollider2D bounds
         if (hallwayArea != null)
         {
             Bounds bounds = hallwayArea.bounds;
@@ -125,7 +166,6 @@ public class AIChase : MonoBehaviour
             }
         }
 
-        // Option 2: Circular fallback around current location
         Vector2 circlePoint = (Vector2)transform.position + (Random.insideUnitCircle * roamRadius);
         if (NavMesh.SamplePosition(circlePoint, out NavMeshHit fallbackHit, roamRadius, NavMesh.AllAreas))
         {
@@ -172,6 +212,14 @@ public class AIChase : MonoBehaviour
         foreach (GameObject obj in objectsToActivate)
         {
             if (obj != null) obj.SetActive(true);
+        }
+    }
+
+    private void PlayReachSound()
+    {
+        if (reachPlayerSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(reachPlayerSound, soundVolume);
         }
     }
 }
