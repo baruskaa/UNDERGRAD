@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Flashlight
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Flashlight
-  <Description>k__BackingField: 'An old flashlight that surprisingly still works.  '
-  <ItemImage>k__BackingField: {fileID: -2638390803197812687, guid: 9642b85f51ae39e46bb83172d37bf0a2, type: 3}
+  <Description>k__BackingField: "An old flashlight that surprisingly still works.
+    \n\nPress F to toggle. "
+  <ItemImage>k__BackingField: {fileID: -6635950913137762894, guid: d63e579c4086b9f4e992010834c04402, type: 3}
   itemType: 2
   restoreAmount: 0

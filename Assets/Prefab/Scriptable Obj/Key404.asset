@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
-  m_Name: Chizdog
+  m_Name: Key404
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Chizdog
-  <Description>k__BackingField: sdfsdfsfd
-  <ItemImage>k__BackingField: {fileID: -1876665437634475542, guid: c39480b00bf89ac4580b738f596c58aa, type: 3}
-  itemType: 0
+  <Name>k__BackingField: Key
+  <Description>k__BackingField: A key found in a cubicle. I wonder where this is
+    for.
+  <ItemImage>k__BackingField: {fileID: -2338900158614536072, guid: 2dc70b68126f2ed4b9abc7795440cf4b, type: 3}
+  itemType: 2
   restoreAmount: 5

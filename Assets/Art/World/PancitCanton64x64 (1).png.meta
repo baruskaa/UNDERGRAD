@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a8b27a7564f7bc04bb61bcc2c1bb5e92
+guid: a831e0e18036d684ca26293dab4fe4ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3347685813828341178
-    second: Sardines_0
+      213: 2247652878403217142
+    second: PancitCanton64x64 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sardines_0
+      name: PancitCanton64x64 (1)_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 49
-        width: 302
-        height: 552
+        x: 59
+        y: 129
+        width: 472
+        height: 362
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abd4ad8c28e557e20800000000000000
-      internalID: 3347685813828341178
+      spriteID: 6f6ab936264413f10800000000000000
+      internalID: 2247652878403217142
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sardines_0: 3347685813828341178
+      PancitCanton64x64 (1)_0: 2247652878403217142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

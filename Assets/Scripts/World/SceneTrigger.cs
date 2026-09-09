@@ -7,9 +7,8 @@ public class SceneTrigger : MonoBehaviour
 
     private bool isTransitioning = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // For 2D games, change 'Collider other' to 'Collider2D other' and use OnTriggerEnter2D
         if (!isTransitioning && other.CompareTag(playerTag))
         {
             isTransitioning = true;

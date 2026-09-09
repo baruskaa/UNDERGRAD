@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
-  m_Name: PancitCanton
+  m_Name: BoltCutter
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Ticnap Notnac
-  <Description>k__BackingField: usto mouh pantet cantun? ouhm.. dalawa? ouhm.. ubuten
-    mouh? hate tau mahal quouhh...
-  <ItemImage>k__BackingField: {fileID: 2247652878403217142, guid: a831e0e18036d684ca26293dab4fe4ff, type: 3}
-  itemType: 0
+  <Name>k__BackingField: Bolt Cutter
+  <Description>k__BackingField: a tool used for cutting bolts, chains, padlocks,
+    rebar and wire mesh.
+  <ItemImage>k__BackingField: {fileID: 6058751146893802768, guid: 7a268924b87c9d7469afcecbdd143d87, type: 3}
+  itemType: 2
   restoreAmount: 5

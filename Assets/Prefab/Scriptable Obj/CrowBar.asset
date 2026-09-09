@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
-  m_Name: PancitCanton
+  m_Name: CrowBar
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Ticnap Notnac
-  <Description>k__BackingField: usto mouh pantet cantun? ouhm.. dalawa? ouhm.. ubuten
-    mouh? hate tau mahal quouhh...
-  <ItemImage>k__BackingField: {fileID: 2247652878403217142, guid: a831e0e18036d684ca26293dab4fe4ff, type: 3}
-  itemType: 0
+  <Name>k__BackingField: Crow Bar
+  <Description>k__BackingField: A heavy metal hand tool used as a lever to pry apart
+    objects. This can be useful somewhere.
+  <ItemImage>k__BackingField: {fileID: 5965709494192836717, guid: 5e98a47c1bc67674486541a2ab682050, type: 3}
+  itemType: 2
   restoreAmount: 5

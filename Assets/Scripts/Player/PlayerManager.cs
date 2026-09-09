@@ -12,6 +12,11 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public int maxHunger = 20;
     [SerializeField] public int currentHunger;
 
+    [Header("Hunger Timer Settings")]
+    [Tooltip("Time in seconds before hunger decreases by 1 point.")]
+    public float hungerInterval = 60f; // 1 Minute
+    private float hungerTimer = 0f;
+
     [Header("Flash Feedback")]
     public SpriteRenderer spriteRenderer;
     public Material flashMaterial;
@@ -62,6 +67,18 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+        // --- PASSIVE HUNGER DECAY ---
+        if (currentHunger > 0)
+        {
+            hungerTimer += Time.deltaTime;
+            if (hungerTimer >= hungerInterval)
+            {
+                TakeHunger(1);
+                hungerTimer = 0f; // Reset timer for the next minute
+            }
+        }
+
+        // --- DEBUG CONTROLS ---
         if (Input.GetKeyDown(KeyCode.H))
         {
             TakeDamage(1);
@@ -71,6 +88,7 @@ public class PlayerManager : MonoBehaviour
             TakeHunger(1);
         }
 
+        // --- STARVATION DAMAGE LOGIC ---
         if (currentHunger <= 6 && currentHealth > 0)
         {
             starvationTimer += Time.deltaTime;
@@ -104,6 +122,9 @@ public class PlayerManager : MonoBehaviour
         {
             bar.SetHunger(currentHunger);
         }
+
+        // Reset passive decay timer when fed to give full 60 seconds before next loss
+        hungerTimer = 0f;
 
         UpdateHungerPenalties();
     }

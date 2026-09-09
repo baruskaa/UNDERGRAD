@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b011b8f56450f9e47877db4ff2a80feb, type: 3}
-  m_Name: PancitCanton
+  m_Name: Key402
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Ticnap Notnac
-  <Description>k__BackingField: usto mouh pantet cantun? ouhm.. dalawa? ouhm.. ubuten
-    mouh? hate tau mahal quouhh...
-  <ItemImage>k__BackingField: {fileID: 2247652878403217142, guid: a831e0e18036d684ca26293dab4fe4ff, type: 3}
-  itemType: 0
+  <Name>k__BackingField: Key
+  <Description>k__BackingField: A key in a window. I wonder where this is for.
+  <ItemImage>k__BackingField: {fileID: -1918398180692305237, guid: 2dc70b68126f2ed4b9abc7795440cf4b, type: 3}
+  itemType: 2
   restoreAmount: 5

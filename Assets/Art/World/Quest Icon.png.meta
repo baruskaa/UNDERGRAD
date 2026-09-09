@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc2dcc5a08f294946bdc602f7fe011dc
+guid: 1b223fc6645b83646bd82d501f5bdf31
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3629191439132732467
-    second: Waterbottle_0
+      213: -4739091719488039077
+    second: Quest Icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Waterbottle_0
+      name: Quest Icon_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 5
-        width: 20
-        height: 55
+        x: 29
+        y: 19
+        width: 262
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc3da984d9582adc0800000000000000
-      internalID: -3629191439132732467
+      spriteID: b579bed903d5b3eb0800000000000000
+      internalID: -4739091719488039077
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Waterbottle_0: -3629191439132732467
+      Quest Icon_0: -4739091719488039077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

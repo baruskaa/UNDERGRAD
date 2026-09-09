@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 228e615e67362354da12510872bacc35
+guid: 3566dc4d1729ce54489807452ff4f56d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4552770127603750836
-    second: PancitCanton_0
+      213: 3978689832123251910
+    second: Waterbottle64x64_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PancitCanton_0
+      name: Waterbottle64x64_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 8
-        width: 49
-        height: 38
+        x: 209
+        y: 59
+        width: 182
+        height: 532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c482b28c0bf41d0c0800000000000000
-      internalID: -4552770127603750836
+      spriteID: 6cc3a238255273730800000000000000
+      internalID: 3978689832123251910
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PancitCanton_0: -4552770127603750836
+      Waterbottle64x64_0: 3978689832123251910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

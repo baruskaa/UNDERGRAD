@@ -22,6 +22,7 @@ public class FlashlightDialogue : MonoBehaviour
     public GameObject[] objectsToDisable;
 
     private bool hasTriggered = false;
+    private bool awaitingDialogueEnd = false;
 
     private void Update()
     {
@@ -66,29 +67,62 @@ public class FlashlightDialogue : MonoBehaviour
         {
             hasTriggered = true;
 
-            // 1. Enable specified GameObjects
-            if (objectsToEnable != null)
-            {
-                foreach (GameObject go in objectsToEnable)
-                {
-                    if (go != null) go.SetActive(true);
-                }
-            }
-
-            // 2. Disable specified GameObjects
-            if (objectsToDisable != null)
-            {
-                foreach (GameObject go in objectsToDisable)
-                {
-                    if (go != null) go.SetActive(false);
-                }
-            }
-
-            // 3. Trigger Dialogue (if dialogue lines are present)
+            // Trigger Dialogue if available
             if (DialogueManager.Instance != null && dialogue != null && dialogue.dialogueLines != null && dialogue.dialogueLines.Count > 0)
             {
+                awaitingDialogueEnd = true;
+                DialogueManager.Instance.OnDialogueEnded += HandleDialogueEnded;
                 DialogueManager.Instance.StartDialogue(dialogue);
             }
+            else
+            {
+                // If no dialogue exists, enable/disable objects immediately
+                ApplyObjectToggles();
+            }
+        }
+    }
+
+    private void HandleDialogueEnded()
+    {
+        if (!awaitingDialogueEnd) return;
+
+        // Unsubscribe to avoid double-firing
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= HandleDialogueEnded;
+        }
+
+        awaitingDialogueEnd = false;
+        ApplyObjectToggles();
+    }
+
+    private void ApplyObjectToggles()
+    {
+        // 1. Enable specified GameObjects
+        if (objectsToEnable != null)
+        {
+            foreach (GameObject go in objectsToEnable)
+            {
+                if (go != null) go.SetActive(true);
+            }
+        }
+
+        // 2. Disable specified GameObjects
+        if (objectsToDisable != null)
+        {
+            foreach (GameObject go in objectsToDisable)
+            {
+                if (go != null) go.SetActive(false);
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Clean up subscription if GameObject is destroyed during dialogue
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= HandleDialogueEnded;
         }
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c44a01fbc98a574a9d3ed5bf0121a8d
+guid: 7a268924b87c9d7469afcecbdd143d87
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6003113951198659176
-    second: Crowbar_0
+      213: 6058751146893802768
+    second: BoltCutter64x64_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crowbar_0
+      name: BoltCutter64x64_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 61
-        height: 60
+        x: 9
+        y: 249
+        width: 602
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 862436f25585f4350800000000000000
-      internalID: 6003113951198659176
+      spriteID: 01d78154112051450800000000000000
+      internalID: 6058751146893802768
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Crowbar_0: 6003113951198659176
+      BoltCutter64x64_0: 6058751146893802768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
