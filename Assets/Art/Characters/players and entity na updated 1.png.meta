@@ -1,0 +1,4891 @@
+fileFormatVersion: 2
+guid: bdb16b0c772aa1d4a92bfb75ff475147
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8937798220948833028
+    second: players and entity na updated 1_0
+  - first:
+      213: -8214873263829945246
+    second: players and entity na updated 1_1
+  - first:
+      213: -9071015713406611158
+    second: players and entity na updated 1_2
+  - first:
+      213: 2977978192817921650
+    second: players and entity na updated 1_3
+  - first:
+      213: -3827496234847232722
+    second: players and entity na updated 1_4
+  - first:
+      213: 6596477148919615136
+    second: players and entity na updated 1_5
+  - first:
+      213: -3158713098577041165
+    second: players and entity na updated 1_6
+  - first:
+      213: -6056221903223948643
+    second: players and entity na updated 1_7
+  - first:
+      213: 2784350313960625500
+    second: players and entity na updated 1_8
+  - first:
+      213: -7009411000856372705
+    second: players and entity na updated 1_9
+  - first:
+      213: 7726631890159136171
+    second: players and entity na updated 1_10
+  - first:
+      213: -4939944782506973399
+    second: players and entity na updated 1_11
+  - first:
+      213: -6689800245485409805
+    second: players and entity na updated 1_12
+  - first:
+      213: 5202426915836714001
+    second: players and entity na updated 1_13
+  - first:
+      213: -221589694694641954
+    second: players and entity na updated 1_14
+  - first:
+      213: 2228604270722418415
+    second: players and entity na updated 1_15
+  - first:
+      213: 249011761190201367
+    second: players and entity na updated 1_16
+  - first:
+      213: -8494276171145516168
+    second: players and entity na updated 1_17
+  - first:
+      213: 189723695554610415
+    second: players and entity na updated 1_18
+  - first:
+      213: -3829247296052618463
+    second: players and entity na updated 1_19
+  - first:
+      213: -3642611783361294292
+    second: players and entity na updated 1_20
+  - first:
+      213: 3908053973877089684
+    second: players and entity na updated 1_21
+  - first:
+      213: 6375139741827149218
+    second: players and entity na updated 1_22
+  - first:
+      213: -2096071359171983210
+    second: players and entity na updated 1_23
+  - first:
+      213: -3555202505014214555
+    second: players and entity na updated 1_24
+  - first:
+      213: -9091090364098954452
+    second: players and entity na updated 1_25
+  - first:
+      213: -5677172509177157022
+    second: players and entity na updated 1_26
+  - first:
+      213: 4180290544087943178
+    second: players and entity na updated 1_27
+  - first:
+      213: 2640143417397411145
+    second: players and entity na updated 1_28
+  - first:
+      213: -8792619451665388731
+    second: players and entity na updated 1_29
+  - first:
+      213: 2108994492572874861
+    second: players and entity na updated 1_30
+  - first:
+      213: 7965104673975590879
+    second: players and entity na updated 1_31
+  - first:
+      213: -321533858744500280
+    second: players and entity na updated 1_32
+  - first:
+      213: 978885164831896820
+    second: players and entity na updated 1_33
+  - first:
+      213: -5053940444586881051
+    second: players and entity na updated 1_34
+  - first:
+      213: -2482294269154095831
+    second: players and entity na updated 1_35
+  - first:
+      213: -686018404298633472
+    second: players and entity na updated 1_36
+  - first:
+      213: -8803664423940008908
+    second: players and entity na updated 1_37
+  - first:
+      213: 2553592156541450323
+    second: players and entity na updated 1_38
+  - first:
+      213: -6716173121936213488
+    second: players and entity na updated 1_39
+  - first:
+      213: -1280035525444885207
+    second: players and entity na updated 1_40
+  - first:
+      213: 2944730185583251521
+    second: players and entity na updated 1_41
+  - first:
+      213: -7304784513685037004
+    second: players and entity na updated 1_42
+  - first:
+      213: -8044944041531639680
+    second: players and entity na updated 1_43
+  - first:
+      213: 7378428699193525588
+    second: players and entity na updated 1_44
+  - first:
+      213: -1980446941103815584
+    second: players and entity na updated 1_45
+  - first:
+      213: 8116486498426556419
+    second: players and entity na updated 1_46
+  - first:
+      213: 6613697132999603903
+    second: players and entity na updated 1_47
+  - first:
+      213: 8315195622624078126
+    second: players and entity na updated 1_48
+  - first:
+      213: 579532833933530296
+    second: players and entity na updated 1_49
+  - first:
+      213: 1139715387212378931
+    second: players and entity na updated 1_50
+  - first:
+      213: -7032658325389409792
+    second: players and entity na updated 1_51
+  - first:
+      213: 3585664138661741737
+    second: players and entity na updated 1_52
+  - first:
+      213: 4643553439909116733
+    second: players and entity na updated 1_53
+  - first:
+      213: -1562848857695350652
+    second: players and entity na updated 1_54
+  - first:
+      213: 8546946195052962853
+    second: players and entity na updated 1_55
+  - first:
+      213: -5873010680292189165
+    second: players and entity na updated 1_56
+  - first:
+      213: -5667007676334570905
+    second: players and entity na updated 1_57
+  - first:
+      213: 5093902846328121314
+    second: players and entity na updated 1_58
+  - first:
+      213: -5951394929297055354
+    second: players and entity na updated 1_59
+  - first:
+      213: -897463943213734201
+    second: players and entity na updated 1_60
+  - first:
+      213: 6263987052240562573
+    second: players and entity na updated 1_61
+  - first:
+      213: 4209709115878099185
+    second: players and entity na updated 1_62
+  - first:
+      213: 2409891681871164863
+    second: players and entity na updated 1_63
+  - first:
+      213: -987163175297080879
+    second: players and entity na updated 1_64
+  - first:
+      213: -5376059982401784320
+    second: players and entity na updated 1_65
+  - first:
+      213: -5632223885488131603
+    second: players and entity na updated 1_66
+  - first:
+      213: -6555343515186318938
+    second: players and entity na updated 1_67
+  - first:
+      213: -3512069838132379582
+    second: players and entity na updated 1_68
+  - first:
+      213: -1790114002342313244
+    second: players and entity na updated 1_69
+  - first:
+      213: 4939105908078803174
+    second: players and entity na updated 1_70
+  - first:
+      213: 6897122892489259020
+    second: players and entity na updated 1_71
+  - first:
+      213: 2247156606988441632
+    second: players and entity na updated 1_72
+  - first:
+      213: 1666854441888804702
+    second: players and entity na updated 1_73
+  - first:
+      213: 328713613071513165
+    second: players and entity na updated 1_74
+  - first:
+      213: -1270371848641566756
+    second: players and entity na updated 1_75
+  - first:
+      213: -4359720408395722184
+    second: players and entity na updated 1_76
+  - first:
+      213: 919603010214526792
+    second: players and entity na updated 1_77
+  - first:
+      213: 4574760145119418423
+    second: players and entity na updated 1_78
+  - first:
+      213: 2835313436153285308
+    second: players and entity na updated 1_79
+  - first:
+      213: -1755491059015668804
+    second: players and entity na updated 1_80
+  - first:
+      213: 1595949910727104728
+    second: players and entity na updated 1_81
+  - first:
+      213: -1439247972065840662
+    second: players and entity na updated 1_82
+  - first:
+      213: 3921551479937796632
+    second: players and entity na updated 1_83
+  - first:
+      213: 401146476822577884
+    second: players and entity na updated 1_84
+  - first:
+      213: -8448194153906376460
+    second: players and entity na updated 1_85
+  - first:
+      213: 5192844689662782819
+    second: players and entity na updated 1_86
+  - first:
+      213: -7632216254692839568
+    second: players and entity na updated 1_87
+  - first:
+      213: -622796277578536383
+    second: players and entity na updated 1_88
+  - first:
+      213: 2886803662182808972
+    second: players and entity na updated 1_89
+  - first:
+      213: 6662450888639587321
+    second: players and entity na updated 1_90
+  - first:
+      213: -5334473304758082497
+    second: players and entity na updated 1_91
+  - first:
+      213: -8020569110316259323
+    second: players and entity na updated 1_92
+  - first:
+      213: -7283212211612721600
+    second: players and entity na updated 1_93
+  - first:
+      213: 1554054625566545917
+    second: players and entity na updated 1_94
+  - first:
+      213: 3782654953453449487
+    second: players and entity na updated 1_95
+  - first:
+      213: 445327054361217754
+    second: players and entity na updated 1_96
+  - first:
+      213: 7273062689524409086
+    second: players and entity na updated 1_97
+  - first:
+      213: -6665931328511547746
+    second: players and entity na updated 1_98
+  - first:
+      213: 1120352327246484610
+    second: players and entity na updated 1_99
+  - first:
+      213: 461521861659977659
+    second: players and entity na updated 1_100
+  - first:
+      213: -433541173537361235
+    second: players and entity na updated 1_101
+  - first:
+      213: -2048583586360269490
+    second: players and entity na updated 1_102
+  - first:
+      213: -1896799261401232078
+    second: players and entity na updated 1_103
+  - first:
+      213: 2984688207736144717
+    second: players and entity na updated 1_104
+  - first:
+      213: -5417108477604614091
+    second: players and entity na updated 1_105
+  - first:
+      213: -1595404843505681311
+    second: players and entity na updated 1_106
+  - first:
+      213: 3327735591735898391
+    second: players and entity na updated 1_107
+  - first:
+      213: 2676936626575240053
+    second: players and entity na updated 1_108
+  - first:
+      213: 1427817940112285496
+    second: players and entity na updated 1_109
+  - first:
+      213: -2229073733000161376
+    second: players and entity na updated 1_110
+  - first:
+      213: 7428370253110974587
+    second: players and entity na updated 1_111
+  - first:
+      213: 1330464662979327804
+    second: players and entity na updated 1_112
+  - first:
+      213: 4529604226719064071
+    second: players and entity na updated 1_113
+  - first:
+      213: 3498122327785223180
+    second: players and entity na updated 1_114
+  - first:
+      213: 8654389376382888701
+    second: players and entity na updated 1_115
+  - first:
+      213: -7314607057896161114
+    second: players and entity na updated 1_116
+  - first:
+      213: -6355025438427804952
+    second: players and entity na updated 1_117
+  - first:
+      213: 171665183553736912
+    second: players and entity na updated 1_118
+  - first:
+      213: -6189430875415268440
+    second: players and entity na updated 1_119
+  - first:
+      213: -300343806234292258
+    second: players and entity na updated 1_120
+  - first:
+      213: -9038705227409759545
+    second: players and entity na updated 1_121
+  - first:
+      213: 1411238047654923680
+    second: players and entity na updated 1_122
+  - first:
+      213: -1545789321758689764
+    second: players and entity na updated 1_123
+  - first:
+      213: -6211067944170240589
+    second: players and entity na updated 1_124
+  - first:
+      213: -2038257555737302475
+    second: players and entity na updated 1_125
+  - first:
+      213: 6412198274949848182
+    second: players and entity na updated 1_126
+  - first:
+      213: -153243063000070152
+    second: players and entity na updated 1_127
+  - first:
+      213: -4936473702595097771
+    second: players and entity na updated 1_128
+  - first:
+      213: 996205743122996282
+    second: players and entity na updated 1_129
+  - first:
+      213: 1189684356852555877
+    second: players and entity na updated 1_130
+  - first:
+      213: -9108183339604822853
+    second: players and entity na updated 1_131
+  - first:
+      213: -8174612071294816931
+    second: players and entity na updated 1_132
+  - first:
+      213: 8718496533615026688
+    second: players and entity na updated 1_133
+  - first:
+      213: 3990848302466426524
+    second: players and entity na updated 1_134
+  - first:
+      213: -5083636192396121813
+    second: players and entity na updated 1_135
+  - first:
+      213: 8336308696909216661
+    second: players and entity na updated 1_136
+  - first:
+      213: -732151388957612219
+    second: players and entity na updated 1_137
+  - first:
+      213: -8150259949125226592
+    second: players and entity na updated 1_138
+  - first:
+      213: 5174144355790347976
+    second: players and entity na updated 1_139
+  - first:
+      213: -2015017538534546780
+    second: players and entity na updated 1_140
+  - first:
+      213: 7044140290138894395
+    second: players and entity na updated 1_141
+  - first:
+      213: -5435179425605980060
+    second: players and entity na updated 1_142
+  - first:
+      213: -4188530679616529299
+    second: players and entity na updated 1_143
+  - first:
+      213: -829040509798788608
+    second: players and entity na updated 1_144
+  - first:
+      213: 6282284259154780076
+    second: players and entity na updated 1_145
+  - first:
+      213: 2009464745504685878
+    second: players and entity na updated 1_146
+  - first:
+      213: 6505107180608394205
+    second: players and entity na updated 1_147
+  - first:
+      213: -6499613339499767397
+    second: players and entity na updated 1_148
+  - first:
+      213: -3567764268703290242
+    second: players and entity na updated 1_149
+  - first:
+      213: 1812733070018199683
+    second: players and entity na updated 1_150
+  - first:
+      213: -1944767811338337853
+    second: players and entity na updated 1_151
+  - first:
+      213: -2719993774567317259
+    second: players and entity na updated 1_152
+  - first:
+      213: -8394805685121103792
+    second: players and entity na updated 1_153
+  - first:
+      213: 867667770185350238
+    second: players and entity na updated 1_154
+  - first:
+      213: 2825528970762230619
+    second: players and entity na updated 1_155
+  - first:
+      213: -8021885890753337293
+    second: players and entity na updated 1_156
+  - first:
+      213: -3806087032489794470
+    second: players and entity na updated 1_157
+  - first:
+      213: -1758251291370608892
+    second: players and entity na updated 1_158
+  - first:
+      213: -3834474840771933993
+    second: players and entity na updated 1_159
+  - first:
+      213: -4297311766823142824
+    second: players and entity na updated 1_160
+  - first:
+      213: 1169018090334805216
+    second: players and entity na updated 1_161
+  - first:
+      213: 3735218312434812230
+    second: players and entity na updated 1_162
+  - first:
+      213: 6592877949778112302
+    second: players and entity na updated 1_163
+  - first:
+      213: 2975793366926176807
+    second: players and entity na updated 1_164
+  - first:
+      213: -7958944514668432006
+    second: players and entity na updated 1_165
+  - first:
+      213: -6459469237801523674
+    second: players and entity na updated 1_166
+  - first:
+      213: 6529878436053514733
+    second: players and entity na updated 1_167
+  - first:
+      213: 7021170821726604866
+    second: players and entity na updated 1_168
+  - first:
+      213: -3153528107608163404
+    second: players and entity na updated 1_169
+  - first:
+      213: -7575121169120571304
+    second: players and entity na updated 1_170
+  - first:
+      213: 8835918273938088497
+    second: players and entity na updated 1_171
+  - first:
+      213: -8695453378367501303
+    second: players and entity na updated 1_172
+  - first:
+      213: 4565060242107164149
+    second: players and entity na updated 1_173
+  - first:
+      213: -1663821621412439561
+    second: players and entity na updated 1_174
+  - first:
+      213: -911659808771961386
+    second: players and entity na updated 1_175
+  - first:
+      213: 5802798551802934813
+    second: players and entity na updated 1_176
+  - first:
+      213: 4008230603247267471
+    second: players and entity na updated 1_177
+  - first:
+      213: 6919876889766687843
+    second: players and entity na updated 1_178
+  - first:
+      213: 8194279658426399482
+    second: players and entity na updated 1_179
+  - first:
+      213: 8675113359247536994
+    second: players and entity na updated 1_180
+  - first:
+      213: 2635659020713149241
+    second: players and entity na updated 1_181
+  - first:
+      213: 6016602842690686650
+    second: players and entity na updated 1_182
+  - first:
+      213: -6881354745268856800
+    second: players and entity na updated 1_183
+  - first:
+      213: -6551595068632361413
+    second: players and entity na updated 1_184
+  - first:
+      213: -6681650980189912126
+    second: players and entity na updated 1_185
+  - first:
+      213: 6856890593810730234
+    second: players and entity na updated 1_186
+  - first:
+      213: 966171037622032857
+    second: players and entity na updated 1_187
+  - first:
+      213: 384726803441150608
+    second: players and entity na updated 1_188
+  - first:
+      213: -3205597403724512204
+    second: players and entity na updated 1_189
+  - first:
+      213: -3104420429672125555
+    second: players and entity na updated 1_190
+  - first:
+      213: 5148625227490313086
+    second: players and entity na updated 1_191
+  - first:
+      213: -4277909242225564063
+    second: players and entity na updated 1_192
+  - first:
+      213: -683564338906136567
+    second: players and entity na updated 1_193
+  - first:
+      213: -3331567829444558640
+    second: players and entity na updated 1_194
+  - first:
+      213: 8310189455812669711
+    second: players and entity na updated 1_195
+  - first:
+      213: -4526371942151436050
+    second: players and entity na updated 1_196
+  - first:
+      213: 8045836984365143409
+    second: players and entity na updated 1_197
+  - first:
+      213: -6670430071932228381
+    second: players and entity na updated 1_198
+  - first:
+      213: 2225999551745495127
+    second: players and entity na updated 1_199
+  - first:
+      213: 8140148535269713563
+    second: players and entity na updated 1_200
+  - first:
+      213: 7642867401653105097
+    second: players and entity na updated 1_201
+  - first:
+      213: 8808499731580783814
+    second: players and entity na updated 1_202
+  - first:
+      213: 3030170853707635959
+    second: players and entity na updated 1_203
+  - first:
+      213: -7199501978246209256
+    second: players and entity na updated 1_204
+  - first:
+      213: 3977202024656756758
+    second: players and entity na updated 1_205
+  - first:
+      213: 6211483177091948096
+    second: players and entity na updated 1_206
+  - first:
+      213: 131293660366972646
+    second: players and entity na updated 1_207
+  - first:
+      213: 2211549710424550472
+    second: players and entity na updated 1_208
+  - first:
+      213: 5605402121563221801
+    second: players and entity na updated 1_209
+  - first:
+      213: 2098735567755379576
+    second: players and entity na updated 1_210
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: players and entity na updated 1_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3019
+        width: 172
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40306c1a020790c70800000000000000
+      internalID: 8937798220948833028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 3009
+        width: 162
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264ff827a48eefd80800000000000000
+      internalID: -8214873263829945246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_2
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3019
+        width: 152
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21996ad4474d1280800000000000000
+      internalID: -9071015713406611158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_3
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 3329
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e95cb6367e35920800000000000000
+      internalID: 2977978192817921650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_4
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 3019
+        width: 162
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d19ce047002eac0800000000000000
+      internalID: -3827496234847232722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_5
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 3329
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aec55e64056b8b50800000000000000
+      internalID: 6596477148919615136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_6
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 3019
+        width: 162
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f821f32c2ff924d0800000000000000
+      internalID: -3158713098577041165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_7
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 3319
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a7569244af3fba0800000000000000
+      internalID: -6056221903223948643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_8
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 3019
+        width: 162
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55ded1cbdff3a620800000000000000
+      internalID: 2784350313960625500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_9
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 3009
+        width: 292
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a9d3905d199be90800000000000000
+      internalID: -7009411000856372705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_10
+      rect:
+        serializedVersion: 2
+        x: 3079
+        y: 3009
+        width: 272
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bade32344c28a3b60800000000000000
+      internalID: 7726631890159136171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_11
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 3029
+        width: 322
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927a0aca46ac17bb0800000000000000
+      internalID: -4939944782506973399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_12
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 2999
+        width: 332
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9658dee1e0923a0800000000000000
+      internalID: -6689800245485409805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_13
+      rect:
+        serializedVersion: 2
+        x: 7519
+        y: 3329
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cd06067bbb23840800000000000000
+      internalID: 5202426915836714001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_14
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 3309
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edea6d1c851ccecf0800000000000000
+      internalID: -221589694694641954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_15
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 3279
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6045dc6c79dee10800000000000000
+      internalID: 2228604270722418415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_16
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 3269
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718e2a2a0eaa47300800000000000000
+      internalID: 249011761190201367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_17
+      rect:
+        serializedVersion: 2
+        x: 5749
+        y: 2059
+        width: 972
+        height: 1242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b6ec2b3d44e1a80800000000000000
+      internalID: -8494276171145516168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_18
+      rect:
+        serializedVersion: 2
+        x: 7149
+        y: 3249
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4c10722b802a200800000000000000
+      internalID: 189723695554610415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_19
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 3179
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b98a95fd7cbdac0800000000000000
+      internalID: -3829247296052618463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_20
+      rect:
+        serializedVersion: 2
+        x: 4570
+        y: 2050
+        width: 1012
+        height: 1202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c201916e1e7d27dc0800000000000000
+      internalID: -3642611783361294292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_21
+      rect:
+        serializedVersion: 2
+        x: 6747
+        y: 2048
+        width: 1012
+        height: 1202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4956ffb22623c3630800000000000000
+      internalID: 3908053973877089684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_22
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 3139
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad251971db097850800000000000000
+      internalID: 6375139741827149218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_23
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 3129
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6980fac443249e2e0800000000000000
+      internalID: -2096071359171983210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_24
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 3079
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5608c00782269aec0800000000000000
+      internalID: -3555202505014214555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_25
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 3029
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bb7e20b75f5d180800000000000000
+      internalID: -9091090364098954452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_26
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 3039
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ae1ed8ea1a631b0800000000000000
+      internalID: -5677172509177157022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_27
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 3029
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08494a0a10630a30800000000000000
+      internalID: 4180290544087943178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_28
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3009
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94dfe06337ca3a420800000000000000
+      internalID: 2640143417397411145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_29
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 3019
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b6b4aa1375af580800000000000000
+      internalID: -8792619451665388731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_30
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 3009
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68bf0b2157a44d10800000000000000
+      internalID: 2108994492572874861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_31
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 2999
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf5e13008cb98e60800000000000000
+      internalID: 7965104673975590879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_32
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 2909
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cff546b8aea98bf0800000000000000
+      internalID: -321533858744500280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_33
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 2519
+        width: 172
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f474bdfed2b59d00800000000000000
+      internalID: 978885164831896820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_34
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 2859
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef4b6c41fbccd9b0800000000000000
+      internalID: -5053940444586881051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_35
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2539
+        width: 192
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d0513938e1d8dd0800000000000000
+      internalID: -2482294269154095831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_36
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2529
+        width: 192
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f466e55e5ca76f0800000000000000
+      internalID: -686018404298633472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_37
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 2519
+        width: 172
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434df49a9d913d580800000000000000
+      internalID: -8803664423940008908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_38
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 2529
+        width: 192
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35870ef698e207320800000000000000
+      internalID: 2553592156541450323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_39
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 2529
+        width: 192
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a37f0212c5bc2a0800000000000000
+      internalID: -6716173121936213488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_40
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 2519
+        width: 302
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9252af5b8766c3ee0800000000000000
+      internalID: -1280035525444885207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_41
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 2519
+        width: 332
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1405f0f7088cdd820800000000000000
+      internalID: 2944730185583251521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_42
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 2509
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430670def2130aa90800000000000000
+      internalID: -7304784513685037004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_43
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 2519
+        width: 342
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0887c96a40e9a5090800000000000000
+      internalID: -8044944041531639680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_44
+      rect:
+        serializedVersion: 2
+        x: 4379
+        y: 2849
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4554aff2fc1756660800000000000000
+      internalID: 7378428699193525588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_45
+      rect:
+        serializedVersion: 2
+        x: 3959
+        y: 2819
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0648ffafff90484e0800000000000000
+      internalID: -1980446941103815584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_46
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 2839
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30018f2a77d83a070800000000000000
+      internalID: 8116486498426556419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_47
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 2839
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6f578608298cb50800000000000000
+      internalID: 6613697132999603903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_48
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 2819
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29246cec52856370800000000000000
+      internalID: 8315195622624078126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_49
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 2789
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4984eba0aea0800800000000000000
+      internalID: 579532833933530296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_50
+      rect:
+        serializedVersion: 2
+        x: 3889
+        y: 2799
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33337df2b1511df00800000000000000
+      internalID: 1139715387212378931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_51
+      rect:
+        serializedVersion: 2
+        x: 2459
+        y: 2749
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0028870838af66e90800000000000000
+      internalID: -7032658325389409792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_52
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 2759
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a44ac45986d2c130800000000000000
+      internalID: 3585664138661741737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_53
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2719
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b73514047317040800000000000000
+      internalID: 4643553439909116733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_54
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 2699
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48091778e35af4ae0800000000000000
+      internalID: -1562848857695350652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_55
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 2699
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524228ed74adc9670800000000000000
+      internalID: 8546946195052962853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_56
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 2679
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cdb1f17efde7ea0800000000000000
+      internalID: -5873010680292189165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_57
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 2669
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7628aa02b8eba51b0800000000000000
+      internalID: -5667007676334570905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_58
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 2639
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e72dbb66ad21b640800000000000000
+      internalID: 5093902846328121314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_59
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 2659
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6812039f7d5686da0800000000000000
+      internalID: -5951394929297055354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_60
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2619
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c626027c419b83f0800000000000000
+      internalID: -897463943213734201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_61
+      rect:
+        serializedVersion: 2
+        x: 3019
+        y: 2589
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89e17639072ee650800000000000000
+      internalID: 6263987052240562573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_62
+      rect:
+        serializedVersion: 2
+        x: 3909
+        y: 2599
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f843ab0324eb6a30800000000000000
+      internalID: 4209709115878099185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_63
+      rect:
+        serializedVersion: 2
+        x: 3959
+        y: 2549
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5791d67b7a17120800000000000000
+      internalID: 2409891681871164863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_64
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 2549
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d122118254ec42f0800000000000000
+      internalID: -987163175297080879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_65
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 2549
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006bfb9fde56465b0800000000000000
+      internalID: -5376059982401784320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_66
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 2559
+        width: 52
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1720a873256d1b0800000000000000
+      internalID: -5632223885488131603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_67
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 2539
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1b8acfdcdb605a0800000000000000
+      internalID: -6555343515186318938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_68
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2559
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24081c7071f924fc0800000000000000
+      internalID: -3512069838132379582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_69
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2539
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e20fee9ccc3827e0800000000000000
+      internalID: -1790114002342313244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_70
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2529
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8f117a7aa3b8440800000000000000
+      internalID: 4939105908078803174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_71
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 2509
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08790b6ab087bf50800000000000000
+      internalID: 6897122892489259020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_72
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 2519
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028d73237018f2f10800000000000000
+      internalID: 2247156606988441632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_73
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 2509
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f6015984bd12710800000000000000
+      internalID: 1666854441888804702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_74
+      rect:
+        serializedVersion: 2
+        x: 4369
+        y: 2519
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4676fb1a43df8400800000000000000
+      internalID: 328713613071513165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_75
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 2489
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7201dc88bbe5ee0800000000000000
+      internalID: -1270371848641566756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_76
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 2439
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8325d8923692f73c0800000000000000
+      internalID: -4359720408395722184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_77
+      rect:
+        serializedVersion: 2
+        x: 4349
+        y: 2449
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f7736c01613cc00800000000000000
+      internalID: 919603010214526792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_78
+      rect:
+        serializedVersion: 2
+        x: 4379
+        y: 2449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73815762d10dc7f30800000000000000
+      internalID: 4574760145119418423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_79
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 2419
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba0fcc4c8e095720800000000000000
+      internalID: 2835313436153285308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_81
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2049
+        width: 192
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d89434fcf3f52610800000000000000
+      internalID: 1595949910727104728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_82
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2059
+        width: 202
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae170594893c60ce0800000000000000
+      internalID: -1439247972065840662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_83
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 2059
+        width: 202
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a89123b462c6630800000000000000
+      internalID: 3921551479937796632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_84
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 2049
+        width: 192
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2c8e56898219500800000000000000
+      internalID: 401146476822577884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_85
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 2049
+        width: 172
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0f0ee6d2cf1ca80800000000000000
+      internalID: -8448194153906376460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_86
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 2349
+        width: 12
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36daf1d7bb0b01840800000000000000
+      internalID: 5192844689662782819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_89
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 2379
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8df3b4c2acff0820800000000000000
+      internalID: 2886803662182808972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_90
+      rect:
+        serializedVersion: 2
+        x: 6719
+        y: 2379
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f329d6b8c7c57c50800000000000000
+      internalID: 6662450888639587321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_91
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 2049
+        width: 172
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f342716eac428f5b0800000000000000
+      internalID: -5334473304758082497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_94
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 2349
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7527eb27c119510800000000000000
+      internalID: 1554054625566545917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_95
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 2339
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01f67883a0be7430800000000000000
+      internalID: 3782654953453449487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_96
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 2329
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada4214b89e1e2600800000000000000
+      internalID: 445327054361217754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_97
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 2069
+        width: 362
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2ef365bfb1fe460800000000000000
+      internalID: 7273062689524409086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_98
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 2329
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96ebea36cadd73a0800000000000000
+      internalID: -6665931328511547746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_99
+      rect:
+        serializedVersion: 2
+        x: 3019
+        y: 2069
+        width: 372
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2841fc8718a4c8f00800000000000000
+      internalID: 1120352327246484610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_101
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 2079
+        width: 382
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2bcc38990cbf9f0800000000000000
+      internalID: -433541173537361235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_103
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 2069
+        width: 372
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23dc4f51f173da5e0800000000000000
+      internalID: -1896799261401232078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_104
+      rect:
+        serializedVersion: 2
+        x: 4369
+        y: 2339
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4309638c1ebb6920800000000000000
+      internalID: 2984688207736144717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_110
+      rect:
+        serializedVersion: 2
+        x: 4529
+        y: 2249
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a71f5eff3db011e0800000000000000
+      internalID: -2229073733000161376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_111
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 2239
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7812c4536fd61760800000000000000
+      internalID: 7428370253110974587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_112
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 2199
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37b717df82c67210800000000000000
+      internalID: 1330464662979327804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_113
+      rect:
+        serializedVersion: 2
+        x: 4379
+        y: 2209
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700a2ba9b036cde30800000000000000
+      internalID: 4529604226719064071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_114
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 2159
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04308829b3db8030800000000000000
+      internalID: 3498122327785223180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_116
+      rect:
+        serializedVersion: 2
+        x: 4369
+        y: 2109
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0c882a2ab4d7a90800000000000000
+      internalID: -7314607057896161114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_117
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 2069
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea80fbb80a6ec7a0800000000000000
+      internalID: -6355025438427804952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_120
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2059
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf8ae646e6f4dbf0800000000000000
+      internalID: -300343806234292258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_121
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 2059
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c266ca1c71109280800000000000000
+      internalID: -9038705227409759545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_122
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 2059
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0adccfbf689b59310800000000000000
+      internalID: 1411238047654923680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_123
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 2039
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c163bf24dc04c8ae0800000000000000
+      internalID: -1545789321758689764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_124
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 2059
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5cae7cc9addc9a0800000000000000
+      internalID: -6211067944170240589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_130
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 2039
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560290d8e9b928010800000000000000
+      internalID: 1189684356852555877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_131
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 2029
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb439b5828b399180800000000000000
+      internalID: -9108183339604822853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_136
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1989
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59bf549979480b370800000000000000
+      internalID: 8336308696909216661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_137
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1999
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5476f5bd030e6d5f0800000000000000
+      internalID: -732151388957612219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_139
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1969
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ced977b0e04ec740800000000000000
+      internalID: 5174144355790347976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_140
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1979
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2677789383904e0800000000000000
+      internalID: -2015017538534546780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_144
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1919
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002d80d7c08ae74f0800000000000000
+      internalID: -829040509798788608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_145
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1909
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafd2fcaf382f2750800000000000000
+      internalID: 6282284259154780076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_146
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1929
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f3a781a8d03eb10800000000000000
+      internalID: 2009464745504685878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_147
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1909
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd39106e388c64a50800000000000000
+      internalID: 6505107180608394205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_148
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1929
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99d9b9aa1cbcc5a0800000000000000
+      internalID: -6499613339499767397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_151
+      rect:
+        serializedVersion: 2
+        x: 5479
+        y: 1919
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1809abafbc205e0800000000000000
+      internalID: -1944767811338337853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_152
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1559
+        width: 172
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f024abb214a04ad0800000000000000
+      internalID: -2719993774567317259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_153
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0584debf4b8af7b80800000000000000
+      internalID: -8394805685121103792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_154
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1569
+        width: 192
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cf3f86d339a0c00800000000000000
+      internalID: 867667770185350238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_155
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b9bdce0ab463720800000000000000
+      internalID: 2825528970762230619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_156
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338edecb8498ca090800000000000000
+      internalID: -8021885890753337293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_157
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1909
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54a93c62001e2bc0800000000000000
+      internalID: -3806087032489794470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_158
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407abff14cf6997e0800000000000000
+      internalID: -1758251291370608892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_159
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1899
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8cd9fb27539cac0800000000000000
+      internalID: -3834474840771933993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_160
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1909
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a766957b1ec54c0800000000000000
+      internalID: -4297311766823142824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_161
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1559
+        width: 172
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec596a62cf293010800000000000000
+      internalID: 1169018090334805216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_162
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645063fd34926d330800000000000000
+      internalID: 3735218312434812230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_165
+      rect:
+        serializedVersion: 2
+        x: 5419
+        y: 1909
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75f428d1262c8190800000000000000
+      internalID: -7958944514668432006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_166
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1809
+        width: 12
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626e643b3fa5b56a0800000000000000
+      internalID: -6459469237801523674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_167
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1579
+        width: 192
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9f37f37d9ce9a50800000000000000
+      internalID: 6529878436053514733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_168
+      rect:
+        serializedVersion: 2
+        x: 2529
+        y: 1609
+        width: 342
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e0a50a9a5307160800000000000000
+      internalID: 7021170821726604866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_169
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 1609
+        width: 352
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb3ecce4ea6c34d0800000000000000
+      internalID: -3153528107608163404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_171
+      rect:
+        serializedVersion: 2
+        x: 3489
+        y: 1579
+        width: 352
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132667efadc7f9a70800000000000000
+      internalID: 8835918273938088497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_172
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 1859
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c4f6d093b835780800000000000000
+      internalID: -8695453378367501303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_173
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 1609
+        width: 352
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f56e0d7a1a5a5f30800000000000000
+      internalID: 4565060242107164149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_174
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 1839
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9d816fc0be8e8e0800000000000000
+      internalID: -1663821621412439561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_175
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 1809
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd852eeb322953f0800000000000000
+      internalID: -911659808771961386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_176
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 1819
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d167d5fc98ea78050800000000000000
+      internalID: 5802798551802934813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_177
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 1809
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e27644f7810a730800000000000000
+      internalID: 4008230603247267471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_178
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 1739
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3647aff3e57580060800000000000000
+      internalID: 6919876889766687843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_179
+      rect:
+        serializedVersion: 2
+        x: 3959
+        y: 1739
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afaf6b62fede7b170800000000000000
+      internalID: 8194279658426399482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_180
+      rect:
+        serializedVersion: 2
+        x: 4909
+        y: 1729
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263f13433a1346870800000000000000
+      internalID: 8675113359247536994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_181
+      rect:
+        serializedVersion: 2
+        x: 7679
+        y: 1729
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93349ae3aedb39420800000000000000
+      internalID: 2635659020713149241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_182
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 1719
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe0f2978644f7350800000000000000
+      internalID: 6016602842690686650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_183
+      rect:
+        serializedVersion: 2
+        x: 4879
+        y: 1699
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0281dc271548080a0800000000000000
+      internalID: -6881354745268856800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_184
+      rect:
+        serializedVersion: 2
+        x: 6239
+        y: 1709
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3697f53ffe0415a0800000000000000
+      internalID: -6551595068632361413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_185
+      rect:
+        serializedVersion: 2
+        x: 4379
+        y: 1699
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3c3ac95d10643a0800000000000000
+      internalID: -6681650980189912126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_186
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 459
+        width: 972
+        height: 1242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc4ecb6aa1982f50800000000000000
+      internalID: 6856890593810730234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_187
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1679
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d95bb19077886d00800000000000000
+      internalID: 966171037622032857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_188
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1659
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a6ea64df2d65500800000000000000
+      internalID: 384726803441150608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_189
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 1649
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4340612352e6383d0800000000000000
+      internalID: -3205597403724512204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_190
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 1619
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b6def2112eae4d0800000000000000
+      internalID: -3104420429672125555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_191
+      rect:
+        serializedVersion: 2
+        x: 3319
+        y: 1589
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73cc26ad57937740800000000000000
+      internalID: 5148625227490313086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_192
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 1619
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166e8c3a530d1a4c0800000000000000
+      internalID: -4277909242225564063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_193
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 1609
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900006efadd7386f0800000000000000
+      internalID: -683564338906136567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_194
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 1619
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d086d4e5b4e3c1d0800000000000000
+      internalID: -3331567829444558640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_195
+      rect:
+        serializedVersion: 2
+        x: 4569
+        y: 449
+        width: 1002
+        height: 1192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0139e1e749b35370800000000000000
+      internalID: 8310189455812669711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_196
+      rect:
+        serializedVersion: 2
+        x: 6704
+        y: 464
+        width: 1012
+        height: 1202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8c4ca43b81f21c0800000000000000
+      internalID: -4526371942151436050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_197
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 1569
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175d8cdcb1e88af60800000000000000
+      internalID: 8045836984365143409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_198
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 1589
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec6567e03fdd63a0800000000000000
+      internalID: -6670430071932228381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_199
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1559
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75018f76cc654ee10800000000000000
+      internalID: 2225999551745495127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_200
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1549
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96eaa7e6fd97f070800000000000000
+      internalID: 8140148535269713563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_201
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 1539
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c132fc786be01a60800000000000000
+      internalID: 7642867401653105097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_202
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 1529
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc0ff026d31e3a70800000000000000
+      internalID: 8808499731580783814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_203
+      rect:
+        serializedVersion: 2
+        x: 4359
+        y: 1509
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc5cff36545d0a20800000000000000
+      internalID: 3030170853707635959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_204
+      rect:
+        serializedVersion: 2
+        x: 4379
+        y: 1509
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 811a9ea681b361c90800000000000000
+      internalID: -7199501978246209256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_205
+      rect:
+        serializedVersion: 2
+        x: 4219
+        y: 1499
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61061a75b2cd13730800000000000000
+      internalID: 3977202024656756758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_206
+      rect:
+        serializedVersion: 2
+        x: 3179
+        y: 1459
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e51ea2a0f933650800000000000000
+      internalID: 6211483177091948096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_207
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 779
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e62f6373e272d100800000000000000
+      internalID: 131293660366972646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_208
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 369
+        width: 2562
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c29fc8eb001be10800000000000000
+      internalID: 2211549710424550472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_209
+      rect:
+        serializedVersion: 2
+        x: 5589
+        y: 779
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f2ff6e7836acd40800000000000000
+      internalID: 5605402121563221801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: players and entity na updated 1_210
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 609
+        width: 62
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873898911e4302d10800000000000000
+      internalID: 2098735567755379576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 473e65797f7e3a849b2774e3522fe744
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      players and entity na updated 1_0: 8937798220948833028
+      players and entity na updated 1_1: -8214873263829945246
+      players and entity na updated 1_10: 7726631890159136171
+      players and entity na updated 1_100: 461521861659977659
+      players and entity na updated 1_101: -433541173537361235
+      players and entity na updated 1_102: -2048583586360269490
+      players and entity na updated 1_103: -1896799261401232078
+      players and entity na updated 1_104: 2984688207736144717
+      players and entity na updated 1_105: -5417108477604614091
+      players and entity na updated 1_106: -1595404843505681311
+      players and entity na updated 1_107: 3327735591735898391
+      players and entity na updated 1_108: 2676936626575240053
+      players and entity na updated 1_109: 1427817940112285496
+      players and entity na updated 1_11: -4939944782506973399
+      players and entity na updated 1_110: -2229073733000161376
+      players and entity na updated 1_111: 7428370253110974587
+      players and entity na updated 1_112: 1330464662979327804
+      players and entity na updated 1_113: 4529604226719064071
+      players and entity na updated 1_114: 3498122327785223180
+      players and entity na updated 1_115: 8654389376382888701
+      players and entity na updated 1_116: -7314607057896161114
+      players and entity na updated 1_117: -6355025438427804952
+      players and entity na updated 1_118: 171665183553736912
+      players and entity na updated 1_119: -6189430875415268440
+      players and entity na updated 1_12: -6689800245485409805
+      players and entity na updated 1_120: -300343806234292258
+      players and entity na updated 1_121: -9038705227409759545
+      players and entity na updated 1_122: 1411238047654923680
+      players and entity na updated 1_123: -1545789321758689764
+      players and entity na updated 1_124: -6211067944170240589
+      players and entity na updated 1_125: -2038257555737302475
+      players and entity na updated 1_126: 6412198274949848182
+      players and entity na updated 1_127: -153243063000070152
+      players and entity na updated 1_128: -4936473702595097771
+      players and entity na updated 1_129: 996205743122996282
+      players and entity na updated 1_13: 5202426915836714001
+      players and entity na updated 1_130: 1189684356852555877
+      players and entity na updated 1_131: -9108183339604822853
+      players and entity na updated 1_132: -8174612071294816931
+      players and entity na updated 1_133: 8718496533615026688
+      players and entity na updated 1_134: 3990848302466426524
+      players and entity na updated 1_135: -5083636192396121813
+      players and entity na updated 1_136: 8336308696909216661
+      players and entity na updated 1_137: -732151388957612219
+      players and entity na updated 1_138: -8150259949125226592
+      players and entity na updated 1_139: 5174144355790347976
+      players and entity na updated 1_14: -221589694694641954
+      players and entity na updated 1_140: -2015017538534546780
+      players and entity na updated 1_141: 7044140290138894395
+      players and entity na updated 1_142: -5435179425605980060
+      players and entity na updated 1_143: -4188530679616529299
+      players and entity na updated 1_144: -829040509798788608
+      players and entity na updated 1_145: 6282284259154780076
+      players and entity na updated 1_146: 2009464745504685878
+      players and entity na updated 1_147: 6505107180608394205
+      players and entity na updated 1_148: -6499613339499767397
+      players and entity na updated 1_149: -3567764268703290242
+      players and entity na updated 1_15: 2228604270722418415
+      players and entity na updated 1_150: 1812733070018199683
+      players and entity na updated 1_151: -1944767811338337853
+      players and entity na updated 1_152: -2719993774567317259
+      players and entity na updated 1_153: -8394805685121103792
+      players and entity na updated 1_154: 867667770185350238
+      players and entity na updated 1_155: 2825528970762230619
+      players and entity na updated 1_156: -8021885890753337293
+      players and entity na updated 1_157: -3806087032489794470
+      players and entity na updated 1_158: -1758251291370608892
+      players and entity na updated 1_159: -3834474840771933993
+      players and entity na updated 1_16: 249011761190201367
+      players and entity na updated 1_160: -4297311766823142824
+      players and entity na updated 1_161: 1169018090334805216
+      players and entity na updated 1_162: 3735218312434812230
+      players and entity na updated 1_163: 6592877949778112302
+      players and entity na updated 1_164: 2975793366926176807
+      players and entity na updated 1_165: -7958944514668432006
+      players and entity na updated 1_166: -6459469237801523674
+      players and entity na updated 1_167: 6529878436053514733
+      players and entity na updated 1_168: 7021170821726604866
+      players and entity na updated 1_169: -3153528107608163404
+      players and entity na updated 1_17: -8494276171145516168
+      players and entity na updated 1_170: -7575121169120571304
+      players and entity na updated 1_171: 8835918273938088497
+      players and entity na updated 1_172: -8695453378367501303
+      players and entity na updated 1_173: 4565060242107164149
+      players and entity na updated 1_174: -1663821621412439561
+      players and entity na updated 1_175: -911659808771961386
+      players and entity na updated 1_176: 5802798551802934813
+      players and entity na updated 1_177: 4008230603247267471
+      players and entity na updated 1_178: 6919876889766687843
+      players and entity na updated 1_179: 8194279658426399482
+      players and entity na updated 1_18: 189723695554610415
+      players and entity na updated 1_180: 8675113359247536994
+      players and entity na updated 1_181: 2635659020713149241
+      players and entity na updated 1_182: 6016602842690686650
+      players and entity na updated 1_183: -6881354745268856800
+      players and entity na updated 1_184: -6551595068632361413
+      players and entity na updated 1_185: -6681650980189912126
+      players and entity na updated 1_186: 6856890593810730234
+      players and entity na updated 1_187: 966171037622032857
+      players and entity na updated 1_188: 384726803441150608
+      players and entity na updated 1_189: -3205597403724512204
+      players and entity na updated 1_19: -3829247296052618463
+      players and entity na updated 1_190: -3104420429672125555
+      players and entity na updated 1_191: 5148625227490313086
+      players and entity na updated 1_192: -4277909242225564063
+      players and entity na updated 1_193: -683564338906136567
+      players and entity na updated 1_194: -3331567829444558640
+      players and entity na updated 1_195: 8310189455812669711
+      players and entity na updated 1_196: -4526371942151436050
+      players and entity na updated 1_197: 8045836984365143409
+      players and entity na updated 1_198: -6670430071932228381
+      players and entity na updated 1_199: 2225999551745495127
+      players and entity na updated 1_2: -9071015713406611158
+      players and entity na updated 1_20: -3642611783361294292
+      players and entity na updated 1_200: 8140148535269713563
+      players and entity na updated 1_201: 7642867401653105097
+      players and entity na updated 1_202: 8808499731580783814
+      players and entity na updated 1_203: 3030170853707635959
+      players and entity na updated 1_204: -7199501978246209256
+      players and entity na updated 1_205: 3977202024656756758
+      players and entity na updated 1_206: 6211483177091948096
+      players and entity na updated 1_207: 131293660366972646
+      players and entity na updated 1_208: 2211549710424550472
+      players and entity na updated 1_209: 5605402121563221801
+      players and entity na updated 1_21: 3908053973877089684
+      players and entity na updated 1_210: 2098735567755379576
+      players and entity na updated 1_211: 1872905097
+      players and entity na updated 1_22: 6375139741827149218
+      players and entity na updated 1_23: -2096071359171983210
+      players and entity na updated 1_24: -3555202505014214555
+      players and entity na updated 1_25: -9091090364098954452
+      players and entity na updated 1_26: -5677172509177157022
+      players and entity na updated 1_27: 4180290544087943178
+      players and entity na updated 1_28: 2640143417397411145
+      players and entity na updated 1_29: -8792619451665388731
+      players and entity na updated 1_3: 2977978192817921650
+      players and entity na updated 1_30: 2108994492572874861
+      players and entity na updated 1_31: 7965104673975590879
+      players and entity na updated 1_32: -321533858744500280
+      players and entity na updated 1_33: 978885164831896820
+      players and entity na updated 1_34: -5053940444586881051
+      players and entity na updated 1_35: -2482294269154095831
+      players and entity na updated 1_36: -686018404298633472
+      players and entity na updated 1_37: -8803664423940008908
+      players and entity na updated 1_38: 2553592156541450323
+      players and entity na updated 1_39: -6716173121936213488
+      players and entity na updated 1_4: -3827496234847232722
+      players and entity na updated 1_40: -1280035525444885207
+      players and entity na updated 1_41: 2944730185583251521
+      players and entity na updated 1_42: -7304784513685037004
+      players and entity na updated 1_43: -8044944041531639680
+      players and entity na updated 1_44: 7378428699193525588
+      players and entity na updated 1_45: -1980446941103815584
+      players and entity na updated 1_46: 8116486498426556419
+      players and entity na updated 1_47: 6613697132999603903
+      players and entity na updated 1_48: 8315195622624078126
+      players and entity na updated 1_49: 579532833933530296
+      players and entity na updated 1_5: 6596477148919615136
+      players and entity na updated 1_50: 1139715387212378931
+      players and entity na updated 1_51: -7032658325389409792
+      players and entity na updated 1_52: 3585664138661741737
+      players and entity na updated 1_53: 4643553439909116733
+      players and entity na updated 1_54: -1562848857695350652
+      players and entity na updated 1_55: 8546946195052962853
+      players and entity na updated 1_56: -5873010680292189165
+      players and entity na updated 1_57: -5667007676334570905
+      players and entity na updated 1_58: 5093902846328121314
+      players and entity na updated 1_59: -5951394929297055354
+      players and entity na updated 1_6: -3158713098577041165
+      players and entity na updated 1_60: -897463943213734201
+      players and entity na updated 1_61: 6263987052240562573
+      players and entity na updated 1_62: 4209709115878099185
+      players and entity na updated 1_63: 2409891681871164863
+      players and entity na updated 1_64: -987163175297080879
+      players and entity na updated 1_65: -5376059982401784320
+      players and entity na updated 1_66: -5632223885488131603
+      players and entity na updated 1_67: -6555343515186318938
+      players and entity na updated 1_68: -3512069838132379582
+      players and entity na updated 1_69: -1790114002342313244
+      players and entity na updated 1_7: -6056221903223948643
+      players and entity na updated 1_70: 4939105908078803174
+      players and entity na updated 1_71: 6897122892489259020
+      players and entity na updated 1_72: 2247156606988441632
+      players and entity na updated 1_73: 1666854441888804702
+      players and entity na updated 1_74: 328713613071513165
+      players and entity na updated 1_75: -1270371848641566756
+      players and entity na updated 1_76: -4359720408395722184
+      players and entity na updated 1_77: 919603010214526792
+      players and entity na updated 1_78: 4574760145119418423
+      players and entity na updated 1_79: 2835313436153285308
+      players and entity na updated 1_8: 2784350313960625500
+      players and entity na updated 1_80: -1755491059015668804
+      players and entity na updated 1_81: 1595949910727104728
+      players and entity na updated 1_82: -1439247972065840662
+      players and entity na updated 1_83: 3921551479937796632
+      players and entity na updated 1_84: 401146476822577884
+      players and entity na updated 1_85: -8448194153906376460
+      players and entity na updated 1_86: 5192844689662782819
+      players and entity na updated 1_87: -7632216254692839568
+      players and entity na updated 1_88: -622796277578536383
+      players and entity na updated 1_89: 2886803662182808972
+      players and entity na updated 1_9: -7009411000856372705
+      players and entity na updated 1_90: 6662450888639587321
+      players and entity na updated 1_91: -5334473304758082497
+      players and entity na updated 1_92: -8020569110316259323
+      players and entity na updated 1_93: -7283212211612721600
+      players and entity na updated 1_94: 1554054625566545917
+      players and entity na updated 1_95: 3782654953453449487
+      players and entity na updated 1_96: 445327054361217754
+      players and entity na updated 1_97: 7273062689524409086
+      players and entity na updated 1_98: -6665931328511547746
+      players and entity na updated 1_99: 1120352327246484610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

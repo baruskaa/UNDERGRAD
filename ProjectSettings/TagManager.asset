@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Walls
+  - 
   - Water
   - UI
   - 
@@ -41,11 +41,5 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-  - name: Infront Player
-    uniqueID: 1906649731
-    locked: 0
-=======
->>>>>>> b4cd3449ca9a77167687ed7636b5f155e63037db
   m_RenderingLayers:
   - Default

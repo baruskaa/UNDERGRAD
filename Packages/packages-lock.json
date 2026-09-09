@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.johanjimenez.folder-color": {
+      "version": "https://github.com/JohanJimenex/unity-folder-color.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "81b79365f65adfc68c408ec7e8aca95fb7ac6ba4"
+    },
     "com.unity.2d.animation": {
       "version": "10.2.3",
       "depth": 1,
