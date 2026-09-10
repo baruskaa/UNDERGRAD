@@ -116,12 +116,12 @@ TextureImporter:
       name: First Aid Kit64x64 (1)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 89
-        width: 612
-        height: 462
+        x: 0
+        y: 11
+        width: 629
+        height: 629
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 22644c661ee15ea4088370361d705252
     internalID: 0
     vertices: []
     indices: 

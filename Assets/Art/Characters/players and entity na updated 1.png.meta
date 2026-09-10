@@ -878,10 +878,10 @@ TextureImporter:
       name: players and entity na updated 1_6
       rect:
         serializedVersion: 2
-        x: 1730
-        y: 3139
-        width: 210
-        height: 210
+        x: 1740
+        y: 3167
+        width: 185
+        height: 185
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

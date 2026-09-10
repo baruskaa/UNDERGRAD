@@ -9,8 +9,13 @@ public class AIChase : MonoBehaviour
 {
     [Header("Target Settings")]
     public GameObject player;
-    public float detectionDistance = 7f;
     public LayerMask obstacleLayer;
+
+    [Header("Flashlight Detection Settings")]
+    [Tooltip("The GameObject or Light component representing the player's flashlight.")]
+    public GameObject playerFlashlight;
+    public float flashlightOnDetectionDistance = 20f;
+    public float flashlightOffDetectionDistance = 3f;
 
     [Header("Movement Speeds")]
     public float walkSpeed = 2f;
@@ -25,14 +30,21 @@ public class AIChase : MonoBehaviour
     public float reachDistance = 0.5f;
     public List<GameObject> objectsToActivate;
 
-    [Header("Jumpscare & GameOver")]
-    public GameObject jumpscareUI;             // Assign your Jumpscare Image/Canvas object
-    public GameOverManager gameOverManager;   // Reference to your GameOverManager script
-    public float delayBeforeGameOver = 2f;     // Delay time in seconds
+    [Header("Jumpscare Settings")]
+    [Tooltip("The Jumpscare Canvas/Panel GameObject (must have JumpscareManager script attached).")]
+    public GameObject jumpscareUI;
 
-    [Header("Audio Settings")]
+    [Header("Audio Clips")]
     public AudioClip reachPlayerSound;
     [Range(0f, 1f)] public float soundVolume = 1f;
+
+    [Header("Proximity Audio Settings")]
+    [Tooltip("Plays when player is within 25f (Far)")]
+    public AudioClip audioFar;       // Triggered <= 25f
+    [Tooltip("Plays when player is within 10f (Medium)")]
+    public AudioClip audioMedium;    // Triggered <= 10f
+    [Tooltip("Plays when player is within 5f (Close)")]
+    public AudioClip audioClose;     // Triggered <= 5f
 
     private NavMeshAgent agent;
     private Animator animator;
@@ -40,11 +52,18 @@ public class AIChase : MonoBehaviour
     private float roamTimer;
     private bool hasReachedPlayer = false;
 
+    // Track current playing proximity state to prevent restarting clips every frame
+    private enum AudioProximityState { None, Far, Medium, Close }
+    private AudioProximityState currentAudioState = AudioProximityState.None;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        // Enable looping for continuous background/proximity audio
+        audioSource.loop = true;
 
         // Hide jumpscare object on start
         if (jumpscareUI != null) jumpscareUI.SetActive(false);
@@ -65,16 +84,22 @@ public class AIChase : MonoBehaviour
         if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
         {
             StopAgent();
+            UpdateProximityAudio(float.MaxValue); // Silence/reset distance audio during dialogue
             return;
         }
 
         if (player == null)
         {
             StopAgent();
+            UpdateProximityAudio(float.MaxValue);
             return;
         }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        // Manage background proximity audio depending on distance
+        UpdateProximityAudio(distanceToPlayer);
+
         bool canSeePlayer = HasLineOfSight(distanceToPlayer);
 
         if (canSeePlayer)
@@ -87,8 +112,7 @@ public class AIChase : MonoBehaviour
             // Trigger sequence when reaching the player
             if (distanceToPlayer <= reachDistance && !hasReachedPlayer)
             {
-                hasReachedPlayer = true;
-                StartCoroutine(TriggerJumpscareSequence());
+                TriggerPlayerCaught();
             }
         }
         else
@@ -102,35 +126,89 @@ public class AIChase : MonoBehaviour
         UpdateAnimations();
     }
 
-    private IEnumerator TriggerJumpscareSequence()
+    private void UpdateProximityAudio(float distanceToPlayer)
     {
-        // 1. Freeze enemy movement and animation immediately
+        AudioProximityState newState = AudioProximityState.None;
+
+        if (distanceToPlayer <= 5f)
+        {
+            newState = AudioProximityState.Close;
+        }
+        else if (distanceToPlayer <= 10f)
+        {
+            newState = AudioProximityState.Medium;
+        }
+        else if (distanceToPlayer <= 25f)
+        {
+            newState = AudioProximityState.Far;
+        }
+
+        // Switch audio clip only when transitioning to a new distance threshold
+        if (newState != currentAudioState)
+        {
+            currentAudioState = newState;
+
+            switch (currentAudioState)
+            {
+                case AudioProximityState.Close:
+                    PlayProximityClip(audioClose);
+                    break;
+                case AudioProximityState.Medium:
+                    PlayProximityClip(audioMedium);
+                    break;
+                case AudioProximityState.Far:
+                    PlayProximityClip(audioFar);
+                    break;
+                case AudioProximityState.None:
+                    audioSource.Stop();
+                    break;
+            }
+        }
+    }
+
+    private void PlayProximityClip(AudioClip clip)
+    {
+        if (clip == null)
+        {
+            audioSource.Stop();
+            return;
+        }
+
+        audioSource.clip = clip;
+        audioSource.volume = soundVolume;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    private void TriggerPlayerCaught()
+    {
+        hasReachedPlayer = true;
+
+        // 1. Freeze enemy movement and animation
         StopAgent();
 
-        // 2. Play the jumpscare audio clip
+        // 2. Play the jumpscare audio clip (stops proximity looping clip)
         PlayReachSound();
 
-        // 3. Show jumpscare UI and activate any designated GameObjects
-        if (jumpscareUI != null) jumpscareUI.SetActive(true);
+        // 3. Activate extra designated GameObjects
         ActivateObjects();
 
-        // 4. Wait for the specified delay (e.g., 2 seconds) with the jumpscare visible
-        yield return new WaitForSeconds(delayBeforeGameOver);
-
-        // 5. Fade in the Game Over UI OVER the jumpscare (jumpscare stays active underneath)
-        if (gameOverManager != null)
+        // 4. Enable Jumpscare UI (JumpscareManager will handle the delay to Game Over)
+        if (jumpscareUI != null)
         {
-            gameOverManager.TriggerGameOver();
-        }
-        else
-        {
-            Debug.LogWarning("GameOverManager reference missing on AIChase script.");
+            jumpscareUI.SetActive(true);
         }
     }
 
     private bool HasLineOfSight(float distanceToPlayer)
     {
-        if (distanceToPlayer > detectionDistance) return false;
+        // Check if flashlight is active
+        bool isFlashlightOn = playerFlashlight != null && playerFlashlight.activeSelf;
+
+        // Set detection distance dynamically based on flashlight state
+        float currentDetectionDistance = isFlashlightOn ? flashlightOnDetectionDistance : flashlightOffDetectionDistance;
+
+        if (distanceToPlayer > currentDetectionDistance) return false;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceToPlayer, obstacleLayer);
@@ -217,9 +295,13 @@ public class AIChase : MonoBehaviour
 
     private void PlayReachSound()
     {
-        if (reachPlayerSound != null && audioSource != null)
+        if (audioSource != null)
         {
-            audioSource.PlayOneShot(reachPlayerSound, soundVolume);
+            audioSource.Stop(); // Stop proximity loops
+            if (reachPlayerSound != null)
+            {
+                audioSource.PlayOneShot(reachPlayerSound, soundVolume);
+            }
         }
     }
 }

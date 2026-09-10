@@ -116,12 +116,12 @@ TextureImporter:
       name: PancitCanton64x64 (1)_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 129
-        width: 472
-        height: 362
+        x: 0
+        y: 0
+        width: 640
+        height: 640
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e89357ba30c81b2448db0ec703b7d106
     internalID: 0
     vertices: []
     indices: 

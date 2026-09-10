@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CanvasGroup))]
 public class GameOverManager : MonoBehaviour
 {
+    [Header("Scene Settings")]
+    [Tooltip("If checked, uses Scene Names instead of Build Indices.")]
+    [SerializeField] private bool useSceneName = false;
+
+    [Header("Scene Names")]
+    [SerializeField] private string restartSceneName = "";
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
+
+    [Header("Scene Indices (if useSceneName is unchecked)")]
+    [SerializeField] private int restartSceneIndex = 1;
+    [SerializeField] private int mainMenuSceneIndex = 0;
+
     [Header("Fade Settings")]
     [SerializeField] private float fadeDuration = 1f;
 
@@ -48,13 +60,37 @@ public class GameOverManager : MonoBehaviour
     public void RetryGame()
     {
         Time.timeScale = 1f; // Reset time scale before scene load
-        SceneManager.LoadScene(1);
+
+        if (useSceneName)
+        {
+            // If restartSceneName is blank, reloads the current active scene automatically
+            if (string.IsNullOrEmpty(restartSceneName))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                SceneManager.LoadScene(restartSceneName);
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene(restartSceneIndex);
+        }
     }
 
     // Attached to Main Menu Button
     public void GoToMainMenu()
     {
         Time.timeScale = 1f; // Reset time scale before scene load
-        SceneManager.LoadScene(0);
+
+        if (useSceneName)
+        {
+            SceneManager.LoadScene(mainMenuSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(mainMenuSceneIndex);
+        }
     }
 }

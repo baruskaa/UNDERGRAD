@@ -12,6 +12,10 @@ public class DialogueManager : MonoBehaviour
 
     public PlayerManager playerManager;
 
+    [Header("UI ANIMATIONS")]
+    [Tooltip("Animators for Canvas UI elements that slide out during dialogue and slide back in after.")]
+    public Animator[] uiElementAnimators;
+
     [Header("PORTRAIT SETTINGS")]
     [Tooltip("The Image UI component on the LEFT (for NPCs)")]
     public Image leftCharacterIcon;
@@ -72,6 +76,9 @@ public class DialogueManager : MonoBehaviour
         DialogueBox.SetActive(true);
         isDialogueActive = true;
 
+        // Slide out canvas elements when dialogue starts
+        TriggerUIAnimations("SlideOut");
+
         if (animator != null)
         {
             animator.Play("show");
@@ -121,7 +128,6 @@ public class DialogueManager : MonoBehaviour
         // 2. Handle Speaker Portraits (Left vs Right)
         if (currentLine.character.isPlayer)
         {
-            // Show Right Portrait (Player), Hide Left
             if (rightCharacterIcon != null)
             {
                 rightCharacterIcon.sprite = currentLine.character.icon;
@@ -134,7 +140,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            // Show Left Portrait (NPC), Hide Right
             if (leftCharacterIcon != null)
             {
                 leftCharacterIcon.sprite = currentLine.character.icon;
@@ -171,22 +176,21 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
 
-        // Hide full-screen cutscene panel immediately when dialogue concludes
         if (fullscreenImageContainer != null)
         {
             fullscreenImageContainer.SetActive(false);
         }
 
-        // 1. Play the slide-down animation while portraits are still visible
         if (animator != null)
         {
             animator.Play("hide");
         }
 
-        // 2. Wait for the slide-down animation to complete
+        // Slide canvas elements back in when dialogue ends
+        TriggerUIAnimations("SlideIn");
+
         yield return new WaitForSeconds(0.5f);
 
-        // 3. Hide both portraits AFTER the animation finishes sliding down
         if (leftCharacterIcon != null) leftCharacterIcon.gameObject.SetActive(false);
         if (rightCharacterIcon != null) rightCharacterIcon.gameObject.SetActive(false);
 
@@ -202,5 +206,18 @@ public class DialogueManager : MonoBehaviour
     public void DisableDialogue()
     {
         currentTrigger = null;
+    }
+
+    private void TriggerUIAnimations(string stateName)
+    {
+        if (uiElementAnimators == null) return;
+
+        foreach (Animator elemAnimator in uiElementAnimators)
+        {
+            if (elemAnimator != null)
+            {
+                elemAnimator.Play(stateName);
+            }
+        }
     }
 }

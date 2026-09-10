@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItems:
   - item: {fileID: 11400000, guid: 56d38a9086fea8347a15bce876f463b6, type: 2}
-  - item: {fileID: 11400000, guid: 4fb5ed281353f2747980289e8735e7ef, type: 2}
-  - item: {fileID: 11400000, guid: 4fb5ed281353f2747980289e8735e7ef, type: 2}
   - item: {fileID: 11400000, guid: e11f8229ecfffb94ea1a0e430639581a, type: 2}
-  - item: {fileID: 11400000, guid: 67d67d6526b0b9847ba6ce5e5ddebc8e, type: 2}
+  - item: {fileID: 11400000, guid: 4fb5ed281353f2747980289e8735e7ef, type: 2}
   - item: {fileID: 11400000, guid: 88098ed3829dce14f881c71561f22abf, type: 2}
   - item: {fileID: 11400000, guid: 42577d502a3fb2f4bafc44c71542237c, type: 2}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
   - item: {fileID: 0}
   <Size>k__BackingField: 8

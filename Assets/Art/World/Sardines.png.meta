@@ -116,12 +116,12 @@ TextureImporter:
       name: Sardines_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 49
-        width: 302
-        height: 552
+        x: 9
+        y: 18
+        width: 622
+        height: 622
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 96ad750be913dad46ac89c6e686b8e4d
     internalID: 0
     vertices: []
     indices: 
