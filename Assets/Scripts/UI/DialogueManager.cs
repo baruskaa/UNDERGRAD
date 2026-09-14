@@ -24,12 +24,13 @@ public class DialogueManager : MonoBehaviour
     public Image rightCharacterIcon;
 
     [Header("FULLSCREEN IMAGE UI")]
-    public GameObject fullscreenImageContainer; // Parent panel or GameObject holding the Image
-    public Image fullscreenImageDisplay;        // UI Image component showing the sprite
+    public GameObject fullscreenImageContainer;
+    public Image fullscreenImageDisplay;
 
     [Header("TEXT SETTINGS")]
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
+    public GameObject continuePrompt;
 
     private Queue<DialogueLine> lines;
 
@@ -44,6 +45,11 @@ public class DialogueManager : MonoBehaviour
     public bool isTimelineControllingPlayer = false;
 
     public event System.Action OnDialogueEnded;
+
+    // NEW:
+    // True only when the current dialogue line has completely finished typing
+    private bool isTypingFinished = false;
+
 
     private void Awake()
     {
@@ -60,14 +66,20 @@ public class DialogueManager : MonoBehaviour
         lines = new Queue<DialogueLine>();
     }
 
+
     private void Update()
     {
-        // Press Space to advance to the next dialogue line
-        if (isDialogueActive && Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        // Space can only advance dialogue AFTER the current line
+        // has completely finished typing
+        if (isDialogueActive &&
+            isTypingFinished &&
+            Keyboard.current != null &&
+            Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             DisplayNextDialogueLine();
         }
     }
+
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger = null)
     {
@@ -75,6 +87,15 @@ public class DialogueManager : MonoBehaviour
 
         DialogueBox.SetActive(true);
         isDialogueActive = true;
+
+        // Reset typing state
+        isTypingFinished = false;
+
+        // Hide continue prompt when dialogue starts
+        if (continuePrompt != null)
+        {
+            continuePrompt.SetActive(false);
+        }
 
         // Slide out canvas elements when dialogue starts
         TriggerUIAnimations("SlideOut");
@@ -94,6 +115,7 @@ public class DialogueManager : MonoBehaviour
         DisplayNextDialogueLine();
     }
 
+
     public void DisplayNextDialogueLine()
     {
         if (lines.Count == 0)
@@ -102,7 +124,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // New dialogue line is now being typed
+        isTypingFinished = false;
+
+        // Hide Continue prompt while typing
+        if (continuePrompt != null)
+        {
+            continuePrompt.SetActive(false);
+        }
+
         DialogueLine currentLine = lines.Dequeue();
+
 
         // 1. Handle Fullscreen Image per line
         if (currentLine.hasImage && currentLine.fullscreenImage != null)
@@ -125,7 +157,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // 2. Handle Speaker Portraits (Left vs Right)
+
+        // 2. Handle Speaker Portraits
         if (currentLine.character.isPlayer)
         {
             if (rightCharacterIcon != null)
@@ -133,6 +166,7 @@ public class DialogueManager : MonoBehaviour
                 rightCharacterIcon.sprite = currentLine.character.icon;
                 rightCharacterIcon.gameObject.SetActive(true);
             }
+
             if (leftCharacterIcon != null)
             {
                 leftCharacterIcon.gameObject.SetActive(false);
@@ -145,11 +179,13 @@ public class DialogueManager : MonoBehaviour
                 leftCharacterIcon.sprite = currentLine.character.icon;
                 leftCharacterIcon.gameObject.SetActive(true);
             }
+
             if (rightCharacterIcon != null)
             {
                 rightCharacterIcon.gameObject.SetActive(false);
             }
         }
+
 
         characterName.text = currentLine.character.name;
 
@@ -157,24 +193,54 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(currentLine));
     }
 
+
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
+        // Make sure Continue is hidden while typing
+        isTypingFinished = false;
+
+        if (continuePrompt != null)
+        {
+            continuePrompt.SetActive(false);
+        }
+
         dialogueArea.text = "";
+
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
+
             yield return new WaitForSeconds(typingSpeed);
         }
+
+
+        // IMPORTANT:
+        // This happens ONLY after the entire sentence has finished typing
+        isTypingFinished = true;
+
+        if (continuePrompt != null)
+        {
+            continuePrompt.SetActive(true);
+        }
     }
+
 
     public void EndDialogue()
     {
         StartCoroutine(EndDialogueRoutine());
     }
 
+
     private IEnumerator EndDialogueRoutine()
     {
         isDialogueActive = false;
+
+        isTypingFinished = false;
+
+        if (continuePrompt != null)
+        {
+            continuePrompt.SetActive(false);
+        }
 
         if (fullscreenImageContainer != null)
         {
@@ -191,26 +257,35 @@ public class DialogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        if (leftCharacterIcon != null) leftCharacterIcon.gameObject.SetActive(false);
-        if (rightCharacterIcon != null) rightCharacterIcon.gameObject.SetActive(false);
+        if (leftCharacterIcon != null)
+            leftCharacterIcon.gameObject.SetActive(false);
+
+        if (rightCharacterIcon != null)
+            rightCharacterIcon.gameObject.SetActive(false);
 
         DialogueBox.SetActive(false);
 
-        if (currentTrigger != null) currentTrigger.OnDialogueComplete();
+        if (currentTrigger != null)
+        {
+            currentTrigger.OnDialogueComplete();
+        }
 
         DisableDialogue();
 
         OnDialogueEnded?.Invoke();
     }
 
+
     public void DisableDialogue()
     {
         currentTrigger = null;
     }
 
+
     private void TriggerUIAnimations(string stateName)
     {
-        if (uiElementAnimators == null) return;
+        if (uiElementAnimators == null)
+            return;
 
         foreach (Animator elemAnimator in uiElementAnimators)
         {
