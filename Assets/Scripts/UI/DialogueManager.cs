@@ -27,12 +27,19 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
 
+    [Header("PLAYER STATS ANIMATION")]
+    [Tooltip("Drag your 'Player Stats' GameObject here (the one with the Animator component)")]
+    public Animator playerStatsAnimator;
+    public string playerStatsHideState = "SlideOut"; // Animation to hide stats during dialogue
+    public string playerStatsShowState = "SlideIn";  // Animation to bring stats back after dialogue
+
     private Queue<DialogueLine> lines;
 
     public bool isDialogueActive = false;
 
     public float typingSpeed = 0.02f;
 
+    [Header("DIALOGUE BOX ANIMATOR")]
     public Animator animator;
 
     private DialogueTrigger currentTrigger;
@@ -72,9 +79,16 @@ public class DialogueManager : MonoBehaviour
         DialogueBox.SetActive(true);
         isDialogueActive = true;
 
+        // 1. Play Dialogue Box show animation
         if (animator != null)
         {
             animator.Play("show");
+        }
+
+        // 2. Play Player Stats hide animation (SlideOut)
+        if (playerStatsAnimator != null)
+        {
+            playerStatsAnimator.Play(playerStatsHideState);
         }
 
         lines.Clear();
@@ -177,16 +191,21 @@ public class DialogueManager : MonoBehaviour
             fullscreenImageContainer.SetActive(false);
         }
 
-        // 1. Play the slide-down animation while portraits are still visible
+        // 1. Play the dialogue box hide animation & slide player stats back in
         if (animator != null)
         {
             animator.Play("hide");
         }
 
-        // 2. Wait for the slide-down animation to complete
+        if (playerStatsAnimator != null)
+        {
+            playerStatsAnimator.Play(playerStatsShowState);
+        }
+
+        // 2. Wait for the animation transition to complete
         yield return new WaitForSeconds(0.5f);
 
-        // 3. Hide both portraits AFTER the animation finishes sliding down
+        // 3. Hide both portraits AFTER the animation finishes
         if (leftCharacterIcon != null) leftCharacterIcon.gameObject.SetActive(false);
         if (rightCharacterIcon != null) rightCharacterIcon.gameObject.SetActive(false);
 

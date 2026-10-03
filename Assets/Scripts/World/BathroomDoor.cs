@@ -1,100 +1,155 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BathroomDoor : MonoBehaviour
 {
-    [Header("Door GameObjects")]
-    [SerializeField] private GameObject closedDoor;
-    [SerializeField] private GameObject openedDoor;
+    [Header("Door Models / Sprites")]
+    public GameObject closedDoorObject;
+    public GameObject openDoorObject;
 
-    [Header("Door State")]
-    [SerializeField] private bool isClosed = true;
-    [SerializeField] private bool isOpened = false;
+    [Header("Objects to Enable when Door Opens")]
+    [Tooltip("Drag any lights, triggers, or items inside the cubicle that should turn on when opened.")]
+    public GameObject[] objectsToEnable;
 
-    [Header("Post-Open Objects")]
-    [SerializeField] private List<GameObject> objectsToEnable = new List<GameObject>();
+    [Header("Interaction & Alert Settings")]
+    [Tooltip("UI prompt or alert object shown when player is near (e.g. 'Press Q to Open')")]
+    public GameObject playerAlert;
+    public KeyCode interactKey = KeyCode.Q;
+    public string playerTag = "Player";
 
-    [Header("Player Feedback")]
-    [SerializeField] private GameObject playerAlert;
+    [Header("Save System Reference")]
+    public SaveableWorldObject saveableObject;
 
+    [HideInInspector]
+    public bool isOpen = false;
     private bool isPlayerInRange = false;
 
     private void Start()
     {
-        // Set initial visual states
-        UpdateDoorStateVisuals();
-    }
-
-    private void Update()
-    {
-        // If the door is already opened, ignore interaction
-        if (isOpened) return;
-
-        // Press 'E' to open the door (or change to Keyboard.current.qKey for 'Q')
-        if (isPlayerInRange && Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
+        if (saveableObject == null)
         {
-            OpenDoor();
+            saveableObject = GetComponent<SaveableWorldObject>();
         }
-    }
 
-    private void OpenDoor()
-    {
-        isClosed = false;
-        isOpened = true;
-
-        // Hide alert icon
         if (playerAlert != null)
         {
             playerAlert.SetActive(false);
         }
 
-        // Toggle door objects
-        UpdateDoorStateVisuals();
+        // Sync visual state on start if save state was loaded
+        if (saveableObject != null)
+        {
+            isOpen = saveableObject.IsStateChanged;
+        }
 
-        // Enable secondary objects
+        UpdateDoorState();
+    }
+
+    private void Update()
+    {
+        // Only allow interaction if door is NOT yet opened
+        if (!isOpen && isPlayerInRange && Input.GetKeyDown(interactKey))
+        {
+            InteractWithDoor();
+        }
+    }
+
+    // --- TRIGGER DETECTION ---
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            isPlayerInRange = true;
+            // Only show alert prompt if door is still closed
+            if (!isOpen && playerAlert != null) playerAlert.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            isPlayerInRange = false;
+            if (playerAlert != null) playerAlert.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            isPlayerInRange = true;
+            if (!isOpen && playerAlert != null) playerAlert.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            isPlayerInRange = false;
+            if (playerAlert != null) playerAlert.SetActive(false);
+        }
+    }
+
+    // --- DOOR LOGIC ---
+    public void InteractWithDoor()
+    {
+        // Guard Clause: Prevent closing if door is already open
+        if (isOpen) return;
+
+        isOpen = true;
+
+        if (saveableObject != null)
+        {
+            saveableObject.SetStateChanged(true);
+        }
+
+        // Hide alert UI permanently once opened
+        if (playerAlert != null)
+        {
+            playerAlert.SetActive(false);
+        }
+
+        UpdateDoorState();
+    }
+
+    public void UpdateDoorState()
+    {
+        // 1. Swap door models
+        if (closedDoorObject != null) closedDoorObject.SetActive(!isOpen);
+        if (openDoorObject != null) openDoorObject.SetActive(isOpen);
+
+        // 2. Enable objects inside cubicle
         if (objectsToEnable != null)
         {
             foreach (GameObject obj in objectsToEnable)
             {
                 if (obj != null)
                 {
-                    obj.SetActive(true);
+                    obj.SetActive(isOpen);
                 }
             }
         }
     }
 
-    private void UpdateDoorStateVisuals()
+    /// <summary>
+    /// Called by SaveableWorldObject during LoadGame()
+    /// </summary>
+    public void ApplyLoadedState(bool savedIsOpenState)
     {
-        if (closedDoor != null) closedDoor.SetActive(isClosed);
-        if (openedDoor != null) openedDoor.SetActive(isOpened);
-    }
+        isOpen = savedIsOpenState;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Only show alert if door is still closed
-        if (isClosed && collision.CompareTag("Player"))
+        if (saveableObject != null)
         {
-            isPlayerInRange = true;
-
-            if (playerAlert != null)
-            {
-                playerAlert.SetActive(true);
-            }
+            saveableObject.SetStateChanged(isOpen);
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        // Ensure alert prompt is hidden if loading an already opened door
+        if (isOpen && playerAlert != null)
         {
-            isPlayerInRange = false;
-
-            if (playerAlert != null)
-            {
-                playerAlert.SetActive(false);
-            }
+            playerAlert.SetActive(false);
         }
+
+        UpdateDoorState();
     }
 }

@@ -8,7 +8,7 @@ public enum ItemType
     NonConsumable
 }
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/ItemSO")]
 public class ItemSO : ScriptableObject
 {
     public int ID => GetInstanceID();
@@ -23,7 +23,6 @@ public class ItemSO : ScriptableObject
     [field: SerializeField]
     public Sprite ItemImage { get; set; }
 
-
     public bool IsConsumable => itemType != ItemType.NonConsumable;
 
     [Header("Item Category")]
@@ -31,7 +30,6 @@ public class ItemSO : ScriptableObject
 
     [Header("Consumable Values")]
     [SerializeField] private int restoreAmount = 5;
-    [SerializeField] private int foodHealthRestore = 3; // Health restored when eating food
 
     public void Eat(PlayerManager player)
     {
@@ -41,7 +39,6 @@ public class ItemSO : ScriptableObject
         if (player != null)
         {
             player.RestoreHunger(restoreAmount);
-            player.RestoreHealth(foodHealthRestore); // Restores 3 health points
         }
     }
 
@@ -52,7 +49,7 @@ public class ItemSO : ScriptableObject
 
         if (player != null)
         {
-            player.RestoreHealth(restoreAmount);
+            player.Heal(restoreAmount); // Fixed: Changed RestoreHealth to Heal to match PlayerManager
         }
     }
 

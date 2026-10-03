@@ -1,68 +1,25 @@
 using UnityEngine;
+using Inventory.Model;
 
+[RequireComponent(typeof(SaveableWorldObject))]
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField] private ItemSO itemData;
+    [SerializeField] private ItemSO item;
+    private SaveableWorldObject saveableObject;
 
-    [Header("ALERT SETTINGS")]
-    [Tooltip("Optional: Local alert icon attached to this item object.")]
-    [SerializeField] private GameObject itemAlertIcon;
-
-    public ItemSO GetItem() => itemData;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Awake()
     {
-        if (collision.CompareTag("Player"))
-        {
-            // Option A: Toggle an alert icon floating above this specific item
-            if (itemAlertIcon != null)
-            {
-                itemAlertIcon.SetActive(true);
-            }
-
-            // Option B: If your Player has an Alert GameObject, toggle it directly via PlayerManager
-            PlayerManager player = collision.GetComponent<PlayerManager>();
-            if (player != null && itemAlertIcon != null)
-            {
-                itemAlertIcon.SetActive(true);
-            }
-        }
+        saveableObject = GetComponent<SaveableWorldObject>();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            HideAlert(collision.gameObject);
-        }
-    }
+    public ItemSO GetItem() => item;
 
     public void OnPickedUp()
     {
-        // Make sure the alert is hidden before destroying the item
-        GameObject playerObj = GameObject.FindWithTag("Player");
-        if (playerObj != null)
+        if (saveableObject != null)
         {
-            HideAlert(playerObj);
+            saveableObject.SetStateChanged(true);
         }
-
-        Destroy(gameObject);
-    }
-
-    private void HideAlert(GameObject playerObj)
-    {
-        if (itemAlertIcon != null)
-        {
-            itemAlertIcon.SetActive(false);
-        }
-
-        if (playerObj != null)
-        {
-            PlayerManager player = playerObj.GetComponent<PlayerManager>();
-            if (player != null && itemAlertIcon != null)
-            {
-                itemAlertIcon.SetActive(false);
-            }
-        }
+        gameObject.SetActive(false);
     }
 }

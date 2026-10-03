@@ -5,8 +5,10 @@ using Inventory.Model;
 
 public class UnlockHallwayDoor : MonoBehaviour
 {
+    [Header("SAVE SYSTEM")]
+    public SaveableWorldObject saveableObject;
+
     [Header("KEY SETTINGS")]
-    [Tooltip("The ScriptableObject item representing the key needed for this door.")]
     public ItemSO requiredKey;
     public InventorySO playerInventory;
 
@@ -15,8 +17,8 @@ public class UnlockHallwayDoor : MonoBehaviour
     public List<GameObject> objectsToDisable = new List<GameObject>();
 
     [Header("ALERT GAMEOBJECTS")]
-    public GameObject regularAlert; // Alert shown when player DOES NOT have the key
-    public GameObject keyAlert;     // Alert shown when player HAS the key
+    public GameObject regularAlert;
+    public GameObject keyAlert;
 
     [Header("LOCKED DOOR DIALOGUE")]
     public Dialogue lockedDialogue;
@@ -24,11 +26,27 @@ public class UnlockHallwayDoor : MonoBehaviour
     private bool isPlayerInRange = false;
     private bool isUnlocked = false;
 
+    public bool IsUnlocked => isUnlocked;
+
+    private void Awake()
+    {
+        if (saveableObject == null)
+            saveableObject = GetComponent<SaveableWorldObject>();
+    }
+
+    private void Start()
+    {
+        // If state was already marked changed upon scene load, apply it immediately
+        if (saveableObject != null && saveableObject.IsStateChanged)
+        {
+            SetUnlockedState(true);
+        }
+    }
+
     private void Update()
     {
         if (isUnlocked || !isPlayerInRange) return;
 
-        // Press 'Q' to interact with the door
         if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             InteractWithDoor();
@@ -37,7 +55,9 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void InteractWithDoor()
     {
-        bool hasKey = playerInventory != null && playerInventory.HasItem(requiredKey);
+        // Check both direct reference and asset name for maximum reliability
+        bool hasKey = playerInventory != null && requiredKey != null &&
+            (playerInventory.HasItem(requiredKey) || playerInventory.HasItemByName(requiredKey.name));
 
         if (hasKey)
         {
@@ -51,40 +71,59 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void UnlockDoor()
     {
-        isUnlocked = true;
-
-        // Disable both alerts upon unlocking
-        HideAlerts();
-
-        // Enable target GameObjects
-        if (objectsToEnable != null)
+        // Mark state as changed so SaveSystem saves this door as unlocked
+        if (saveableObject != null)
         {
-            foreach (GameObject obj in objectsToEnable)
-            {
-                if (obj != null) obj.SetActive(true);
-            }
+            saveableObject.SetStateChanged(true);
         }
 
-        // Disable target GameObjects
-        if (objectsToDisable != null)
+        SetUnlockedState(true);
+    }
+
+    public void SetUnlockedState(bool unlocked)
+    {
+        isUnlocked = unlocked;
+
+        if (unlocked)
         {
-            foreach (GameObject obj in objectsToDisable)
+            HideAlerts();
+
+            if (objectsToEnable != null)
             {
-                if (obj != null) obj.SetActive(false);
+                foreach (GameObject obj in objectsToEnable) if (obj != null) obj.SetActive(true);
             }
+
+            if (objectsToDisable != null)
+            {
+                foreach (GameObject obj in objectsToDisable) if (obj != null) obj.SetActive(false);
+            }
+
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
+    /// <summary>
+    /// Called directly by SaveableWorldObject when SaveSystem loads the save file
+    /// </summary>
+    public void ApplyLoadedState(bool isStateChanged)
+    {
+        if (saveableObject != null)
+        {
+            saveableObject.SetStateChanged(isStateChanged);
         }
 
-        // Disable this interaction trigger so it can't be reused
-        gameObject.SetActive(false);
+        SetUnlockedState(isStateChanged);
     }
 
     private void TriggerLockedDialogue()
     {
         if (DialogueManager.Instance != null && !DialogueManager.Instance.isDialogueActive)
         {
-            // Hide alerts while dialogue box is open
             HideAlerts();
-
             DialogueManager.Instance.StartDialogue(lockedDialogue, null);
         }
     }
@@ -111,7 +150,8 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void UpdateAlertState()
     {
-        bool hasKey = playerInventory != null && playerInventory.HasItem(requiredKey);
+        bool hasKey = playerInventory != null && requiredKey != null &&
+            (playerInventory.HasItem(requiredKey) || playerInventory.HasItemByName(requiredKey.name));
 
         if (hasKey)
         {

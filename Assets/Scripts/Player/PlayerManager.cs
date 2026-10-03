@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Inventory.Model;
 
 public class PlayerManager : MonoBehaviour
 {
-    [Header("Save / Load References")]
-    public InventorySO inventoryData;
-    public QuestManager questManager;
-    public List<ItemSO> itemDatabase; // Assign all ItemSO assets here in the Inspector
+    public static PlayerManager Instance { get; private set; }
 
     [Header("Health")]
     [SerializeField] public int maxHealth = 20;
@@ -36,12 +32,27 @@ public class PlayerManager : MonoBehaviour
     private Material originalMaterial;
     private Coroutine flashCoroutine;
     private float starvationTimer = 0f;
-    private const float STARVATION_INTERVAL = 3f;
+    private const float STARVATION_INTERVAL = 5f;
+
+    private void Awake()
+    {
+        // Singleton pattern required for SaveSystem and ItemSO access
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
 
+        // Cache original material and SpriteRenderer
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,21 +63,11 @@ public class PlayerManager : MonoBehaviour
             originalMaterial = spriteRenderer.material;
         }
 
-        currentHealth = maxHealth;
-        currentHunger = maxHunger;
+        // Only set default max stats if they haven't been assigned yet or loaded
+        if (currentHealth <= 0) currentHealth = maxHealth;
+        if (currentHunger <= 0) currentHunger = maxHunger;
 
-        foreach (HealthBar bar in healthBars)
-        {
-            bar.SetmaxHealth(maxHealth);
-            bar.SetHealth(currentHealth);
-        }
-
-        foreach (Hungerbar bar in hungerbars)
-        {
-            bar.SetMaxHunger(maxHunger);
-            bar.SetHunger(currentHunger);
-        }
-
+        InitializeBars();
         UpdateHungerPenalties();
     }
 
@@ -79,7 +80,7 @@ public class PlayerManager : MonoBehaviour
             if (hungerTimer >= hungerInterval)
             {
                 TakeHunger(1);
-                hungerTimer = 0f;
+                hungerTimer = 0f; // Reset timer for the next minute
             }
         }
 
@@ -87,15 +88,13 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             TakeDamage(1);
+            Debug.Log($"[DEBUG] Pressed 'H' -> Health: {currentHealth}/{maxHealth}");
         }
+
         if (Input.GetKeyDown(KeyCode.J))
         {
             TakeHunger(1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadPlayer();
+            Debug.Log($"[DEBUG] Pressed 'J' -> Hunger: {currentHunger}/{maxHunger}");
         }
 
         // --- STARVATION DAMAGE LOGIC ---
@@ -114,113 +113,79 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void SavePlayer()
+    public void InitializeBars()
     {
-        SaveSystem.SavePlayer(this, inventoryData, questManager);
-        Debug.Log("Game Saved!");
-    }
-
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        if (data == null) return;
-
-        // Restore Stats
-        currentHealth = data.health;
-        currentHunger = data.hunger;
-
-        foreach (HealthBar bar in healthBars)
+        if (healthBars != null)
         {
-            bar.SetHealth(currentHealth);
-        }
-
-        foreach (Hungerbar bar in hungerbars)
-        {
-            bar.SetHunger(currentHunger);
-        }
-
-        // Restore Position
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
-
-        // Restore Inventory Data
-        if (inventoryData != null && itemDatabase != null)
-        {
-            // Clear current inventory contents
-            for (int i = 0; i < inventoryData.Size; i++)
+            foreach (HealthBar bar in healthBars)
             {
-                inventoryData.RemoveItem(i);
-            }
-
-            // Repopulate from saved items
-            for (int i = 0; i < data.inventoryItemNames.Count; i++)
-            {
-                string storedName = data.inventoryItemNames[i];
-
-                ItemSO matchedItem = itemDatabase.Find(item =>
-                    item != null && (item.Name == storedName || item.name == storedName));
-
-                if (matchedItem != null)
+                if (bar != null)
                 {
-                    inventoryData.AddItem(matchedItem);
+                    bar.SetmaxHealth(maxHealth);
+                    bar.SetHealth(currentHealth);
                 }
             }
         }
 
-        // Restore Quests
-        if (questManager != null && data.questCompleted != null)
+        if (hungerbars != null)
         {
-            questManager.questCompleted = (bool[])data.questCompleted.Clone();
-            questManager.itemCollected = data.itemCollected;
+            foreach (Hungerbar bar in hungerbars)
+            {
+                if (bar != null)
+                {
+                    bar.SetMaxHunger(maxHunger);
+                    bar.SetHunger(currentHunger);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Call this after SaveSystem loads new health/hunger values to push updates to all UI bars.
+    /// </summary>
+    public void UpdateUI()
+    {
+        if (healthBars != null)
+        {
+            foreach (HealthBar bar in healthBars)
+            {
+                if (bar != null) bar.SetHealth(currentHealth);
+            }
+        }
+
+        if (hungerbars != null)
+        {
+            foreach (Hungerbar bar in hungerbars)
+            {
+                if (bar != null) bar.SetHunger(currentHunger);
+            }
         }
 
         UpdateHungerPenalties();
-        Debug.Log("Game Loaded!");
-    }
-
-    // --- EAT FOOD FUNCTION ---
-    public void Eat(int hungerAmount, int healthAmount = 3)
-    {
-        RestoreHunger(hungerAmount);
-        RestoreHealth(healthAmount);
     }
 
     public void RestoreHealth(int amount)
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
-
-        foreach (HealthBar bar in healthBars)
-        {
-            bar.SetHealth(currentHealth);
-        }
+        UpdateUI();
     }
+
+    // Alias for ItemSO compatibility
+    public void Heal(int amount) => RestoreHealth(amount);
 
     public void RestoreHunger(int amount)
     {
         currentHunger = Mathf.Min(currentHunger + amount, maxHunger);
-
-        foreach (Hungerbar bar in hungerbars)
-        {
-            bar.SetHunger(currentHunger);
-        }
-
-        hungerTimer = 0f;
-        UpdateHungerPenalties();
+        hungerTimer = 0f; // Reset passive decay timer when fed
+        UpdateUI();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth = Mathf.Max(0, currentHealth - damage);
+        UpdateUI();
 
-        foreach (HealthBar bar in healthBars)
-        {
-            bar.SetHealth(currentHealth);
-        }
-
+        // Trigger flash effect
         if (spriteRenderer != null && flashMaterial != null)
         {
             if (flashCoroutine != null) StopCoroutine(flashCoroutine);
@@ -239,14 +204,11 @@ public class PlayerManager : MonoBehaviour
     public void TakeHunger(int hunger)
     {
         currentHunger = Mathf.Max(0, currentHunger - hunger);
-
-        foreach (Hungerbar bar in hungerbars)
-        {
-            bar.SetHunger(currentHunger);
-        }
-
-        UpdateHungerPenalties();
+        UpdateUI();
     }
+
+    // Alias for SaveSystem compatibility
+    public void ConsumeHunger(int amount) => TakeHunger(amount);
 
     private void UpdateHungerPenalties()
     {

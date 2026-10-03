@@ -1,66 +1,70 @@
+using Inventory.Model;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Inventory.Model;
+
+[Serializable]
+public class WorldObjectState
+{
+    public string objectID;
+    public bool isInteractableStateChanged;
+    public bool isActive; // <--- Tracks whether the GameObject is enabled/disabled in the scene
+}
 
 [Serializable]
 public class PlayerData
 {
-    // Health and Hunger Stats
     public int health;
     public int hunger;
+    public float[] position = new float[3];
+    public bool[] questCompleted;
+    public string itemCollected;
+    public List<WorldObjectState> savedWorldStates = new List<WorldObjectState>();
 
-    // Transform Position
-    public float[] position;
-
-    // Inventory Data (Slot Index -> Item Name)
+    // Inventory lists
     public List<int> inventoryIndices = new List<int>();
     public List<string> inventoryItemNames = new List<string>();
 
-    // Quest System Data
-    public bool[] questCompleted;
-    public string itemCollected;
-
-    public PlayerData(PlayerManager player, InventorySO inventorySO, QuestManager questManager)
+    public PlayerData(PlayerManager pm, InventorySO inv, QuestManager qm)
     {
-        // Save Player Stats
-        health = player.currentHealth;
-        hunger = player.currentHunger;
-
-        // Save Position
-        position = new float[3];
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
-
-        // Save Inventory State
-        if (inventorySO != null)
+        if (pm != null)
         {
-            var currentState = inventorySO.GetCurrentInventoryState();
-            foreach (var kvp in currentState)
+            health = pm.currentHealth;
+            hunger = pm.currentHunger;
+            position = new float[] { pm.transform.position.x, pm.transform.position.y, pm.transform.position.z };
+        }
+
+        if (qm != null)
+        {
+            if (qm.questCompleted != null)
             {
-                if (!kvp.Value.IsEmpty && kvp.Value.item != null)
+                questCompleted = (bool[])qm.questCompleted.Clone();
+            }
+            itemCollected = qm.itemCollected;
+        }
+
+        // Saves state AND Active status of all SaveableWorldObjects in the scene
+        SaveableWorldObject[] worldObjects = UnityEngine.Object.FindObjectsByType<SaveableWorldObject>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None
+        );
+
+        foreach (var worldObj in worldObjects)
+        {
+            if (!string.IsNullOrEmpty(worldObj.UniqueID))
+            {
+                savedWorldStates.Add(new WorldObjectState
                 {
-                    inventoryIndices.Add(kvp.Key);
-
-                    // Save item by Name property or ScriptableObject asset name
-                    string nameToSave = !string.IsNullOrEmpty(kvp.Value.item.Name)
-                        ? kvp.Value.item.Name
-                        : kvp.Value.item.name;
-
-                    inventoryItemNames.Add(nameToSave);
-                }
+                    objectID = worldObj.UniqueID,
+                    isInteractableStateChanged = worldObj.IsStateChanged,
+                    isActive = worldObj.gameObject.activeSelf // Saves active/disabled state
+                });
             }
         }
 
-        // Save Quest State
-        if (questManager != null)
+        if (inv != null)
         {
-            if (questManager.questCompleted != null)
-            {
-                questCompleted = (bool[])questManager.questCompleted.Clone();
-            }
-            itemCollected = questManager.itemCollected;
+            inv.GetSaveData(out inventoryIndices, out inventoryItemNames);
         }
     }
 }

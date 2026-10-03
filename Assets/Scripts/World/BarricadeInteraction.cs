@@ -6,8 +6,8 @@ using Inventory.Model;
 public class BarricadeInteraction : MonoBehaviour
 {
     [Header("BARRICADE GAMEOBJECTS")]
-    [SerializeField] private GameObject barricadeEnabled;  // Active intact barricade
-    [SerializeField] private GameObject barricadeDisabled; // Broken/cleared barricade visual (optional)
+    [SerializeField] private GameObject barricadeEnabled;
+    [SerializeField] private GameObject barricadeDisabled;
 
     [Header("CROWBAR SETTINGS")]
     public ItemSO crowbarSO;
@@ -17,14 +17,16 @@ public class BarricadeInteraction : MonoBehaviour
     public List<GameObject> objectsToEnable = new List<GameObject>();
 
     [Header("ALERT GAMEOBJECTS")]
-    public GameObject regularAlert; // Alert shown when player DOES NOT have the crowbar
-    public GameObject crowbarAlert; // Alert shown when player HAS the crowbar
+    public GameObject regularAlert;
+    public GameObject crowbarAlert;
 
     [Header("NO CROWBAR DIALOGUE")]
     public Dialogue noCrowbarDialogue;
 
     private bool isPlayerInRange = false;
     private bool isCleared = false;
+
+    public bool IsCleared => isCleared;
 
     private void Start()
     {
@@ -35,7 +37,6 @@ public class BarricadeInteraction : MonoBehaviour
     {
         if (isCleared || !isPlayerInRange) return;
 
-        // Press 'Q' to interact with the barricade
         if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             InteractWithBarricade();
@@ -58,25 +59,29 @@ public class BarricadeInteraction : MonoBehaviour
 
     private void RemoveBarricade()
     {
-        isCleared = true;
+        SetClearedState(true);
+    }
 
-        // Hide alert UI
+    public void SetClearedState(bool cleared)
+    {
+        isCleared = cleared;
+
         HideAlerts();
-
-        // Swap barricade visual states
         UpdateBarricadeVisuals();
 
-        // Enable post-break objects (e.g. pathways, new items, colliders)
-        if (objectsToEnable != null)
+        if (cleared)
         {
-            foreach (GameObject obj in objectsToEnable)
+            if (objectsToEnable != null)
             {
-                if (obj != null) obj.SetActive(true);
+                foreach (GameObject obj in objectsToEnable) if (obj != null) obj.SetActive(true);
             }
-        }
 
-        // Disable interaction trigger so it can't be reused
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     private void TriggerNoCrowbarDialogue()
