@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Inventory.Model;
 
 public class PlayerManager : MonoBehaviour
 {
+    [Header("Save / Load References")]
+    public InventorySO inventoryData;
+    public QuestManager questManager;
+    public List<ItemSO> itemDatabase; // Assign all ItemSO assets here in the Inspector
+
     [Header("Health")]
     [SerializeField] public int maxHealth = 20;
     [SerializeField] public int currentHealth;
@@ -30,13 +36,12 @@ public class PlayerManager : MonoBehaviour
     private Material originalMaterial;
     private Coroutine flashCoroutine;
     private float starvationTimer = 0f;
-    private const float STARVATION_INTERVAL = 5f;
+    private const float STARVATION_INTERVAL = 3f;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
 
-        // Cache original material and SpriteRenderer
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -74,7 +79,7 @@ public class PlayerManager : MonoBehaviour
             if (hungerTimer >= hungerInterval)
             {
                 TakeHunger(1);
-                hungerTimer = 0f; // Reset timer for the next minute
+                hungerTimer = 0f;
             }
         }
 
@@ -86,6 +91,11 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             TakeHunger(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadPlayer();
         }
 
         // --- STARVATION DAMAGE LOGIC ---
@@ -102,6 +112,81 @@ public class PlayerManager : MonoBehaviour
         {
             starvationTimer = 0f;
         }
+    }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this, inventoryData, questManager);
+        Debug.Log("Game Saved!");
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        if (data == null) return;
+
+        // Restore Stats
+        currentHealth = data.health;
+        currentHunger = data.hunger;
+
+        foreach (HealthBar bar in healthBars)
+        {
+            bar.SetHealth(currentHealth);
+        }
+
+        foreach (Hungerbar bar in hungerbars)
+        {
+            bar.SetHunger(currentHunger);
+        }
+
+        // Restore Position
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+
+        // Restore Inventory Data
+        if (inventoryData != null && itemDatabase != null)
+        {
+            // Clear current inventory contents
+            for (int i = 0; i < inventoryData.Size; i++)
+            {
+                inventoryData.RemoveItem(i);
+            }
+
+            // Repopulate from saved items
+            for (int i = 0; i < data.inventoryItemNames.Count; i++)
+            {
+                string storedName = data.inventoryItemNames[i];
+
+                ItemSO matchedItem = itemDatabase.Find(item =>
+                    item != null && (item.Name == storedName || item.name == storedName));
+
+                if (matchedItem != null)
+                {
+                    inventoryData.AddItem(matchedItem);
+                }
+            }
+        }
+
+        // Restore Quests
+        if (questManager != null && data.questCompleted != null)
+        {
+            questManager.questCompleted = (bool[])data.questCompleted.Clone();
+            questManager.itemCollected = data.itemCollected;
+        }
+
+        UpdateHungerPenalties();
+        Debug.Log("Game Loaded!");
+    }
+
+    // --- EAT FOOD FUNCTION ---
+    public void Eat(int hungerAmount, int healthAmount = 3)
+    {
+        RestoreHunger(hungerAmount);
+        RestoreHealth(healthAmount);
     }
 
     public void RestoreHealth(int amount)
@@ -123,9 +208,7 @@ public class PlayerManager : MonoBehaviour
             bar.SetHunger(currentHunger);
         }
 
-        // Reset passive decay timer when fed to give full 60 seconds before next loss
         hungerTimer = 0f;
-
         UpdateHungerPenalties();
     }
 
@@ -138,7 +221,6 @@ public class PlayerManager : MonoBehaviour
             bar.SetHealth(currentHealth);
         }
 
-        // Trigger flash effect
         if (spriteRenderer != null && flashMaterial != null)
         {
             if (flashCoroutine != null) StopCoroutine(flashCoroutine);
