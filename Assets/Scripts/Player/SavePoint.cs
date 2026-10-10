@@ -22,6 +22,8 @@ public class SavePoint : MonoBehaviour
         {
             saveButton.onClick.AddListener(OnSaveButtonClicked);
         }
+
+        Debug.Log($"Save File Location: {Application.persistentDataPath}");
     }
 
     private void Update()

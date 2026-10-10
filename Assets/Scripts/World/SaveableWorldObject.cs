@@ -33,7 +33,7 @@ public class SaveableWorldObject : MonoBehaviour
 
         IsStateChanged = state.isInteractableStateChanged;
 
-        // 1. If this object has UnlockHallwayDoor, run custom door logic
+        // 1. Check for UnlockHallwayDoor
         UnlockHallwayDoor hallwayDoor = GetComponent<UnlockHallwayDoor>();
         if (hallwayDoor != null)
         {
@@ -41,8 +41,15 @@ public class SaveableWorldObject : MonoBehaviour
             return;
         }
 
-        // 2. FOR PURE DESIGN OBJECTS (Barricades, Tilemaps, Props with no custom scripts):
-        // Automatically restore whether this GameObject was active or disabled when saved!
+        // 2. NEW: Check for BathroomDoor (e.g., Door_CRGirls_3)
+        BathroomDoor bathroomDoor = GetComponent<BathroomDoor>();
+        if (bathroomDoor != null)
+        {
+            bathroomDoor.ApplyLoadedState(state.isInteractableStateChanged);
+            return;
+        }
+
+        // 3. Fallback for scriptless design objects (Tilemaps, props, etc.)
         gameObject.SetActive(state.isActive);
     }
 }
