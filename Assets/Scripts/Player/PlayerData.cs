@@ -2,18 +2,20 @@ using Inventory.Model;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Added for SceneManager
 
 [Serializable]
 public class WorldObjectState
 {
     public string objectID;
     public bool isInteractableStateChanged;
-    public bool isActive; // <--- Tracks whether the GameObject is enabled/disabled in the scene
+    public bool isActive;
 }
 
 [Serializable]
 public class PlayerData
 {
+    public string sceneName; // <--- Stores saved scene name
     public int health;
     public int hunger;
     public float[] position = new float[3];
@@ -27,6 +29,9 @@ public class PlayerData
 
     public PlayerData(PlayerManager pm, InventorySO inv, QuestManager qm)
     {
+        // Record currently active scene
+        sceneName = SceneManager.GetActiveScene().name;
+
         if (pm != null)
         {
             health = pm.currentHealth;
@@ -43,7 +48,6 @@ public class PlayerData
             itemCollected = qm.itemCollected;
         }
 
-        // Saves state AND Active status of all SaveableWorldObjects in the scene
         SaveableWorldObject[] worldObjects = UnityEngine.Object.FindObjectsByType<SaveableWorldObject>(
             FindObjectsInactive.Include,
             FindObjectsSortMode.None
@@ -57,7 +61,7 @@ public class PlayerData
                 {
                     objectID = worldObj.UniqueID,
                     isInteractableStateChanged = worldObj.IsStateChanged,
-                    isActive = worldObj.gameObject.activeSelf // Saves active/disabled state
+                    isActive = worldObj.gameObject.activeSelf
                 });
             }
         }

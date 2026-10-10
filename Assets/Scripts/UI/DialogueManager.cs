@@ -28,10 +28,12 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueArea;
 
     [Header("PLAYER STATS ANIMATION")]
-    [Tooltip("Drag your 'Player Stats' GameObject here (the one with the Animator component)")]
     public Animator playerStatsAnimator;
     public string playerStatsHideState = "SlideOut"; // Animation to hide stats during dialogue
     public string playerStatsShowState = "SlideIn";  // Animation to bring stats back after dialogue
+
+    [Header("CONTROLS UI ANIMATION")]
+    public Animator controlsAnimator;
 
     private Queue<DialogueLine> lines;
 
@@ -89,6 +91,7 @@ public class DialogueManager : MonoBehaviour
         if (playerStatsAnimator != null)
         {
             playerStatsAnimator.Play(playerStatsHideState);
+            controlsAnimator.Play("SlideOut");
         }
 
         lines.Clear();
@@ -200,6 +203,7 @@ public class DialogueManager : MonoBehaviour
         if (playerStatsAnimator != null)
         {
             playerStatsAnimator.Play(playerStatsShowState);
+            controlsAnimator.Play("SlideIn");
         }
 
         // 2. Wait for the animation transition to complete

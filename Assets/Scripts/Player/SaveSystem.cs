@@ -1,6 +1,8 @@
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Inventory.Model;
 
 public class SaveSystem : MonoBehaviour
@@ -13,10 +15,7 @@ public class SaveSystem : MonoBehaviour
     public QuestManager questManager;
 
     [Header("Level 1 Inventory Config")]
-    [Tooltip("Drag your Flashlight ItemSO here to guarantee it in Level 1.")]
     public ItemSO flashlightItem;
-
-    [Tooltip("Drag ALL ItemSO assets in your project here so SaveSystem can reconstruct inventory items by name.")]
     public List<ItemSO> itemDatabase;
 
     private string saveFilePath;
@@ -37,37 +36,58 @@ public class SaveSystem : MonoBehaviour
         saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
     }
 
-    private void Start()
+    /// <summary>
+    /// Utility method to check if save JSON exists for Main Menu UI validation
+    /// </summary>
+    public bool HasSaveFile()
     {
-        EnsureReferences();
-
-        // Initialize Level 1 inventory baseline
-        if (playerInventory != null)
-        {
-            playerInventory.InitializeLevel1Inventory(flashlightItem);
-        }
-    }
-
-    private void Update()
-    {
-        // 1. Save Key (K)
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Debug.Log("<color=cyan>[SaveSystem] 'K' Key Pressed -> Triggering Save</color>");
-            SaveGame();
-        }
-
-        // 2. Load Key (L)
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("<color=cyan>[SaveSystem] 'L' Key Pressed -> Triggering Load</color>");
-            LoadGame();
-        }
+        return File.Exists(saveFilePath);
     }
 
     /// <summary>
-    /// Re-binds scene references if they were destroyed or cleared during a scene reload.
+    /// Call this from Main Menu Load Button
     /// </summary>
+    public void LoadGameFromMainMenu()
+    {
+        if (!HasSaveFile())
+        {
+            Debug.LogWarning("[SaveSystem] No save file found!");
+            return;
+        }
+
+        StartCoroutine(LoadSceneAndApplySaveRoutine());
+    }
+
+    private IEnumerator LoadSceneAndApplySaveRoutine()
+    {
+        Debug.Log("<color=yellow>[SaveSystem] --- STARTING MAIN MENU LOAD ---</color>");
+
+        string json = File.ReadAllText(saveFilePath);
+        PlayerData data = JsonUtility.FromJson<PlayerData>(json);
+
+        if (data == null || string.IsNullOrEmpty(data.sceneName))
+        {
+            Debug.LogError("[SaveSystem] Save data corrupt or missing sceneName.");
+            yield break;
+        }
+
+        // 1. Load target level asynchronously
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(data.sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // Wait 1 frame to ensure Scene Awake/Start runs completely
+        yield return null;
+
+        // 2. Re-bind scene objects & restore saved states
+        EnsureReferences();
+        ApplyDataToScene(data);
+
+        Debug.Log("<color=green>[SaveSystem] --- LOAD & SCENE TRANSITION COMPLETE ---</color>");
+    }
+
     private void EnsureReferences()
     {
         if (playerManager == null)
@@ -75,6 +95,54 @@ public class SaveSystem : MonoBehaviour
 
         if (questManager == null)
             questManager = FindObjectOfType<QuestManager>();
+    }
+
+    private void ApplyDataToScene(PlayerData data)
+    {
+        // 1. Player Stats & Position
+        if (playerManager != null)
+        {
+            playerManager.currentHealth = data.health;
+            playerManager.currentHunger = data.hunger;
+
+            if (data.position != null && data.position.Length == 3)
+            {
+                playerManager.transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
+            }
+
+            playerManager.UpdateUI();
+        }
+
+        // 2. Quests
+        if (questManager != null && data.questCompleted != null)
+        {
+            questManager.questCompleted = (bool[])data.questCompleted.Clone();
+            questManager.itemCollected = data.itemCollected;
+        }
+
+        // 3. Inventory
+        if (playerInventory != null)
+        {
+            playerInventory.RestoreFromSaveData(data.inventoryIndices, data.inventoryItemNames, itemDatabase, flashlightItem);
+        }
+
+        // 4. World Objects
+        if (data.savedWorldStates != null)
+        {
+            SaveableWorldObject[] worldObjects = FindObjectsByType<SaveableWorldObject>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None
+            );
+
+            foreach (var worldObj in worldObjects)
+            {
+                var savedState = data.savedWorldStates.Find(x => x.objectID == worldObj.UniqueID);
+                if (savedState != null)
+                {
+                    worldObj.RestoreState(savedState);
+                }
+            }
+        }
     }
 
     public void SaveGame()
@@ -97,13 +165,7 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadGame()
     {
-        Debug.Log("<color=yellow>[SaveSystem] --- STARTING LOAD ---</color>");
-
-        if (!File.Exists(saveFilePath))
-        {
-            Debug.LogWarning($"[SaveSystem] No save file found at path: {saveFilePath}");
-            return;
-        }
+        if (!HasSaveFile()) return;
 
         EnsureReferences();
 
@@ -111,59 +173,7 @@ public class SaveSystem : MonoBehaviour
         {
             string json = File.ReadAllText(saveFilePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-
-            if (data == null)
-            {
-                Debug.LogError("[SaveSystem] JSON deserialization resulted in null PlayerData.");
-                return;
-            }
-
-            // 1. Restore Player Stats & Position
-            if (playerManager != null)
-            {
-                playerManager.currentHealth = data.health;
-                playerManager.currentHunger = data.hunger;
-
-                if (data.position != null && data.position.Length == 3)
-                {
-                    playerManager.transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
-                }
-
-                playerManager.UpdateUI();
-            }
-
-            // 2. Restore Quests
-            if (questManager != null && data.questCompleted != null)
-            {
-                questManager.questCompleted = (bool[])data.questCompleted.Clone();
-                questManager.itemCollected = data.itemCollected;
-            }
-
-            // 3. Restore Inventory
-            if (playerInventory != null)
-            {
-                playerInventory.RestoreFromSaveData(data.inventoryIndices, data.inventoryItemNames, itemDatabase, flashlightItem);
-            }
-
-            // Inside SaveSystem.cs -> LoadGame() -> Section 4:
-            if (data.savedWorldStates != null)
-            {
-                SaveableWorldObject[] worldObjects = FindObjectsByType<SaveableWorldObject>(
-                    FindObjectsInactive.Include,
-                    FindObjectsSortMode.None
-                );
-
-                foreach (var worldObj in worldObjects)
-                {
-                    var savedState = data.savedWorldStates.Find(x => x.objectID == worldObj.UniqueID);
-                    if (savedState != null)
-                    {
-                        worldObj.RestoreState(savedState); // Passes the full state including isActive
-                    }
-                }
-            }
-
-            Debug.Log("<color=green>[SaveSystem] --- LOAD COMPLETE ---</color>");
+            if (data != null) ApplyDataToScene(data);
         }
         catch (System.Exception e)
         {
