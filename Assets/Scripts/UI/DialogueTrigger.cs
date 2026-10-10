@@ -1,9 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [System.Serializable]
-public class DialogueCharacter
+public struct DialogueCharacter
 {
     public string name;
     public Sprite icon;
@@ -18,19 +19,21 @@ public class DialogueLine
     public string line;
 
     [Header("FULLSCREEN IMAGE SETTINGS")]
-    public bool hasImage; // Boolean toggle in Inspector
+    public bool hasImage;
     public Sprite fullscreenImage;
 }
 
 [System.Serializable]
 public class Dialogue
 {
+    [NonReorderable]
     public List<DialogueLine> dialogueLines = new List<DialogueLine>();
 }
 
 public class DialogueTrigger : MonoBehaviour
 {
     private bool isPlayerInRange = false;
+    private bool isInitialized = false;
 
     [Header("DIALOGUE SETTINGS")]
     public Dialogue dialogue;
@@ -46,9 +49,60 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject[] objectsToEnable;
     public GameObject[] objectsToDisable;
 
+    private SaveableWorldObject saveableObject;
+
+    private void Awake()
+    {
+        saveableObject = GetComponent<SaveableWorldObject>();
+    }
+
+    private IEnumerator Start()
+    {
+        // Wait 1 frame so SaveSystem can restore save data first if loading
+        yield return null;
+
+        // If SaveSystem loaded this object as already completed, cancel execution
+        if (saveableObject != null && saveableObject.IsStateChanged)
+        {
+            if (disableAfterDialogue) gameObject.SetActive(false);
+            yield break;
+        }
+
+        isInitialized = true;
+
+        // NEW GAME AUTO-TRIGGER: If this dialogue triggers automatically (!isDialogueOnInteract)
+        // and we are NOT loading a save file, trigger the intro dialogue!
+        if (!isDialogueOnInteract && !SaveSystem.IsLoadingSave)
+        {
+            if (isPlayerInRange || IsPlayerOverlapping())
+            {
+                TriggerDialogue();
+            }
+        }
+    }
+
+    private bool IsPlayerOverlapping()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        if (col == null) return false;
+
+        ContactFilter2D filter = new ContactFilter2D().NoFilter();
+        List<Collider2D> results = new List<Collider2D>();
+        col.Overlap(filter, results);
+
+        foreach (var c in results)
+        {
+            if (c.CompareTag("Player")) return true;
+        }
+        return false;
+    }
+
     private void Update()
     {
-        // Press Q to interact with the NPC
+        if (!isInitialized) return;
+        if (saveableObject != null && saveableObject.IsStateChanged) return;
+
+        // Press Q to interact with NPC
         if (isPlayerInRange && isDialogueOnInteract && Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             if (DialogueManager.Instance != null && !DialogueManager.Instance.isDialogueActive)
@@ -60,11 +114,21 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if (saveableObject != null && saveableObject.IsStateChanged)
+        {
+            if (disableAfterDialogue) gameObject.SetActive(false);
+            return;
+        }
+
         if (Alert != null)
         {
             Alert.SetActive(false);
         }
-        DialogueManager.Instance.StartDialogue(dialogue, this);
+
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.StartDialogue(dialogue, this);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +136,9 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
+
+            if (!isInitialized || SaveSystem.IsLoadingSave) return;
+            if (saveableObject != null && saveableObject.IsStateChanged) return;
 
             if (isDialogueOnInteract)
             {
@@ -102,7 +169,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public void OnDialogueComplete()
     {
-        // 1. Enable designated GameObjects
+        if (saveableObject != null)
+        {
+            saveableObject.SetStateChanged(true);
+        }
+
         if (objectsToEnable != null)
         {
             foreach (GameObject go in objectsToEnable)
@@ -111,7 +182,6 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
 
-        // 2. Disable designated GameObjects
         if (objectsToDisable != null)
         {
             foreach (GameObject go in objectsToDisable)
@@ -120,10 +190,9 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
 
-        // 3. Trigger the Quest
         if (startQuestAfterDialogue)
         {
-            QuestManager qm = FindAnyObjectByType<QuestManager>();
+            QuestManager qm = FindFirstObjectByType<QuestManager>();
             if (qm != null && questNumberToStart < qm.quests.Length)
             {
                 if (!qm.questCompleted[questNumberToStart] && !qm.quests[questNumberToStart].gameObject.activeSelf)
@@ -132,16 +201,28 @@ public class DialogueTrigger : MonoBehaviour
                     qm.quests[questNumberToStart].StartQuest();
                 }
             }
-            else
-            {
-                Debug.LogError($"QuestManager missing or Quest Index {questNumberToStart} out of bounds.");
-            }
         }
 
-        // 4. Disable trigger object if checked
         if (disableAfterDialogue)
         {
             gameObject.SetActive(false);
+        }
+    }
+
+    public void ApplyLoadedState(bool isCompleted, bool isActive)
+    {
+        if (saveableObject != null)
+        {
+            saveableObject.SetStateChanged(isCompleted);
+        }
+
+        if (isCompleted && disableAfterDialogue)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(isActive);
         }
     }
 }

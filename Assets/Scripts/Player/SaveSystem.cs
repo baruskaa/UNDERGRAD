@@ -9,13 +9,21 @@ public class SaveSystem : MonoBehaviour
 {
     public static SaveSystem Instance { get; private set; }
 
+    /// <summary>
+    /// Static flag that prevents triggers (like start dialogues) from firing while a save file is loading.
+    /// </summary>
+    public static bool IsLoadingSave { get; private set; } = false;
+
     [Header("References")]
     public PlayerManager playerManager;
     public InventorySO playerInventory;
     public QuestManager questManager;
 
     [Header("Level 1 Inventory Config")]
+    [Tooltip("Drag your Flashlight ItemSO here to guarantee it in Level 1.")]
     public ItemSO flashlightItem;
+
+    [Tooltip("Drag ALL ItemSO assets in your project here so SaveSystem can reconstruct inventory items by name.")]
     public List<ItemSO> itemDatabase;
 
     private string saveFilePath;
@@ -34,6 +42,17 @@ public class SaveSystem : MonoBehaviour
         }
 
         saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
+    }
+
+    private void Start()
+    {
+        EnsureReferences();
+
+        // Initialize Level 1 inventory baseline if starting fresh and not restoring a save file
+        if (playerInventory != null && !IsLoadingSave)
+        {
+            playerInventory.InitializeLevel1Inventory(flashlightItem);
+        }
     }
 
     /// <summary>
@@ -61,6 +80,7 @@ public class SaveSystem : MonoBehaviour
     private IEnumerator LoadSceneAndApplySaveRoutine()
     {
         Debug.Log("<color=yellow>[SaveSystem] --- STARTING MAIN MENU LOAD ---</color>");
+        IsLoadingSave = true; // Lock triggers during loading
 
         string json = File.ReadAllText(saveFilePath);
         PlayerData data = JsonUtility.FromJson<PlayerData>(json);
@@ -68,6 +88,7 @@ public class SaveSystem : MonoBehaviour
         if (data == null || string.IsNullOrEmpty(data.sceneName))
         {
             Debug.LogError("[SaveSystem] Save data corrupt or missing sceneName.");
+            IsLoadingSave = false;
             yield break;
         }
 
@@ -85,6 +106,7 @@ public class SaveSystem : MonoBehaviour
         EnsureReferences();
         ApplyDataToScene(data);
 
+        IsLoadingSave = false; // Unlock triggers after restoration finishes
         Debug.Log("<color=green>[SaveSystem] --- LOAD & SCENE TRANSITION COMPLETE ---</color>");
     }
 
@@ -99,6 +121,12 @@ public class SaveSystem : MonoBehaviour
 
     private void ApplyDataToScene(PlayerData data)
     {
+        // 0. Instantly kill any dialogue UI that auto-triggered during scene load
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.ForceCloseDialogue();
+        }
+
         // 1. Player Stats & Position
         if (playerManager != null)
         {
@@ -126,7 +154,7 @@ public class SaveSystem : MonoBehaviour
             playerInventory.RestoreFromSaveData(data.inventoryIndices, data.inventoryItemNames, itemDatabase, flashlightItem);
         }
 
-        // 4. World Objects
+        // 4. Restore World Objects & Dialogue Triggers
         if (data.savedWorldStates != null)
         {
             SaveableWorldObject[] worldObjects = FindObjectsByType<SaveableWorldObject>(
@@ -171,6 +199,7 @@ public class SaveSystem : MonoBehaviour
 
         try
         {
+            IsLoadingSave = true;
             string json = File.ReadAllText(saveFilePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             if (data != null) ApplyDataToScene(data);
@@ -178,6 +207,10 @@ public class SaveSystem : MonoBehaviour
         catch (System.Exception e)
         {
             Debug.LogError($"<color=red>[SaveSystem] LOAD EXCEPTION:</color> {e.Message}");
+        }
+        finally
+        {
+            IsLoadingSave = false;
         }
     }
 }

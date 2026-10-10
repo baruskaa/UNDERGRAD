@@ -18,7 +18,7 @@ public class SaveableWorldObject : MonoBehaviour
     {
         if (string.IsNullOrEmpty(uniqueID))
         {
-            GenerateID();
+            uniqueID = gameObject.name;
         }
     }
 
@@ -33,7 +33,7 @@ public class SaveableWorldObject : MonoBehaviour
 
         IsStateChanged = state.isInteractableStateChanged;
 
-        // 1. Check for UnlockHallwayDoor
+        // 1. Hallway Door restoring
         UnlockHallwayDoor hallwayDoor = GetComponent<UnlockHallwayDoor>();
         if (hallwayDoor != null)
         {
@@ -41,7 +41,7 @@ public class SaveableWorldObject : MonoBehaviour
             return;
         }
 
-        // 2. NEW: Check for BathroomDoor (e.g., Door_CRGirls_3)
+        // 2. Bathroom Door restoring
         BathroomDoor bathroomDoor = GetComponent<BathroomDoor>();
         if (bathroomDoor != null)
         {
@@ -49,7 +49,15 @@ public class SaveableWorldObject : MonoBehaviour
             return;
         }
 
-        // 3. Fallback for scriptless design objects (Tilemaps, props, etc.)
+        // 3. Dialogue Trigger restoring
+        DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        if (dialogueTrigger != null)
+        {
+            dialogueTrigger.ApplyLoadedState(state.isInteractableStateChanged, state.isActive);
+            return;
+        }
+
+        // 4. Default fallback for scriptless objects/barricades
         gameObject.SetActive(state.isActive);
     }
 }

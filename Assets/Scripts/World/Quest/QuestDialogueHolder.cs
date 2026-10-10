@@ -1,88 +1,43 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-
-public class QuestDialogueHolder : MonoBehaviour
-{
-    public string dialogue;
-    private QuestBoxManager dMan;
-
-    public List<string> dialogueLines = new List<string>();
-
-    void Start()
-    {
-        dMan = FindObjectOfType<QuestBoxManager>();
-        dMan.HideBox();
-    }
-
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                if (!dMan.dialogueActive)
-                {
-                    dMan.dialogueLines.Clear();
-                    dMan.dialogueLines.AddRange(dialogueLines);
-                    dMan.currentLine = 0;
-                    dMan.ShowDialogue();
-                }
-            }
-        }
-    }
-}*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class QuestDialogueHolder : MonoBehaviour
 {
-
     public string dialogue;
-    // public GameObject questMark;
-    private QuestBoxManager dMan;
-
     public string[] dialogueLines;
 
+    private QuestBoxManager dMan;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        dMan = FindObjectOfType<QuestBoxManager>();
-        dMan.HideBox();
-        //questMark.SetActive(false);
-    }
+        dMan = FindFirstObjectByType<QuestBoxManager>();
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // Null check prevents NullReferenceException on frame 1
+        if (dMan != null)
+        {
+            dMan.HideBox();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.CompareTag("Player"))
         {
-            //questMark.SetActive(true);
-
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                // dMan.ShowBox(dialogue);
-                if (!dMan.dialogueActive)
+                if (dMan != null && !dMan.isQuestActive)
                 {
-                    dMan.dialogueLines = dialogueLines;
-                    dMan.currentLine = 0;
-                    dMan.ShowDialogue();
+                    // Pass dialogue lines to QuestBoxManager's updated ShowQuest system
+                    if (dialogueLines != null && dialogueLines.Length > 0)
+                    {
+                        dMan.ShowQuest(dialogueLines[0]);
+                    }
+                    else if (!string.IsNullOrEmpty(dialogue))
+                    {
+                        dMan.ShowQuest(dialogue);
+                    }
                 }
-
             }
         }
     }

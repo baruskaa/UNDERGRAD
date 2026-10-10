@@ -1,125 +1,38 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-
-public class QuestBoxManager : MonoBehaviour
-{
-    public GameObject dBox;
-    public TextMeshProUGUI dText;
-    public bool dialogueActive;
-
-    public List<string> dialogueLines = new List<string>();
-    public int currentLine;
-
-    void Start()
-    {
-        dBox.SetActive(false);
-        dialogueActive = false;
-    }
-
-    void Update()
-    {
-        if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
-        {
-            currentLine++;
-        }
-
-        if (currentLine >= dialogueLines.Count)
-        {
-            HideBox();
-            currentLine = 0;
-            return;
-        }
-
-        if (dialogueActive && dialogueLines.Count > 0)
-        {
-            dText.text = dialogueLines[currentLine];
-        }
-    }
-
-    public void ShowBox(string dialogue)
-    {
-        dialogueActive = true;
-        dBox.SetActive(true);
-        dText.text = dialogue;
-    }
-
-    public void HideBox()
-    {
-        dialogueActive = false;
-        dBox.SetActive(false);
-    }
-
-    public void ShowDialogue()
-    {
-        dialogueActive = true;
-        dBox.SetActive(true);
-    }
-}*/
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class QuestBoxManager : MonoBehaviour
 {
-
     public GameObject dBox;
     public TextMeshProUGUI dText;
-    public bool dialogueActive;
+    public Animator questAnimator;
 
-    public string[] dialogueLines;
-    public int currentLine;
-    // public Animator animator;
+    [HideInInspector]
+    public bool isQuestActive = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        dBox.SetActive(false);
-        dialogueActive = false;
+        // Keep active so the Animator can play animations
+        if (dBox != null) dBox.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowQuest(string questText)
     {
-        // Don't run logic unless dialogue is active and has lines
-        if (!dialogueActive || dialogueLines == null || dialogueLines.Length == 0)
-            return;
+        isQuestActive = true;
+        if (dBox != null) dBox.SetActive(true);
+        if (dText != null) dText.text = questText;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            currentLine++;
-        }
-
-        if (currentLine >= dialogueLines.Length)
-        {
-            HideBox();
-            currentLine = 0;
-            return;
-        }
-
-        dText.text = dialogueLines[currentLine];
-    }
-
-    public void ShowBox(string dialogue)
-    {
-        dialogueActive = true;
-        dBox.SetActive(true);
-        dText.text = dialogue;
+            questAnimator.Play("SlideIn");
     }
 
     public void HideBox()
     {
-        dBox.SetActive(false);
-        dialogueActive = false;
-    }
+        isQuestActive = false;
 
-    public void ShowDialogue()
-    {
-        dialogueActive = true;
-        dBox.SetActive(true);
+            questAnimator.Play("SlideOut");
+        
     }
 
     public void CloseAfterDelay(float delay)

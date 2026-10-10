@@ -13,32 +13,28 @@ public class DialogueManager : MonoBehaviour
     public PlayerManager playerManager;
 
     [Header("PORTRAIT SETTINGS")]
-    [Tooltip("The Image UI component on the LEFT (for NPCs)")]
     public Image leftCharacterIcon;
-
-    [Tooltip("The Image UI component on the RIGHT (for Main Character)")]
     public Image rightCharacterIcon;
 
     [Header("FULLSCREEN IMAGE UI")]
-    public GameObject fullscreenImageContainer; // Parent panel or GameObject holding the Image
-    public Image fullscreenImageDisplay;        // UI Image component showing the sprite
+    public GameObject fullscreenImageContainer;
+    public Image fullscreenImageDisplay;
 
     [Header("TEXT SETTINGS")]
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
 
-    [Header("PLAYER STATS ANIMATION")]
+    [Header("ANIMATORS")]
     public Animator playerStatsAnimator;
-    public string playerStatsHideState = "SlideOut"; // Animation to hide stats during dialogue
-    public string playerStatsShowState = "SlideIn";  // Animation to bring stats back after dialogue
-
-    [Header("CONTROLS UI ANIMATION")]
     public Animator controlsAnimator;
+    public Animator questAnimator;
+    public string playerStatsHideState = "SlideOut";
+    public string playerStatsShowState = "SlideIn";
+
 
     private Queue<DialogueLine> lines;
 
     public bool isDialogueActive = false;
-
     public float typingSpeed = 0.02f;
 
     [Header("DIALOGUE BOX ANIMATOR")]
@@ -67,7 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        // Press Space to advance to the next dialogue line
+        // Press Space to advance dialogue
         if (isDialogueActive && Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             DisplayNextDialogueLine();
@@ -81,17 +77,16 @@ public class DialogueManager : MonoBehaviour
         DialogueBox.SetActive(true);
         isDialogueActive = true;
 
-        // 1. Play Dialogue Box show animation
         if (animator != null)
         {
             animator.Play("show");
         }
 
-        // 2. Play Player Stats hide animation (SlideOut)
         if (playerStatsAnimator != null)
         {
             playerStatsAnimator.Play(playerStatsHideState);
             controlsAnimator.Play("SlideOut");
+            questAnimator.Play("SlideOut");
         }
 
         lines.Clear();
@@ -114,7 +109,7 @@ public class DialogueManager : MonoBehaviour
 
         DialogueLine currentLine = lines.Dequeue();
 
-        // 1. Handle Fullscreen Image per line
+        // 1. Fullscreen Image Handling
         if (currentLine.hasImage && currentLine.fullscreenImage != null)
         {
             if (fullscreenImageDisplay != null)
@@ -135,10 +130,9 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // 2. Handle Speaker Portraits (Left vs Right)
+        // 2. Portrait Handling
         if (currentLine.character.isPlayer)
         {
-            // Show Right Portrait (Player), Hide Left
             if (rightCharacterIcon != null)
             {
                 rightCharacterIcon.sprite = currentLine.character.icon;
@@ -151,7 +145,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            // Show Left Portrait (NPC), Hide Right
             if (leftCharacterIcon != null)
             {
                 leftCharacterIcon.sprite = currentLine.character.icon;
@@ -175,7 +168,8 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            // Use Realtime so typing doesn't freeze when Time.timeScale = 0
+            yield return new WaitForSecondsRealtime(typingSpeed);
         }
     }
 
@@ -188,34 +182,39 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
 
-        // Hide full-screen cutscene panel immediately when dialogue concludes
         if (fullscreenImageContainer != null)
         {
             fullscreenImageContainer.SetActive(false);
         }
 
-        // 1. Play the dialogue box hide animation & slide player stats back in
         if (animator != null)
         {
             animator.Play("hide");
         }
 
-        if (playerStatsAnimator != null)
-        {
-            playerStatsAnimator.Play(playerStatsShowState);
-            controlsAnimator.Play("SlideIn");
-        }
+        if (playerStatsAnimator != null) playerStatsAnimator.Play(playerStatsShowState);
+        if (controlsAnimator != null) controlsAnimator.Play("SlideIn");
 
-        // 2. Wait for the animation transition to complete
+        // Slide Quest UI back in
+        QuestBoxManager qbm = FindFirstObjectByType<QuestBoxManager>();
+        if (questAnimator != null && qbm != null && qbm.isQuestActive)
+        {
+            questAnimator.Play("SlideIn");
+        }
+        
+
         yield return new WaitForSeconds(0.5f);
 
-        // 3. Hide both portraits AFTER the animation finishes
         if (leftCharacterIcon != null) leftCharacterIcon.gameObject.SetActive(false);
         if (rightCharacterIcon != null) rightCharacterIcon.gameObject.SetActive(false);
 
         DialogueBox.SetActive(false);
 
-        if (currentTrigger != null) currentTrigger.OnDialogueComplete();
+        // Triggers OnDialogueComplete() which flags SaveableWorldObject state as changed
+        if (currentTrigger != null)
+        {
+            currentTrigger.OnDialogueComplete();
+        }
 
         DisableDialogue();
 
@@ -225,5 +224,26 @@ public class DialogueManager : MonoBehaviour
     public void DisableDialogue()
     {
         currentTrigger = null;
+    }
+
+    /// <summary>
+    /// Instantly closes and resets the dialogue UI (used when loading a save file)
+    /// </summary>
+    public void ForceCloseDialogue()
+    {
+        StopAllCoroutines();
+        isDialogueActive = false;
+        currentTrigger = null;
+
+        if (DialogueBox != null) DialogueBox.SetActive(false);
+        if (fullscreenImageContainer != null) fullscreenImageContainer.SetActive(false);
+        if (leftCharacterIcon != null) leftCharacterIcon.gameObject.SetActive(false);
+        if (rightCharacterIcon != null) rightCharacterIcon.gameObject.SetActive(false);
+
+        if (playerStatsAnimator != null)
+        {
+            playerStatsAnimator.Play(playerStatsShowState);
+            if (controlsAnimator != null) controlsAnimator.Play("SlideIn");
+        }
     }
 }
