@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     [HideInInspector] public float speedPenalty = 0f;
 
+    [Header("Inspection Pause Flag")]
+    public bool isInspecting = false;
+
     [Header("Inventory Reference")]
     public InventorySO inventoryData;
     public ItemSO flashlightItem; // Drag Flashlight ItemSO here (or leave null to search by name "Flashlight")
@@ -35,11 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        if (isInspecting || (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive))
         {
             speedX = 0f;
             speedY = 0f;
-            animator.SetBool("isWalking", false);
+            if (animator != null) animator.SetBool("isWalking", false);
             return;
         }
 
@@ -52,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (inventoryData != null)
             {
-                // Check by ScriptableObject reference or by name fallback
                 hasFlashlightInInventory = flashlightItem != null
                     ? inventoryData.HasItem(flashlightItem)
                     : inventoryData.HasItemByName("Flashlight");
@@ -80,16 +82,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         bool isWalking = speedX != 0f || speedY != 0f;
-        animator.SetBool("isWalking", isWalking);
+        if (animator != null) animator.SetBool("isWalking", isWalking);
 
         if (isWalking)
         {
             lastFacingDir = new Vector2(speedX, speedY).normalized;
 
-            animator.SetFloat("InputX", speedX);
-            animator.SetFloat("InputY", speedY);
-            animator.SetFloat("LastInputX", speedX);
-            animator.SetFloat("LastInputY", speedY);
+            if (animator != null)
+            {
+                animator.SetFloat("InputX", speedX);
+                animator.SetFloat("InputY", speedY);
+                animator.SetFloat("LastInputX", speedX);
+                animator.SetFloat("LastInputY", speedY);
+            }
         }
 
         UpdateFlashlightRotation();
@@ -105,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        if (isInspecting || (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive))
         {
             rb.linearVelocity = Vector2.zero;
             return;

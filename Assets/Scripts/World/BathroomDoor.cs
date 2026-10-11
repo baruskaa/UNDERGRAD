@@ -1,4 +1,5 @@
 using UnityEngine;
+using Inventory.Model;
 
 public class BathroomDoor : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class BathroomDoor : MonoBehaviour
     [Header("Objects to Enable when Door Opens")]
     [Tooltip("Drag any lights, triggers, or items inside the cubicle that should turn on when opened.")]
     public GameObject[] objectsToEnable;
+
+    [Header("Key Requirement Settings")]
+    public bool requiresKey = false;
+    public ItemSO requiredKey;
+    public InventorySO playerInventory;
+
+    [Header("Locked Dialogue Settings")]
+    public Dialogue lockedDialogue; // Dialogue to trigger when player lacks key
 
     [Header("Interaction & Alert Settings")]
     [Tooltip("UI prompt or alert object shown when player is near (e.g. 'Press Q to Open')")]
@@ -46,11 +55,28 @@ public class BathroomDoor : MonoBehaviour
 
     private void Update()
     {
-        // Only allow interaction if door is NOT yet opened
-        if (!isOpen && isPlayerInRange && Input.GetKeyDown(interactKey))
+        // Ignore interactions if door is open or if dialogue is actively playing
+        if (isOpen || !isPlayerInRange) return;
+
+        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive) return;
+
+        if (Input.GetKeyDown(interactKey))
         {
             InteractWithDoor();
         }
+    }
+
+    // --- KEY CHECK LOGIC ---
+    private bool CheckHasKey()
+    {
+        if (!requiresKey) return true;
+
+        InventorySO inv = playerInventory;
+        if (inv == null && SaveSystem.Instance != null) inv = SaveSystem.Instance.playerInventory;
+
+        if (inv == null || requiredKey == null) return false;
+
+        return inv.HasItem(requiredKey) || inv.HasItemByName(requiredKey.name);
     }
 
     // --- TRIGGER DETECTION ---
@@ -59,7 +85,6 @@ public class BathroomDoor : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerInRange = true;
-            // Only show alert prompt if door is still closed
             if (!isOpen && playerAlert != null) playerAlert.SetActive(true);
         }
     }
@@ -94,8 +119,13 @@ public class BathroomDoor : MonoBehaviour
     // --- DOOR LOGIC ---
     public void InteractWithDoor()
     {
-        // Guard Clause: Prevent closing if door is already open
         if (isOpen) return;
+
+        if (requiresKey && !CheckHasKey())
+        {
+            TriggerLockedDialogue();
+            return;
+        }
 
         isOpen = true;
 
@@ -104,7 +134,6 @@ public class BathroomDoor : MonoBehaviour
             saveableObject.SetStateChanged(true);
         }
 
-        // Hide alert UI permanently once opened
         if (playerAlert != null)
         {
             playerAlert.SetActive(false);
@@ -113,13 +142,37 @@ public class BathroomDoor : MonoBehaviour
         UpdateDoorState();
     }
 
+    // --- DIALOGUE HANDLING (Reference: UnlockHallwayDoor) ---
+    private void TriggerLockedDialogue()
+    {
+        if (lockedDialogue != null && DialogueManager.Instance != null && !DialogueManager.Instance.isDialogueActive)
+        {
+            if (playerAlert != null) playerAlert.SetActive(false);
+
+            DialogueManager.Instance.OnDialogueEnded += OnLockedDialogueEnded;
+            DialogueManager.Instance.StartDialogue(lockedDialogue, null);
+        }
+    }
+
+    private void OnLockedDialogueEnded()
+    {
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= OnLockedDialogueEnded;
+        }
+
+        // Re-enable interaction prompt if player is still nearby
+        if (isPlayerInRange && !isOpen && playerAlert != null)
+        {
+            playerAlert.SetActive(true);
+        }
+    }
+
     public void UpdateDoorState()
     {
-        // 1. Swap door models
         if (closedDoorObject != null) closedDoorObject.SetActive(!isOpen);
         if (openDoorObject != null) openDoorObject.SetActive(isOpen);
 
-        // 2. Enable objects inside cubicle
         if (objectsToEnable != null)
         {
             foreach (GameObject obj in objectsToEnable)
@@ -132,9 +185,6 @@ public class BathroomDoor : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Called by SaveableWorldObject during LoadGame()
-    /// </summary>
     public void ApplyLoadedState(bool savedIsOpenState)
     {
         isOpen = savedIsOpenState;
@@ -144,7 +194,6 @@ public class BathroomDoor : MonoBehaviour
             saveableObject.SetStateChanged(isOpen);
         }
 
-        // Ensure alert prompt is hidden if loading an already opened door
         if (isOpen && playerAlert != null)
         {
             playerAlert.SetActive(false);

@@ -9,9 +9,6 @@ public class SaveSystem : MonoBehaviour
 {
     public static SaveSystem Instance { get; private set; }
 
-    /// <summary>
-    /// Static flag that prevents triggers (like start dialogues) from firing while a save file is loading.
-    /// </summary>
     public static bool IsLoadingSave { get; private set; } = false;
 
     [Header("References")]
@@ -20,10 +17,7 @@ public class SaveSystem : MonoBehaviour
     public QuestManager questManager;
 
     [Header("Level 1 Inventory Config")]
-    [Tooltip("Drag your Flashlight ItemSO here to guarantee it in Level 1.")]
     public ItemSO flashlightItem;
-
-    [Tooltip("Drag ALL ItemSO assets in your project here so SaveSystem can reconstruct inventory items by name.")]
     public List<ItemSO> itemDatabase;
 
     private string saveFilePath;
@@ -48,24 +42,26 @@ public class SaveSystem : MonoBehaviour
     {
         EnsureReferences();
 
-        // Initialize Level 1 inventory baseline if starting fresh and not restoring a save file
         if (playerInventory != null && !IsLoadingSave)
         {
             playerInventory.InitializeLevel1Inventory(flashlightItem);
         }
     }
 
-    /// <summary>
-    /// Utility method to check if save JSON exists for Main Menu UI validation
-    /// </summary>
     public bool HasSaveFile()
     {
         return File.Exists(saveFilePath);
     }
 
-    /// <summary>
-    /// Call this from Main Menu Load Button
-    /// </summary>
+    public void DeleteSaveFile()
+    {
+        if (HasSaveFile())
+        {
+            File.Delete(saveFilePath);
+            Debug.Log("[SaveSystem] Save file deleted.");
+        }
+    }
+
     public void LoadGameFromMainMenu()
     {
         if (!HasSaveFile())
@@ -74,13 +70,14 @@ public class SaveSystem : MonoBehaviour
             return;
         }
 
+        Time.timeScale = 1f;
         StartCoroutine(LoadSceneAndApplySaveRoutine());
     }
 
     private IEnumerator LoadSceneAndApplySaveRoutine()
     {
-        Debug.Log("<color=yellow>[SaveSystem] --- STARTING MAIN MENU LOAD ---</color>");
-        IsLoadingSave = true; // Lock triggers during loading
+        Debug.Log("<color=yellow>[SaveSystem] --- STARTING LOAD ROUTINE ---</color>");
+        IsLoadingSave = true;
 
         string json = File.ReadAllText(saveFilePath);
         PlayerData data = JsonUtility.FromJson<PlayerData>(json);
@@ -92,42 +89,38 @@ public class SaveSystem : MonoBehaviour
             yield break;
         }
 
-        // 1. Load target level asynchronously
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(data.sceneName);
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
-        // Wait 1 frame to ensure Scene Awake/Start runs completely
+        // Wait 2 frames to ensure all scene Start() and Awake() methods finish execution first
+        yield return null;
         yield return null;
 
-        // 2. Re-bind scene objects & restore saved states
         EnsureReferences();
         ApplyDataToScene(data);
 
-        IsLoadingSave = false; // Unlock triggers after restoration finishes
+        IsLoadingSave = false;
         Debug.Log("<color=green>[SaveSystem] --- LOAD & SCENE TRANSITION COMPLETE ---</color>");
     }
 
     private void EnsureReferences()
     {
-        if (playerManager == null)
-            playerManager = PlayerManager.Instance ?? FindObjectOfType<PlayerManager>();
-
-        if (questManager == null)
-            questManager = FindObjectOfType<QuestManager>();
+        playerManager = PlayerManager.Instance ?? FindFirstObjectByType<PlayerManager>();
+        questManager = FindFirstObjectByType<QuestManager>();
     }
 
     private void ApplyDataToScene(PlayerData data)
     {
-        // 0. Instantly kill any dialogue UI that auto-triggered during scene load
+        // 0. Close active dialogue
         if (DialogueManager.Instance != null)
         {
             DialogueManager.Instance.ForceCloseDialogue();
         }
 
-        // 1. Player Stats & Position
+        // 1. Restore Player Stats & Position directly
         if (playerManager != null)
         {
             playerManager.currentHealth = data.health;
@@ -141,20 +134,20 @@ public class SaveSystem : MonoBehaviour
             playerManager.UpdateUI();
         }
 
-        // 2. Quests
+        // 2. Restore Quests
         if (questManager != null && data.questCompleted != null)
         {
             questManager.questCompleted = (bool[])data.questCompleted.Clone();
             questManager.itemCollected = data.itemCollected;
         }
 
-        // 3. Inventory
+        // 3. Restore Inventory
         if (playerInventory != null)
         {
             playerInventory.RestoreFromSaveData(data.inventoryIndices, data.inventoryItemNames, itemDatabase, flashlightItem);
         }
 
-        // 4. Restore World Objects & Dialogue Triggers
+        // 4. Restore World Objects & Doors
         if (data.savedWorldStates != null)
         {
             SaveableWorldObject[] worldObjects = FindObjectsByType<SaveableWorldObject>(
@@ -168,6 +161,13 @@ public class SaveSystem : MonoBehaviour
                 if (savedState != null)
                 {
                     worldObj.RestoreState(savedState);
+
+                    // If this object is a door, force refresh its door state
+                    UnlockHallwayDoor door = worldObj.GetComponent<UnlockHallwayDoor>();
+                    if (door != null)
+                    {
+                        door.ApplyLoadedState(savedState.isInteractableStateChanged);
+                    }
                 }
             }
         }
@@ -200,6 +200,7 @@ public class SaveSystem : MonoBehaviour
         try
         {
             IsLoadingSave = true;
+            Time.timeScale = 1f;
             string json = File.ReadAllText(saveFilePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             if (data != null) ApplyDataToScene(data);

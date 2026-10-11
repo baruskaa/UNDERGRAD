@@ -36,7 +36,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern required for SaveSystem and ItemSO access
         if (Instance == null)
         {
             Instance = this;
@@ -52,7 +51,6 @@ public class PlayerManager : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
 
-        // Cache original material and SpriteRenderer
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -63,9 +61,12 @@ public class PlayerManager : MonoBehaviour
             originalMaterial = spriteRenderer.material;
         }
 
-        // Only set default max stats if they haven't been assigned yet or loaded
-        if (currentHealth <= 0) currentHealth = maxHealth;
-        if (currentHunger <= 0) currentHunger = maxHunger;
+        // ONLY initialize default full health/hunger if we are NOT in the middle of loading a save file
+        if (!SaveSystem.IsLoadingSave)
+        {
+            if (currentHealth <= 0) currentHealth = maxHealth;
+            if (currentHunger <= 0) currentHunger = maxHunger;
+        }
 
         InitializeBars();
         UpdateHungerPenalties();
@@ -80,7 +81,7 @@ public class PlayerManager : MonoBehaviour
             if (hungerTimer >= hungerInterval)
             {
                 TakeHunger(1);
-                hungerTimer = 0f; // Reset timer for the next minute
+                hungerTimer = 0f;
             }
         }
 
@@ -140,9 +141,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Call this after SaveSystem loads new health/hunger values to push updates to all UI bars.
-    /// </summary>
     public void UpdateUI()
     {
         if (healthBars != null)
@@ -170,18 +168,19 @@ public class PlayerManager : MonoBehaviour
         UpdateUI();
     }
 
-    // Alias for ItemSO compatibility
     public void Heal(int amount) => RestoreHealth(amount);
 
     public void RestoreHunger(int amount)
     {
         currentHunger = Mathf.Min(currentHunger + amount, maxHunger);
-        hungerTimer = 0f; // Reset passive decay timer when fed
+        hungerTimer = 0f;
         UpdateUI();
     }
 
     public void TakeDamage(int damage)
     {
+        if (currentHealth <= 0) return; // Prevent multiple death triggers
+
         currentHealth = Mathf.Max(0, currentHealth - damage);
         UpdateUI();
 
@@ -190,6 +189,26 @@ public class PlayerManager : MonoBehaviour
         {
             if (flashCoroutine != null) StopCoroutine(flashCoroutine);
             flashCoroutine = StartCoroutine(FlashWhite());
+        }
+
+        // Check for Game Over when health reaches 0
+        if (currentHealth == 0)
+        {
+            OnPlayerDeath();
+        }
+    }
+
+    private void OnPlayerDeath()
+    {
+        Debug.Log("[PlayerManager] Player health reached 0. Triggering Game Over!");
+
+        if (GameOverManager.Instance != null)
+        {
+            GameOverManager.Instance.TriggerGameOver();
+        }
+        else
+        {
+            Debug.LogError("[PlayerManager] GameOverManager Instance not found in scene!");
         }
     }
 
@@ -207,7 +226,6 @@ public class PlayerManager : MonoBehaviour
         UpdateUI();
     }
 
-    // Alias for SaveSystem compatibility
     public void ConsumeHunger(int amount) => TakeHunger(amount);
 
     private void UpdateHungerPenalties()

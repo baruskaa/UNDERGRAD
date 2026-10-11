@@ -214,6 +214,31 @@ namespace Inventory.Model
                 AddItem(flashlightItem);
             }
         }
+
+        /// <summary>
+        /// Finds and removes the first slot containing the given ItemSO, 
+        /// bypassing the NonConsumable check so key items can be consumed.
+        /// </summary>
+        public bool RemoveItemSO(ItemSO itemToRemove)
+        {
+            if (itemToRemove == null || inventoryItems == null) return false;
+
+            for (int i = 0; i < inventoryItems.Count; i++)
+            {
+                if (!inventoryItems[i].IsEmpty && inventoryItems[i].item != null)
+                {
+                    // Match by reference or asset name
+                    if (inventoryItems[i].item == itemToRemove ||
+                        inventoryItems[i].item.name.Equals(itemToRemove.name, StringComparison.OrdinalIgnoreCase))
+                    {
+                        inventoryItems[i] = InventoryItem.GetEmptyItem();
+                        InformAboutChange(); // Triggers UI refresh automatically
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
 
     [Serializable]

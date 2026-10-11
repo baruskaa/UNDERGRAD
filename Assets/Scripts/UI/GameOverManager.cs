@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CanvasGroup))]
 public class GameOverManager : MonoBehaviour
 {
+    public static GameOverManager Instance { get; private set; }
+
     [Header("Scene Settings")]
     [Tooltip("If checked, uses Scene Names instead of Build Indices.")]
     [SerializeField] private bool useSceneName = false;
@@ -20,10 +22,25 @@ public class GameOverManager : MonoBehaviour
     [Header("Fade Settings")]
     [SerializeField] private float fadeDuration = 1f;
 
+    [Header("Transition Settings (Optional)")]
+    [Tooltip("Optional Animator transition for fading out when reloading or loading a save.")]
+    public Animator transition;
+    public float transitionTime = 1f;
+
     private CanvasGroup canvasGroup;
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         canvasGroup = GetComponent<CanvasGroup>();
 
         // Start hidden and un-interactable
@@ -33,7 +50,7 @@ public class GameOverManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this method from your player health script or enemy reach trigger when player dies.
+    /// Call this method when player health reaches 0 or player dies.
     /// </summary>
     public void TriggerGameOver()
     {
@@ -61,9 +78,38 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Reset time scale before scene load
 
+        // 1. Check if a save file exists -> Load Save State
+        if (SaveSystem.Instance != null && SaveSystem.Instance.HasSaveFile())
+        {
+            Debug.Log("[GameOverManager] Save file found. Loading saved game...");
+            StartCoroutine(LoadSavedGameRoutine());
+        }
+        else
+        {
+            // 2. If no save exists -> Restart active scene
+            Debug.Log("[GameOverManager] No save file found. Restarting current scene...");
+            RestartScene();
+        }
+    }
+
+    private IEnumerator LoadSavedGameRoutine()
+    {
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSecondsRealtime(transitionTime);
+        }
+
+        if (SaveSystem.Instance != null)
+        {
+            SaveSystem.Instance.LoadGameFromMainMenu();
+        }
+    }
+
+    private void RestartScene()
+    {
         if (useSceneName)
         {
-            // If restartSceneName is blank, reloads the current active scene automatically
             if (string.IsNullOrEmpty(restartSceneName))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -1,0 +1,733 @@
+fileFormatVersion: 2
+guid: 911512419cf402f4c9b685543181775a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3150919974755562527
+    second: HALLWAY (121)_0
+  - first:
+      213: -4322771908973728001
+    second: HALLWAY (121)_1
+  - first:
+      213: 6492015678955944503
+    second: HALLWAY (121)_2
+  - first:
+      213: -4640073535316650915
+    second: HALLWAY (121)_3
+  - first:
+      213: -3538944583429565726
+    second: HALLWAY (121)_4
+  - first:
+      213: 4279019196770155854
+    second: HALLWAY (121)_5
+  - first:
+      213: 7219881160652828909
+    second: HALLWAY (121)_6
+  - first:
+      213: 4950278339191462876
+    second: HALLWAY (121)_7
+  - first:
+      213: 1563498999269815732
+    second: HALLWAY (121)_8
+  - first:
+      213: 3289179352424160991
+    second: HALLWAY (121)_9
+  - first:
+      213: 1175773495436031605
+    second: HALLWAY (121)_10
+  - first:
+      213: 5949918122040009380
+    second: HALLWAY (121)_11
+  - first:
+      213: 324750357440612043
+    second: HALLWAY (121)_12
+  - first:
+      213: 6513134930147851742
+    second: HALLWAY (121)_13
+  - first:
+      213: 4132915342757536405
+    second: HALLWAY (121)_14
+  - first:
+      213: 548267524399062802
+    second: HALLWAY (121)_15
+  - first:
+      213: 5664022610672618451
+    second: HALLWAY (121)_16
+  - first:
+      213: -4411589055729257715
+    second: HALLWAY (121)_17
+  - first:
+      213: -2947983566113307542
+    second: HALLWAY (121)_18
+  - first:
+      213: -1210809942192334454
+    second: HALLWAY (121)_19
+  - first:
+      213: -2480998323857319155
+    second: HALLWAY (121)_20
+  - first:
+      213: -5185005270703595961
+    second: HALLWAY (121)_21
+  - first:
+      213: 6632336680593855570
+    second: HALLWAY (121)_22
+  - first:
+      213: -2471825003441765832
+    second: HALLWAY (121)_23
+  - first:
+      213: -6805341203712481257
+    second: HALLWAY (121)_24
+  - first:
+      213: -6787539805809076704
+    second: HALLWAY (121)_25
+  - first:
+      213: 86550661991344636
+    second: HALLWAY (121)_26
+  - first:
+      213: 8833316647545416110
+    second: HALLWAY (121)_27
+  - first:
+      213: -947003042193240362
+    second: HALLWAY (121)_28
+  - first:
+      213: 5951844963966904099
+    second: HALLWAY (121)_29
+  - first:
+      213: 2494044387834567404
+    second: HALLWAY (121)_30
+  - first:
+      213: -6438588508398119768
+    second: HALLWAY (121)_31
+  - first:
+      213: -5610350297973386278
+    second: HALLWAY (121)_32
+  - first:
+      213: -6295505475040435732
+    second: HALLWAY (121)_33
+  - first:
+      213: -2553441097957019334
+    second: HALLWAY (121)_34
+  - first:
+      213: -8743023685526925367
+    second: HALLWAY (121)_35
+  - first:
+      213: -5287667713288866113
+    second: HALLWAY (121)_36
+  - first:
+      213: -2049018244882337983
+    second: HALLWAY (121)_37
+  - first:
+      213: 7876762636615720096
+    second: HALLWAY (121)_38
+  - first:
+      213: -7944457844854566912
+    second: HALLWAY (121)_39
+  - first:
+      213: 5107164162614972191
+    second: HALLWAY (121)_40
+  - first:
+      213: 7568292501881612612
+    second: HALLWAY (121)_41
+  - first:
+      213: -3177222289216179333
+    second: HALLWAY (121)_42
+  - first:
+      213: 732369421567870229
+    second: HALLWAY (121)_43
+  - first:
+      213: 2245428902108844539
+    second: HALLWAY (121)_44
+  - first:
+      213: 707492088684302420
+    second: HALLWAY (121)_45
+  - first:
+      213: -187113356352364394
+    second: HALLWAY (121)_46
+  - first:
+      213: 5987710560532532530
+    second: HALLWAY (121)_47
+  - first:
+      213: 8962052615621956557
+    second: HALLWAY (121)_48
+  - first:
+      213: -7115234547787439133
+    second: HALLWAY (121)_49
+  - first:
+      213: 7637607431375043239
+    second: HALLWAY (121)_50
+  - first:
+      213: 5979190305921210369
+    second: HALLWAY (121)_51
+  - first:
+      213: 1854502032156312169
+    second: HALLWAY (121)_52
+  - first:
+      213: -6433601693648530411
+    second: HALLWAY (121)_53
+  - first:
+      213: 6126132991046356658
+    second: HALLWAY (121)_54
+  - first:
+      213: 1533698808468669799
+    second: HALLWAY (121)_55
+  - first:
+      213: -8689216791923044730
+    second: HALLWAY (121)_56
+  - first:
+      213: -8894814724861088266
+    second: HALLWAY (121)_57
+  - first:
+      213: -1675101093549005934
+    second: HALLWAY (121)_58
+  - first:
+      213: 2251798603531557763
+    second: HALLWAY (121)_59
+  - first:
+      213: 643492678545306067
+    second: HALLWAY (121)_60
+  - first:
+      213: 13026281923530860
+    second: HALLWAY (121)_61
+  - first:
+      213: 513296361020867397
+    second: HALLWAY (121)_62
+  - first:
+      213: -7907897352846024578
+    second: HALLWAY (121)_63
+  - first:
+      213: 3102258337663404150
+    second: HALLWAY (121)_64
+  - first:
+      213: -449252443513543697
+    second: HALLWAY (121)_65
+  - first:
+      213: 1138573505844037932
+    second: HALLWAY (121)_66
+  - first:
+      213: -1019347905162217943
+    second: HALLWAY (121)_67
+  - first:
+      213: -6859400836239082644
+    second: HALLWAY (121)_68
+  - first:
+      213: 6452855979058640267
+    second: HALLWAY (121)_69
+  - first:
+      213: 4492570206364593600
+    second: HALLWAY (121)_70
+  - first:
+      213: -7153302555905205312
+    second: HALLWAY (121)_71
+  - first:
+      213: -3070055164182424884
+    second: HALLWAY (121)_72
+  - first:
+      213: 6054411864729050096
+    second: HALLWAY (121)_73
+  - first:
+      213: 6094658733846046547
+    second: HALLWAY (121)_74
+  - first:
+      213: 4949413520878582164
+    second: HALLWAY (121)_75
+  - first:
+      213: -6423173944759428614
+    second: HALLWAY (121)_76
+  - first:
+      213: 1055029695805821043
+    second: HALLWAY (121)_77
+  - first:
+      213: 6913303118117547261
+    second: HALLWAY (121)_78
+  - first:
+      213: 4035558511516372931
+    second: HALLWAY (121)_79
+  - first:
+      213: 104959860093204317
+    second: HALLWAY (121)_80
+  - first:
+      213: 4365180586568667489
+    second: HALLWAY (121)_81
+  - first:
+      213: 120826027393436415
+    second: HALLWAY (121)_82
+  - first:
+      213: -487081206643211449
+    second: HALLWAY (121)_83
+  - first:
+      213: -5937140925178324687
+    second: HALLWAY (121)_84
+  - first:
+      213: 5227333766544804259
+    second: HALLWAY (121)_85
+  - first:
+      213: 8232642858844061230
+    second: HALLWAY (121)_86
+  - first:
+      213: 5651868964466848038
+    second: HALLWAY (121)_87
+  - first:
+      213: 8048543371253294091
+    second: HALLWAY (121)_88
+  - first:
+      213: -8160972515962517285
+    second: HALLWAY (121)_89
+  - first:
+      213: -7570426529042526430
+    second: HALLWAY (121)_90
+  - first:
+      213: -7112120975119938343
+    second: HALLWAY (121)_91
+  - first:
+      213: 8079157741179615849
+    second: HALLWAY (121)_92
+  - first:
+      213: 3578635793308380587
+    second: HALLWAY (121)_93
+  - first:
+      213: 8662787765686035548
+    second: HALLWAY (121)_94
+  - first:
+      213: 9015670192850015412
+    second: HALLWAY (121)_95
+  - first:
+      213: -5161318809222391415
+    second: HALLWAY (121)_96
+  - first:
+      213: 2229706629028251155
+    second: HALLWAY (121)_97
+  - first:
+      213: 4570479010846800794
+    second: HALLWAY (121)_98
+  - first:
+      213: 4561455402238886718
+    second: HALLWAY (121)_99
+  - first:
+      213: -3441811821331084315
+    second: HALLWAY (121)_100
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HALLWAY (121)_51
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 251
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10894e477e95af250800000000000000
+      internalID: 5979190305921210369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_52
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 251
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962caedc5c38cb910800000000000000
+      internalID: 1854502032156312169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_55
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 206
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765073fb0fac84510800000000000000
+      internalID: 1533698808468669799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_56
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 206
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e411d7d53b96780800000000000000
+      internalID: -8689216791923044730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_61
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 177
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60dbca95574e2000800000000000000
+      internalID: 13026281923530860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_62
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 177
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543462f12589f1700800000000000000
+      internalID: 513296361020867397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_67
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 163
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92674422b7c8ad1f0800000000000000
+      internalID: -1019347905162217943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_68
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 147
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bb3f738438ec0a0800000000000000
+      internalID: -6859400836239082644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HALLWAY (121)_69
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 147
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85bb8203562d8950800000000000000
+      internalID: 6452855979058640267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HALLWAY (121)_0: 3150919974755562527
+      HALLWAY (121)_1: -4322771908973728001
+      HALLWAY (121)_10: 1175773495436031605
+      HALLWAY (121)_100: -3441811821331084315
+      HALLWAY (121)_101: 1999659520
+      HALLWAY (121)_11: 5949918122040009380
+      HALLWAY (121)_12: 324750357440612043
+      HALLWAY (121)_13: 6513134930147851742
+      HALLWAY (121)_14: 4132915342757536405
+      HALLWAY (121)_15: 548267524399062802
+      HALLWAY (121)_16: 5664022610672618451
+      HALLWAY (121)_17: -4411589055729257715
+      HALLWAY (121)_18: -2947983566113307542
+      HALLWAY (121)_19: -1210809942192334454
+      HALLWAY (121)_2: 6492015678955944503
+      HALLWAY (121)_20: -2480998323857319155
+      HALLWAY (121)_21: -5185005270703595961
+      HALLWAY (121)_22: 6632336680593855570
+      HALLWAY (121)_23: -2471825003441765832
+      HALLWAY (121)_24: -6805341203712481257
+      HALLWAY (121)_25: -6787539805809076704
+      HALLWAY (121)_26: 86550661991344636
+      HALLWAY (121)_27: 8833316647545416110
+      HALLWAY (121)_28: -947003042193240362
+      HALLWAY (121)_29: 5951844963966904099
+      HALLWAY (121)_3: -4640073535316650915
+      HALLWAY (121)_30: 2494044387834567404
+      HALLWAY (121)_31: -6438588508398119768
+      HALLWAY (121)_32: -5610350297973386278
+      HALLWAY (121)_33: -6295505475040435732
+      HALLWAY (121)_34: -2553441097957019334
+      HALLWAY (121)_35: -8743023685526925367
+      HALLWAY (121)_36: -5287667713288866113
+      HALLWAY (121)_37: -2049018244882337983
+      HALLWAY (121)_38: 7876762636615720096
+      HALLWAY (121)_39: -7944457844854566912
+      HALLWAY (121)_4: -3538944583429565726
+      HALLWAY (121)_40: 5107164162614972191
+      HALLWAY (121)_41: 7568292501881612612
+      HALLWAY (121)_42: -3177222289216179333
+      HALLWAY (121)_43: 732369421567870229
+      HALLWAY (121)_44: 2245428902108844539
+      HALLWAY (121)_45: 707492088684302420
+      HALLWAY (121)_46: -187113356352364394
+      HALLWAY (121)_47: 5987710560532532530
+      HALLWAY (121)_48: 8962052615621956557
+      HALLWAY (121)_49: -7115234547787439133
+      HALLWAY (121)_5: 4279019196770155854
+      HALLWAY (121)_50: 7637607431375043239
+      HALLWAY (121)_51: 5979190305921210369
+      HALLWAY (121)_52: 1854502032156312169
+      HALLWAY (121)_53: -6433601693648530411
+      HALLWAY (121)_54: 6126132991046356658
+      HALLWAY (121)_55: 1533698808468669799
+      HALLWAY (121)_56: -8689216791923044730
+      HALLWAY (121)_57: -8894814724861088266
+      HALLWAY (121)_58: -1675101093549005934
+      HALLWAY (121)_59: 2251798603531557763
+      HALLWAY (121)_6: 7219881160652828909
+      HALLWAY (121)_60: 643492678545306067
+      HALLWAY (121)_61: 13026281923530860
+      HALLWAY (121)_62: 513296361020867397
+      HALLWAY (121)_63: -7907897352846024578
+      HALLWAY (121)_64: 3102258337663404150
+      HALLWAY (121)_65: -449252443513543697
+      HALLWAY (121)_66: 1138573505844037932
+      HALLWAY (121)_67: -1019347905162217943
+      HALLWAY (121)_68: -6859400836239082644
+      HALLWAY (121)_69: 6452855979058640267
+      HALLWAY (121)_7: 4950278339191462876
+      HALLWAY (121)_70: 4492570206364593600
+      HALLWAY (121)_71: -7153302555905205312
+      HALLWAY (121)_72: -3070055164182424884
+      HALLWAY (121)_73: 6054411864729050096
+      HALLWAY (121)_74: 6094658733846046547
+      HALLWAY (121)_75: 4949413520878582164
+      HALLWAY (121)_76: -6423173944759428614
+      HALLWAY (121)_77: 1055029695805821043
+      HALLWAY (121)_78: 6913303118117547261
+      HALLWAY (121)_79: 4035558511516372931
+      HALLWAY (121)_8: 1563498999269815732
+      HALLWAY (121)_80: 104959860093204317
+      HALLWAY (121)_81: 4365180586568667489
+      HALLWAY (121)_82: 120826027393436415
+      HALLWAY (121)_83: -487081206643211449
+      HALLWAY (121)_84: -5937140925178324687
+      HALLWAY (121)_85: 5227333766544804259
+      HALLWAY (121)_86: 8232642858844061230
+      HALLWAY (121)_87: 5651868964466848038
+      HALLWAY (121)_88: 8048543371253294091
+      HALLWAY (121)_89: -8160972515962517285
+      HALLWAY (121)_9: 3289179352424160991
+      HALLWAY (121)_90: -7570426529042526430
+      HALLWAY (121)_91: -7112120975119938343
+      HALLWAY (121)_92: 8079157741179615849
+      HALLWAY (121)_93: 3578635793308380587
+      HALLWAY (121)_94: 8662787765686035548
+      HALLWAY (121)_95: 9015670192850015412
+      HALLWAY (121)_96: -5161318809222391415
+      HALLWAY (121)_97: 2229706629028251155
+      HALLWAY (121)_98: 4570479010846800794
+      HALLWAY (121)_99: 4561455402238886718
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,26 +1,19 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using Inventory.Model;
-
-public enum DoorType
-{
-    LockedDoor,
-    BarricadedDoor,
-    ChainedGate
-}
 
 public class UnlockHallwayDoor : MonoBehaviour
 {
     [Header("SAVE SYSTEM")]
     public SaveableWorldObject saveableObject;
 
-    [Header("DOOR TYPE & INSPECTION UI")]
-    public DoorType doorType = DoorType.LockedDoor;
-    public GameObject lockedDoorUI;
-    public GameObject barricadedDoorUI;
-    public GameObject chainedGateUI;
+    [Header("INSPECTION UI")]
+    [Tooltip("Single GameObject reference for this door's inspection UI image panel.")]
+    public GameObject doorInspectUI;
 
     [Header("BLACK FADE ANIMATOR")]
     public Animator fadeAnimator;
@@ -54,6 +47,12 @@ public class UnlockHallwayDoor : MonoBehaviour
     public Vector2 newMinBounds;
     public Vector2 newMaxBounds;
 
+    [Space(5)]
+    [Tooltip("Check if unlocking this door should transition to another scene instead of moving locally.")]
+    public bool loadNextScene = false;
+    [Tooltip("The build index number of the scene to load.")]
+    public int targetSceneBuildIndex = 0;
+
     private bool isPlayerInRange = false;
     private bool isUnlocked = false;
     private bool isInspecting = false;
@@ -84,13 +83,19 @@ public class UnlockHallwayDoor : MonoBehaviour
         if (fader != null) fader.SetActive(false);
 
         HideAllAlerts();
-        DisableInspectUI();
+
+        // Safely set inspect UI inactive on start without calling DisableInspectUI
+        if (doorInspectUI != null)
+        {
+            doorInspectUI.SetActive(false);
+        }
     }
 
     private void OnDisable()
     {
         isInspecting = false;
         isTransitioning = false;
+        SetPlayerPauseState(false);
         if (fader != null) fader.SetActive(false);
     }
 
@@ -98,7 +103,6 @@ public class UnlockHallwayDoor : MonoBehaviour
     {
         if (isUnlocked || !isPlayerInRange || isTransitioning) return;
 
-        // Ignore Q keypresses while dialogue is actively playing on screen
         if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive) return;
 
         if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
@@ -113,14 +117,44 @@ public class UnlockHallwayDoor : MonoBehaviour
         if (fadeAnimator == null && fader != null) fadeAnimator = fader.GetComponent<Animator>();
     }
 
-    private bool CheckHasKey()
+    private InventorySO GetActiveInventory()
     {
         InventorySO inv = playerInventory;
-        if (inv == null && SaveSystem.Instance != null) inv = SaveSystem.Instance.playerInventory;
+        if (inv == null && SaveSystem.Instance != null)
+            inv = SaveSystem.Instance.playerInventory;
 
+        return inv;
+    }
+
+    private bool CheckHasKey()
+    {
+        InventorySO inv = GetActiveInventory();
         if (inv == null || requiredKey == null) return false;
 
         return inv.HasItem(requiredKey) || inv.HasItemByName(requiredKey.name);
+    }
+
+    private void RemoveKeyFromInventory()
+    {
+        if (requiredKey == null) return;
+
+        InventorySO inv = GetActiveInventory();
+        if (inv != null)
+        {
+            inv.RemoveItemSO(requiredKey);
+        }
+    }
+
+    private void SetPlayerPauseState(bool isPaused)
+    {
+        GameObject player = playerRef != null ? playerRef : GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return;
+
+        PlayerMovement movement = player.GetComponent<PlayerMovement>();
+        if (movement != null)
+        {
+            movement.isInspecting = isPaused;
+        }
     }
 
     private void InteractWithDoor()
@@ -131,39 +165,33 @@ public class UnlockHallwayDoor : MonoBehaviour
         {
             if (hasKey)
             {
-                // Player has key -> Unlock & Teleport
-                _ = PerformUnlockAndTransition();
+                if (loadNextScene)
+                {
+                    _ = PerformUnlockAndTransitionNextScene();
+                }
+                else
+                {
+                    _ = PerformUnlockAndTransition();
+                }
             }
             else
             {
-                // Player doesn't have key -> Close inspect UI with fade
                 _ = CloseInspectionWithFade();
             }
         }
         else
         {
-            // First press -> Open inspect UI with fade
             _ = OpenInspectionWithFade();
         }
     }
 
-    private GameObject GetCurrentInspectUI()
-    {
-        return doorType switch
-        {
-            DoorType.LockedDoor => lockedDoorUI,
-            DoorType.BarricadedDoor => barricadedDoorUI,
-            DoorType.ChainedGate => chainedGateUI,
-            _ => null
-        };
-    }
-
     private void EnableInspectUI()
     {
-        GameObject activeUI = GetCurrentInspectUI();
-        if (activeUI != null)
+        SetPlayerPauseState(true);
+
+        if (doorInspectUI != null)
         {
-            activeUI.SetActive(true);
+            doorInspectUI.SetActive(true);
         }
 
         isInspecting = true;
@@ -171,11 +199,13 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void DisableInspectUI()
     {
-        if (lockedDoorUI != null) lockedDoorUI.SetActive(false);
-        if (barricadedDoorUI != null) barricadedDoorUI.SetActive(false);
-        if (chainedGateUI != null) chainedGateUI.SetActive(false);
+        if (doorInspectUI != null)
+        {
+            doorInspectUI.SetActive(false);
+        }
 
         isInspecting = false;
+        SetPlayerPauseState(false);
     }
 
     private static readonly int FadeInStateHash = Animator.StringToHash("FadeIn");
@@ -190,9 +220,7 @@ public class UnlockHallwayDoor : MonoBehaviour
 
         if (fadeAnimator != null)
         {
-            // Transparency 0 -> 1, screen becomes black
             fadeAnimator.CrossFade(FadeInStateHash, 0f);
-
             await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
         }
     }
@@ -204,7 +232,6 @@ public class UnlockHallwayDoor : MonoBehaviour
         if (fadeAnimator != null)
         {
             fadeAnimator.CrossFade(FadeOutStateHash, 0f);
-
             await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
         }
 
@@ -217,26 +244,19 @@ public class UnlockHallwayDoor : MonoBehaviour
         isTransitioning = true;
         HideProximityAlerts();
 
-        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
-
-        // 2. Enable the door inspection UI while the screen is black
         EnableInspectUI();
 
-        // 3. Enable the door alert at the same time as the inspection UI
         if (CheckHasKey() && doorAlert != null)
         {
             doorAlert.SetActive(true);
         }
 
-        // 4. Optional hold on full black
         if (fadeHoldDuration > 0f)
             await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
 
-        // 5. FadeOut: screen becomes visible again
         await PlayFadeFromBlack();
 
-        // 6. Start dialogue if no key
         if (!CheckHasKey())
         {
             TriggerLockedDialogue();
@@ -252,17 +272,12 @@ public class UnlockHallwayDoor : MonoBehaviour
         if (doorAlert != null)
             doorAlert.SetActive(false);
 
-        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
-
-        // 2. Disable the inspection UI while the screen is black
         DisableInspectUI();
 
-        // 3. Optional hold on full black
         if (fadeHoldDuration > 0f)
             await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
 
-        // 4. FadeOut: return to normal gameplay view
         await PlayFadeFromBlack();
 
         if (isPlayerInRange)
@@ -276,19 +291,14 @@ public class UnlockHallwayDoor : MonoBehaviour
         isTransitioning = true;
         HideAllAlerts();
 
-        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
-
-        // 2. Disable inspect UI
         DisableInspectUI();
 
-        // 3. Play the unlock sound at the same time the 2-second black-screen hold begins
         if (audioSource != null && unlockSound != null)
         {
             audioSource.PlayOneShot(unlockSound);
         }
 
-        // 4. Teleport player and adjust camera bounds while the screen is black
         GameObject playerToMove = playerRef;
 
         if (playerToMove == null)
@@ -304,21 +314,44 @@ public class UnlockHallwayDoor : MonoBehaviour
                 cam.SetBounds(newMinBounds, newMaxBounds);
         }
 
-        
-
-        // 6. Hold the screen black for exactly 2 seconds while the sound plays
         await Task.Delay(Mathf.RoundToInt(2f * 1000f));
 
-
-        // 7. FadeOut: reveal the new area
         await PlayFadeFromBlack();
-
-        isTransitioning = false;
-
-        // 5. Save unlocked state
+        RemoveKeyFromInventory();
         UnlockDoor();
 
+        
+
+        isTransitioning = false;
     }
+
+    private async Task PerformUnlockAndTransitionNextScene()
+    {
+        isTransitioning = true;
+        HideAllAlerts();
+
+        await PlayFadeToBlack();
+        DisableInspectUI();
+
+        if (audioSource != null && unlockSound != null)
+        {
+            audioSource.PlayOneShot(unlockSound);
+        }
+
+        await Task.Delay(Mathf.RoundToInt(2f * 1000f));
+
+        RemoveKeyFromInventory();
+        UnlockDoor();
+
+        AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(targetSceneBuildIndex);
+        while (!sceneLoad.isDone)
+        {
+            await Task.Yield();
+        }
+
+        isTransitioning = false;
+    }
+
     private void UnlockDoor()
     {
         if (saveableObject != null)
