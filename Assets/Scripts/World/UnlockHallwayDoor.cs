@@ -25,10 +25,10 @@ public class UnlockHallwayDoor : MonoBehaviour
     [Header("BLACK FADE ANIMATOR")]
     public Animator fadeAnimator;
     public GameObject fader;                    // Drag the 'Black' GameObject here
-    public string fadeOutAnimation = "fadeout"; // State/Clip name that fades screen to black
-    public string fadeInAnimation = "fadein";   // State/Clip name that fades screen back in
-    public float fadeDuration = 0.5f;           // Duration of the fade animation in seconds
-    public float fadeHoldDuration = 0.2f;       // Hold duration on full black screen
+    public string fadeOutAnimation = "Fadeout"; // State/Clip name that fades screen to black
+    public string fadeInAnimation = "FadeIn";   // State/Clip name that fades screen back in
+    public float fadeDuration = 1f;             // Duration of the fade animation in seconds
+    public float fadeHoldDuration = 0.2f;       // Default hold duration on full black screen
 
     [Header("KEY SETTINGS")]
     public ItemSO requiredKey;
@@ -89,12 +89,7 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void OnDisable()
     {
-        if (isInspecting)
-        {
-            Time.timeScale = 1f;
-            isInspecting = false;
-        }
-
+        isInspecting = false;
         isTransitioning = false;
         if (fader != null) fader.SetActive(false);
     }
@@ -180,22 +175,25 @@ public class UnlockHallwayDoor : MonoBehaviour
         if (barricadedDoorUI != null) barricadedDoorUI.SetActive(false);
         if (chainedGateUI != null) chainedGateUI.SetActive(false);
 
-        Time.timeScale = 1f; // Restore game speed
         isInspecting = false;
     }
+
+    private static readonly int FadeInStateHash = Animator.StringToHash("FadeIn");
+    private static readonly int FadeOutStateHash = Animator.StringToHash("FadeOut");
 
     private async Task PlayFadeToBlack()
     {
         EnsureFadeReferences();
 
-        // 1. Force black panel ON before running the animation
-        if (fader != null) fader.SetActive(true);
+        if (fader != null)
+            fader.SetActive(true);
 
         if (fadeAnimator != null)
         {
-            // Play from normalized time 0 to guarantee fresh start
-            fadeAnimator.Play(fadeOutAnimation, 0, 0f);
-            await Task.Delay((int)(fadeDuration * 1000));
+            // Transparency 0 -> 1, screen becomes black
+            fadeAnimator.CrossFade(FadeInStateHash, 0f);
+
+            await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
         }
     }
 
@@ -205,13 +203,13 @@ public class UnlockHallwayDoor : MonoBehaviour
 
         if (fadeAnimator != null)
         {
-            // Play from normalized time 0 to guarantee fresh start
-            fadeAnimator.Play(fadeInAnimation, 0, 0f);
-            await Task.Delay((int)(fadeDuration * 1000));
+            fadeAnimator.CrossFade(FadeOutStateHash, 0f);
+
+            await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
         }
 
-        // 2. Turn OFF black panel ONLY after fade-in finishes
-        if (fader != null) fader.SetActive(false);
+        if (fader != null)
+            fader.SetActive(false);
     }
 
     private async Task OpenInspectionWithFade()
@@ -219,34 +217,27 @@ public class UnlockHallwayDoor : MonoBehaviour
         isTransitioning = true;
         HideProximityAlerts();
 
-        // 1. Fade Out to Black
+        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
 
-        // 2. Enable Inspect UI while screen is covered in black
+        // 2. Enable the door inspection UI while the screen is black
         EnableInspectUI();
 
-        // 3. Hold black screen briefly
-        if (fadeHoldDuration > 0f)
+        // 3. Enable the door alert at the same time as the inspection UI
+        if (CheckHasKey() && doorAlert != null)
         {
-            await Task.Delay((int)(fadeHoldDuration * 1000));
+            doorAlert.SetActive(true);
         }
 
-        // 4. Fade back in to reveal Inspect UI
+        // 4. Optional hold on full black
+        if (fadeHoldDuration > 0f)
+            await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
+
+        // 5. FadeOut: screen becomes visible again
         await PlayFadeFromBlack();
 
-        // 5. Pause game time AFTER inspect UI is fully visible
-        Time.timeScale = 0f;
-
-        bool hasKey = CheckHasKey();
-
-        if (hasKey)
-        {
-            if (doorAlert != null)
-            {
-                doorAlert.SetActive(true);
-            }
-        }
-        else
+        // 6. Start dialogue if no key
+        if (!CheckHasKey())
         {
             TriggerLockedDialogue();
         }
@@ -258,29 +249,24 @@ public class UnlockHallwayDoor : MonoBehaviour
     {
         isTransitioning = true;
 
-        // Restore game speed before fading
-        Time.timeScale = 1f;
-        if (doorAlert != null) doorAlert.SetActive(false);
+        if (doorAlert != null)
+            doorAlert.SetActive(false);
 
-        // 1. Fade Out to Black
+        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
 
-        // 2. Disable UI while screen is black
+        // 2. Disable the inspection UI while the screen is black
         DisableInspectUI();
 
-        // 3. Hold black screen
+        // 3. Optional hold on full black
         if (fadeHoldDuration > 0f)
-        {
-            await Task.Delay((int)(fadeHoldDuration * 1000));
-        }
+            await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
 
-        // 4. Fade back in
+        // 4. FadeOut: return to normal gameplay view
         await PlayFadeFromBlack();
 
         if (isPlayerInRange)
-        {
             UpdateAlertState();
-        }
 
         isTransitioning = false;
     }
@@ -288,52 +274,51 @@ public class UnlockHallwayDoor : MonoBehaviour
     private async Task PerformUnlockAndTransition()
     {
         isTransitioning = true;
-
-        // Restore game speed before fading
-        Time.timeScale = 1f;
         HideAllAlerts();
 
-        // 1. Fade Out to Black
+        // 1. FadeIn: screen becomes black
         await PlayFadeToBlack();
 
         // 2. Disable inspect UI
         DisableInspectUI();
 
-        // 3. Play SFX
+        // 3. Play the unlock sound at the same time the 2-second black-screen hold begins
         if (audioSource != null && unlockSound != null)
         {
             audioSource.PlayOneShot(unlockSound);
         }
 
-        // 4. Teleport Player & Adjust Camera
+        // 4. Teleport player and adjust camera bounds while the screen is black
         GameObject playerToMove = playerRef;
-        if (playerToMove == null) playerToMove = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerToMove == null)
+            playerToMove = GameObject.FindGameObjectWithTag("Player");
 
         if (movePlayerOnUnlock && playerToMove != null && transitionPoint != null)
         {
             playerToMove.transform.position = transitionPoint.position;
 
             CameraFollow cam = FindAnyObjectByType<CameraFollow>();
+
             if (cam != null)
-            {
                 cam.SetBounds(newMinBounds, newMaxBounds);
-            }
         }
 
-        // 5. Save Unlocked State
-        UnlockDoor();
+        
 
-        if (fadeHoldDuration > 0f)
-        {
-            await Task.Delay((int)(fadeHoldDuration * 1000));
-        }
+        // 6. Hold the screen black for exactly 2 seconds while the sound plays
+        await Task.Delay(Mathf.RoundToInt(2f * 1000f));
 
-        // 6. Fade back in
+
+        // 7. FadeOut: reveal the new area
         await PlayFadeFromBlack();
 
         isTransitioning = false;
-    }
 
+        // 5. Save unlocked state
+        UnlockDoor();
+
+    }
     private void UnlockDoor()
     {
         if (saveableObject != null)
