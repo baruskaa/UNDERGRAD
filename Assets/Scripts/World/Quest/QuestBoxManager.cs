@@ -14,6 +14,8 @@ public class QuestBoxManager : MonoBehaviour
 
     private void Start()
     {
+        // Keep active so the Animator can play animations
+        if (dBox != null) dBox.SetActive(true);
     }
 
     public void ShowQuest(string questText)
