@@ -72,6 +72,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger = null)
     {
+
+
+        currentTrigger = trigger;
+
+        DialogueBox.SetActive(true);
+        isDialogueActive = true;
+
         currentTrigger = trigger;
 
         DialogueBox.SetActive(true);

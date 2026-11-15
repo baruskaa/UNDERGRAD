@@ -41,6 +41,9 @@ public class DialogueTrigger : MonoBehaviour
     public bool isDialogueOnInteract = true;
     public GameObject Alert;
 
+    [Header("AUDIO SETTINGS")]
+    public AudioSource audioToStop;
+
     [Header("DIALOGUE TO QUEST")]
     public bool startQuestAfterDialogue;
     public int questNumberToStart;
@@ -123,6 +126,11 @@ public class DialogueTrigger : MonoBehaviour
         if (Alert != null)
         {
             Alert.SetActive(false);
+        }
+
+        if (audioToStop != null)
+        {
+            audioToStop.Stop();
         }
 
         if (DialogueManager.Instance != null)
