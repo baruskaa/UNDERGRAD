@@ -1,0 +1,2379 @@
+fileFormatVersion: 2
+guid: d16424bc9e5019e4a9a9776a82fbf35a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7445385189444710062
+    second: TAKBO SI ATE GHORL3_0
+  - first:
+      213: -7491388931738291446
+    second: TAKBO SI ATE GHORL3_1
+  - first:
+      213: 5946252609792110477
+    second: TAKBO SI ATE GHORL3_2
+  - first:
+      213: -5908917680255280725
+    second: TAKBO SI ATE GHORL3_3
+  - first:
+      213: 7193871315024135453
+    second: TAKBO SI ATE GHORL3_4
+  - first:
+      213: 1393994712616722932
+    second: TAKBO SI ATE GHORL3_5
+  - first:
+      213: 3969596590955974427
+    second: TAKBO SI ATE GHORL3_6
+  - first:
+      213: 3552680677465889164
+    second: TAKBO SI ATE GHORL3_7
+  - first:
+      213: -5830618788230698542
+    second: TAKBO SI ATE GHORL3_8
+  - first:
+      213: -3378833841222096422
+    second: TAKBO SI ATE GHORL3_9
+  - first:
+      213: -3378416157720721131
+    second: TAKBO SI ATE GHORL3_10
+  - first:
+      213: -5229925094169574326
+    second: TAKBO SI ATE GHORL3_11
+  - first:
+      213: 3625550345055300562
+    second: TAKBO SI ATE GHORL3_12
+  - first:
+      213: 512188743232536977
+    second: TAKBO SI ATE GHORL3_13
+  - first:
+      213: 2936584764052418686
+    second: TAKBO SI ATE GHORL3_14
+  - first:
+      213: 2411958437056542327
+    second: TAKBO SI ATE GHORL3_15
+  - first:
+      213: 4649078058633201727
+    second: TAKBO SI ATE GHORL3_16
+  - first:
+      213: -8908665976360491630
+    second: TAKBO SI ATE GHORL3_17
+  - first:
+      213: 4167673343084813560
+    second: TAKBO SI ATE GHORL3_18
+  - first:
+      213: -3389267772480472739
+    second: TAKBO SI ATE GHORL3_19
+  - first:
+      213: -2893694136964894384
+    second: TAKBO SI ATE GHORL3_20
+  - first:
+      213: -8493260291814776497
+    second: TAKBO SI ATE GHORL3_21
+  - first:
+      213: 5263834682460139991
+    second: TAKBO SI ATE GHORL3_22
+  - first:
+      213: -3379392357953772516
+    second: TAKBO SI ATE GHORL3_23
+  - first:
+      213: 809702425328777414
+    second: TAKBO SI ATE GHORL3_24
+  - first:
+      213: -6914667714039124885
+    second: TAKBO SI ATE GHORL3_25
+  - first:
+      213: -8203529705568869855
+    second: TAKBO SI ATE GHORL3_26
+  - first:
+      213: 5227040180424922021
+    second: TAKBO SI ATE GHORL3_27
+  - first:
+      213: 4176763533187027427
+    second: TAKBO SI ATE GHORL3_28
+  - first:
+      213: 1346412741371630675
+    second: TAKBO SI ATE GHORL3_29
+  - first:
+      213: 1565407337160350347
+    second: TAKBO SI ATE GHORL3_30
+  - first:
+      213: 6852145818471548959
+    second: TAKBO SI ATE GHORL3_31
+  - first:
+      213: 6506122987506418770
+    second: TAKBO SI ATE GHORL3_32
+  - first:
+      213: -8773913291696716258
+    second: TAKBO SI ATE GHORL3_33
+  - first:
+      213: 5801617758883465598
+    second: TAKBO SI ATE GHORL3_34
+  - first:
+      213: -1272971059814652189
+    second: TAKBO SI ATE GHORL3_35
+  - first:
+      213: 5609432175416115714
+    second: TAKBO SI ATE GHORL3_36
+  - first:
+      213: 1874933497211309756
+    second: TAKBO SI ATE GHORL3_37
+  - first:
+      213: -2989779771094768751
+    second: TAKBO SI ATE GHORL3_38
+  - first:
+      213: 4291502534084243066
+    second: TAKBO SI ATE GHORL3_39
+  - first:
+      213: -8021167571336026645
+    second: TAKBO SI ATE GHORL3_40
+  - first:
+      213: 5549765989567101058
+    second: TAKBO SI ATE GHORL3_41
+  - first:
+      213: -3729378980064886599
+    second: TAKBO SI ATE GHORL3_42
+  - first:
+      213: 6755685201786798203
+    second: TAKBO SI ATE GHORL3_43
+  - first:
+      213: 4616521184392005717
+    second: TAKBO SI ATE GHORL3_44
+  - first:
+      213: 2786634728058783923
+    second: TAKBO SI ATE GHORL3_45
+  - first:
+      213: 4827788419686215288
+    second: TAKBO SI ATE GHORL3_46
+  - first:
+      213: 2106789824079031980
+    second: TAKBO SI ATE GHORL3_47
+  - first:
+      213: 1809430563725892504
+    second: TAKBO SI ATE GHORL3_48
+  - first:
+      213: -2894836955824380872
+    second: TAKBO SI ATE GHORL3_49
+  - first:
+      213: 5394687902431529448
+    second: TAKBO SI ATE GHORL3_50
+  - first:
+      213: -5054027636361094477
+    second: TAKBO SI ATE GHORL3_51
+  - first:
+      213: 8838705464443677318
+    second: TAKBO SI ATE GHORL3_52
+  - first:
+      213: 3405563264534642309
+    second: TAKBO SI ATE GHORL3_53
+  - first:
+      213: 1950408482326321367
+    second: TAKBO SI ATE GHORL3_54
+  - first:
+      213: -7632305844605779553
+    second: TAKBO SI ATE GHORL3_55
+  - first:
+      213: 9189696634817191703
+    second: TAKBO SI ATE GHORL3_56
+  - first:
+      213: -6642703066817082827
+    second: TAKBO SI ATE GHORL3_57
+  - first:
+      213: -2048463676230683031
+    second: TAKBO SI ATE GHORL3_58
+  - first:
+      213: -2954665465482623328
+    second: TAKBO SI ATE GHORL3_59
+  - first:
+      213: -2615655831202774014
+    second: TAKBO SI ATE GHORL3_60
+  - first:
+      213: 7270058873621565766
+    second: TAKBO SI ATE GHORL3_61
+  - first:
+      213: -6443507084517440428
+    second: TAKBO SI ATE GHORL3_62
+  - first:
+      213: -3311358178658517762
+    second: TAKBO SI ATE GHORL3_63
+  - first:
+      213: 1669223983440170771
+    second: TAKBO SI ATE GHORL3_64
+  - first:
+      213: 372064084837071254
+    second: TAKBO SI ATE GHORL3_65
+  - first:
+      213: 4984409939468519506
+    second: TAKBO SI ATE GHORL3_66
+  - first:
+      213: -8502130085392568564
+    second: TAKBO SI ATE GHORL3_67
+  - first:
+      213: -7869774295784665006
+    second: TAKBO SI ATE GHORL3_68
+  - first:
+      213: 9047712347010758408
+    second: TAKBO SI ATE GHORL3_69
+  - first:
+      213: -7145249320248525435
+    second: TAKBO SI ATE GHORL3_70
+  - first:
+      213: -8399616529313911670
+    second: TAKBO SI ATE GHORL3_71
+  - first:
+      213: 5830220473159725125
+    second: TAKBO SI ATE GHORL3_72
+  - first:
+      213: 936795225926282290
+    second: TAKBO SI ATE GHORL3_73
+  - first:
+      213: 8036641232168231115
+    second: TAKBO SI ATE GHORL3_74
+  - first:
+      213: 4633449758660821311
+    second: TAKBO SI ATE GHORL3_75
+  - first:
+      213: -9024035243553827603
+    second: TAKBO SI ATE GHORL3_76
+  - first:
+      213: 4920709788712801678
+    second: TAKBO SI ATE GHORL3_77
+  - first:
+      213: 5913678345757863960
+    second: TAKBO SI ATE GHORL3_78
+  - first:
+      213: 1216447526681521078
+    second: TAKBO SI ATE GHORL3_79
+  - first:
+      213: 6169749892251741783
+    second: TAKBO SI ATE GHORL3_80
+  - first:
+      213: -6422921020883211562
+    second: TAKBO SI ATE GHORL3_81
+  - first:
+      213: -3725382116598145553
+    second: TAKBO SI ATE GHORL3_82
+  - first:
+      213: 1179441893890949749
+    second: TAKBO SI ATE GHORL3_83
+  - first:
+      213: -1226564031814175090
+    second: TAKBO SI ATE GHORL3_84
+  - first:
+      213: 1886426316539776431
+    second: TAKBO SI ATE GHORL3_85
+  - first:
+      213: 2427158533030432899
+    second: TAKBO SI ATE GHORL3_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_0
+      rect:
+        serializedVersion: 2
+        x: 10299
+        y: 4429
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae6ec8e162535760800000000000000
+      internalID: 7445385189444710062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_1
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 4409
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a033279257d390890800000000000000
+      internalID: -7491388931738291446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_2
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 4389
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fe5677e35558250800000000000000
+      internalID: 5946252609792110477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_3
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 4369
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9db553dae4ffda0800000000000000
+      internalID: -5908917680255280725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_4
+      rect:
+        serializedVersion: 2
+        x: 7459
+        y: 39
+        width: 2622
+        height: 4312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15c2e3a8d3c5d360800000000000000
+      internalID: 7193871315024135453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_5
+      rect:
+        serializedVersion: 2
+        x: 10219
+        y: 3969
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1ea403ec6785310800000000000000
+      internalID: 1393994712616722932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_6
+      rect:
+        serializedVersion: 2
+        x: 10339
+        y: 2959
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f48815117d61730800000000000000
+      internalID: 3969596590955974427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_7
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2849
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c899fb4d048ad4130800000000000000
+      internalID: 3552680677465889164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_8
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2819
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d96ac2aa1b751fa0800000000000000
+      internalID: -5830618788230698542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_9
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 2619
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad963e2f588fb11d0800000000000000
+      internalID: -3378833841222096422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_10
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 2389
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519cd9777647d11d0800000000000000
+      internalID: -3378416157720721131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_11
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 2339
+        width: 12
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a440f1016d29b67b0800000000000000
+      internalID: -5229925094169574326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_12
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 2409
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbe05074da805230800000000000000
+      internalID: 3625550345055300562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_13
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 2369
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1914452c2f8ab1700800000000000000
+      internalID: 512188743232536977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_14
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 2329
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e703b22c848d0c820800000000000000
+      internalID: 2936584764052418686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_15
+      rect:
+        serializedVersion: 2
+        x: 10179
+        y: 2369
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776f2cd5b6ff87120800000000000000
+      internalID: 2411958437056542327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_16
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 2349
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3805e9ccd7d48040800000000000000
+      internalID: 4649078058633201727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_17
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2249
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295ac60ae7f0e5480800000000000000
+      internalID: -8908665976360491630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_18
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2229
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc5f6203dc86d930800000000000000
+      internalID: 4167673343084813560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_19
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2189
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d593f940be6e6f0d0800000000000000
+      internalID: -3389267772480472739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_20
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 2209
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051b39d838887d7d0800000000000000
+      internalID: -2893694136964894384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_21
+      rect:
+        serializedVersion: 2
+        x: 7319
+        y: 2189
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41237983c0e12a80800000000000000
+      internalID: -8493260291814776497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_22
+      rect:
+        serializedVersion: 2
+        x: 7339
+        y: 2209
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1fa6431c5ec0940800000000000000
+      internalID: 5263834682460139991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_23
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 2189
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14ee732e8cf911d0800000000000000
+      internalID: -3379392357953772516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_24
+      rect:
+        serializedVersion: 2
+        x: 7339
+        y: 2179
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c87e7bd014ac3b00800000000000000
+      internalID: 809702425328777414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_25
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 2169
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ce5dc795a2a00a0800000000000000
+      internalID: -6914667714039124885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_26
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 2159
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122e33b6235372e80800000000000000
+      internalID: -8203529705568869855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_27
+      rect:
+        serializedVersion: 2
+        x: 7319
+        y: 2169
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3dbec995d2a8840800000000000000
+      internalID: 5227040180424922021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_28
+      rect:
+        serializedVersion: 2
+        x: 7379
+        y: 2169
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e11b62dd48d6f930800000000000000
+      internalID: 4176763533187027427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_29
+      rect:
+        serializedVersion: 2
+        x: 7319
+        y: 2149
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3541482314b6fa210800000000000000
+      internalID: 1346412741371630675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_30
+      rect:
+        serializedVersion: 2
+        x: 7359
+        y: 2149
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a9b34eda179b510800000000000000
+      internalID: 1565407337160350347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_31
+      rect:
+        serializedVersion: 2
+        x: 7419
+        y: 1969
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18cc235156b71f50800000000000000
+      internalID: 6852145818471548959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_32
+      rect:
+        serializedVersion: 2
+        x: 7439
+        y: 1989
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254c25fd2646a4a50800000000000000
+      internalID: 6506122987506418770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_33
+      rect:
+        serializedVersion: 2
+        x: 7399
+        y: 1949
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16c65ee85ccc3680800000000000000
+      internalID: -8773913291696716258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_34
+      rect:
+        serializedVersion: 2
+        x: 7439
+        y: 1969
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79c8d80d9c738050800000000000000
+      internalID: 5801617758883465598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_35
+      rect:
+        serializedVersion: 2
+        x: 7419
+        y: 1949
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6256ac09f755ee0800000000000000
+      internalID: -1272971059814652189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_36
+      rect:
+        serializedVersion: 2
+        x: 7379
+        y: 1929
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202035fe7d4b8dd40800000000000000
+      internalID: 5609432175416115714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_37
+      rect:
+        serializedVersion: 2
+        x: 7399
+        y: 1929
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbec2c6f41a150a10800000000000000
+      internalID: 1874933497211309756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_38
+      rect:
+        serializedVersion: 2
+        x: 7379
+        y: 1849
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1936f33832b2286d0800000000000000
+      internalID: -2989779771094768751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_39
+      rect:
+        serializedVersion: 2
+        x: 7419
+        y: 1889
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ea7c041da7e8b30800000000000000
+      internalID: 4291502534084243066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_40
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 1849
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be522a287961fa090800000000000000
+      internalID: -8021167571336026645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_41
+      rect:
+        serializedVersion: 2
+        x: 7419
+        y: 1859
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288f0ba73cab40d40800000000000000
+      internalID: 5549765989567101058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_42
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1849
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b08c64a3959e3cc0800000000000000
+      internalID: -3729378980064886599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_43
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 1809
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b708ddad5e301cd50800000000000000
+      internalID: 6755685201786798203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_44
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 1829
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55840cdce8d211040800000000000000
+      internalID: 4616521184392005717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_45
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1819
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b806bc558d1ca620800000000000000
+      internalID: 2786634728058783923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_46
+      rect:
+        serializedVersion: 2
+        x: 10159
+        y: 1789
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e242e2dffbff240800000000000000
+      internalID: 4827788419686215288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_47
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1809
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae63a8ce22dc3d10800000000000000
+      internalID: 2106789824079031980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_48
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1689
+        width: 72
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bdd9cc2836c1910800000000000000
+      internalID: 1809430563725892504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_49
+      rect:
+        serializedVersion: 2
+        x: 10179
+        y: 1809
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8342a6d402973d7d0800000000000000
+      internalID: -2894836955824380872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_50
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 1729
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e94782a018cdda40800000000000000
+      internalID: 5394687902431529448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_51
+      rect:
+        serializedVersion: 2
+        x: 10079
+        y: 1709
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba90b164ac7cd9b0800000000000000
+      internalID: -5054027636361094477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_52
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 1709
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a287a5ac369aa70800000000000000
+      internalID: 8838705464443677318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_53
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1669
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ef4b2eebdf24f20800000000000000
+      internalID: 3405563264534642309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_54
+      rect:
+        serializedVersion: 2
+        x: 10089
+        y: 1669
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d818f35e2e311b10800000000000000
+      internalID: 1950408482326321367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_55
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1669
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f918223a54a941690800000000000000
+      internalID: -7632305844605779553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_56
+      rect:
+        serializedVersion: 2
+        x: 10159
+        y: 1679
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f91e7766c588f70800000000000000
+      internalID: 9189696634817191703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_57
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 1649
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a48f951c060d3a0800000000000000
+      internalID: -6642703066817082827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_58
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1649
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966baf2c3256293e0800000000000000
+      internalID: -2048463676230683031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_59
+      rect:
+        serializedVersion: 2
+        x: 10159
+        y: 1649
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a64bc3e96beef6d0800000000000000
+      internalID: -2954665465482623328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_60
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1629
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 204ca7e31e253bbd0800000000000000
+      internalID: -2615655831202774014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_61
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1609
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641d362f60074e460800000000000000
+      internalID: 7270058873621565766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_62
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1609
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45400af12701496a0800000000000000
+      internalID: -6443507084517440428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_63
+      rect:
+        serializedVersion: 2
+        x: 7359
+        y: 1589
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc79f4e741bb02d0800000000000000
+      internalID: -3311358178658517762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_64
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 1589
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f83877e564a2710800000000000000
+      internalID: 1669223983440170771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_65
+      rect:
+        serializedVersion: 2
+        x: 10199
+        y: 1449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699f46a5056d92500800000000000000
+      internalID: 372064084837071254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_66
+      rect:
+        serializedVersion: 2
+        x: 10179
+        y: 1419
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25882f07e6e2c2540800000000000000
+      internalID: 4984409939468519506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_67
+      rect:
+        serializedVersion: 2
+        x: 10199
+        y: 1419
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fa30acbbd520a80800000000000000
+      internalID: -8502130085392568564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_68
+      rect:
+        serializedVersion: 2
+        x: 10259
+        y: 1429
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250514d49f1f8c290800000000000000
+      internalID: -7869774295784665006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_69
+      rect:
+        serializedVersion: 2
+        x: 10279
+        y: 1419
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807fd79517eef8d70800000000000000
+      internalID: 9047712347010758408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_70
+      rect:
+        serializedVersion: 2
+        x: 10219
+        y: 1379
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d3cf2b999f6dc90800000000000000
+      internalID: -7145249320248525435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_71
+      rect:
+        serializedVersion: 2
+        x: 10239
+        y: 1399
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8caeb805419e6b80800000000000000
+      internalID: -8399616529313911670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_72
+      rect:
+        serializedVersion: 2
+        x: 10259
+        y: 1399
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54035e861aa19e050800000000000000
+      internalID: 5830220473159725125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_73
+      rect:
+        serializedVersion: 2
+        x: 10139
+        y: 1359
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c2e9c6b4a200d00800000000000000
+      internalID: 936795225926282290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_74
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 879
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc025a6ee92e78f60800000000000000
+      internalID: 8036641232168231115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_75
+      rect:
+        serializedVersion: 2
+        x: 10179
+        y: 859
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f310995a1025d4040800000000000000
+      internalID: 4633449758660821311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_76
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 839
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de45e53e1cf24c280800000000000000
+      internalID: -9024035243553827603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_77
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 679
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8593075b7fd94440800000000000000
+      internalID: 4920709788712801678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_78
+      rect:
+        serializedVersion: 2
+        x: 10099
+        y: 619
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81031da9f1b911250800000000000000
+      internalID: 5913678345757863960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_79
+      rect:
+        serializedVersion: 2
+        x: 10279
+        y: 559
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb21cb9490b1e010800000000000000
+      internalID: 1216447526681521078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_80
+      rect:
+        serializedVersion: 2
+        x: 10259
+        y: 539
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e6ba896da5f9550800000000000000
+      internalID: 6169749892251741783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_81
+      rect:
+        serializedVersion: 2
+        x: 10359
+        y: 219
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6daedd19c533dd6a0800000000000000
+      internalID: -6422921020883211562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_82
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 169
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed139fe3b8cc4cc0800000000000000
+      internalID: -3725382116598145553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_83
+      rect:
+        serializedVersion: 2
+        x: 7239
+        y: 39
+        width: 52
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572859e47283e5010800000000000000
+      internalID: 1179441893890949749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_84
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 129
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86f17df28e5afee0800000000000000
+      internalID: -1226564031814175090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_85
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 89
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad4d4c7dbeed2a10800000000000000
+      internalID: 1886426316539776431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TAKBO SI ATE GHORL3_86
+      rect:
+        serializedVersion: 2
+        x: 7299
+        y: 49
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38056de73dffea120800000000000000
+      internalID: 2427158533030432899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TAKBO SI ATE GHORL3_0: 7445385189444710062
+      TAKBO SI ATE GHORL3_1: -7491388931738291446
+      TAKBO SI ATE GHORL3_10: -3378416157720721131
+      TAKBO SI ATE GHORL3_11: -5229925094169574326
+      TAKBO SI ATE GHORL3_12: 3625550345055300562
+      TAKBO SI ATE GHORL3_13: 512188743232536977
+      TAKBO SI ATE GHORL3_14: 2936584764052418686
+      TAKBO SI ATE GHORL3_15: 2411958437056542327
+      TAKBO SI ATE GHORL3_16: 4649078058633201727
+      TAKBO SI ATE GHORL3_17: -8908665976360491630
+      TAKBO SI ATE GHORL3_18: 4167673343084813560
+      TAKBO SI ATE GHORL3_19: -3389267772480472739
+      TAKBO SI ATE GHORL3_2: 5946252609792110477
+      TAKBO SI ATE GHORL3_20: -2893694136964894384
+      TAKBO SI ATE GHORL3_21: -8493260291814776497
+      TAKBO SI ATE GHORL3_22: 5263834682460139991
+      TAKBO SI ATE GHORL3_23: -3379392357953772516
+      TAKBO SI ATE GHORL3_24: 809702425328777414
+      TAKBO SI ATE GHORL3_25: -6914667714039124885
+      TAKBO SI ATE GHORL3_26: -8203529705568869855
+      TAKBO SI ATE GHORL3_27: 5227040180424922021
+      TAKBO SI ATE GHORL3_28: 4176763533187027427
+      TAKBO SI ATE GHORL3_29: 1346412741371630675
+      TAKBO SI ATE GHORL3_3: -5908917680255280725
+      TAKBO SI ATE GHORL3_30: 1565407337160350347
+      TAKBO SI ATE GHORL3_31: 6852145818471548959
+      TAKBO SI ATE GHORL3_32: 6506122987506418770
+      TAKBO SI ATE GHORL3_33: -8773913291696716258
+      TAKBO SI ATE GHORL3_34: 5801617758883465598
+      TAKBO SI ATE GHORL3_35: -1272971059814652189
+      TAKBO SI ATE GHORL3_36: 5609432175416115714
+      TAKBO SI ATE GHORL3_37: 1874933497211309756
+      TAKBO SI ATE GHORL3_38: -2989779771094768751
+      TAKBO SI ATE GHORL3_39: 4291502534084243066
+      TAKBO SI ATE GHORL3_4: 7193871315024135453
+      TAKBO SI ATE GHORL3_40: -8021167571336026645
+      TAKBO SI ATE GHORL3_41: 5549765989567101058
+      TAKBO SI ATE GHORL3_42: -3729378980064886599
+      TAKBO SI ATE GHORL3_43: 6755685201786798203
+      TAKBO SI ATE GHORL3_44: 4616521184392005717
+      TAKBO SI ATE GHORL3_45: 2786634728058783923
+      TAKBO SI ATE GHORL3_46: 4827788419686215288
+      TAKBO SI ATE GHORL3_47: 2106789824079031980
+      TAKBO SI ATE GHORL3_48: 1809430563725892504
+      TAKBO SI ATE GHORL3_49: -2894836955824380872
+      TAKBO SI ATE GHORL3_5: 1393994712616722932
+      TAKBO SI ATE GHORL3_50: 5394687902431529448
+      TAKBO SI ATE GHORL3_51: -5054027636361094477
+      TAKBO SI ATE GHORL3_52: 8838705464443677318
+      TAKBO SI ATE GHORL3_53: 3405563264534642309
+      TAKBO SI ATE GHORL3_54: 1950408482326321367
+      TAKBO SI ATE GHORL3_55: -7632305844605779553
+      TAKBO SI ATE GHORL3_56: 9189696634817191703
+      TAKBO SI ATE GHORL3_57: -6642703066817082827
+      TAKBO SI ATE GHORL3_58: -2048463676230683031
+      TAKBO SI ATE GHORL3_59: -2954665465482623328
+      TAKBO SI ATE GHORL3_6: 3969596590955974427
+      TAKBO SI ATE GHORL3_60: -2615655831202774014
+      TAKBO SI ATE GHORL3_61: 7270058873621565766
+      TAKBO SI ATE GHORL3_62: -6443507084517440428
+      TAKBO SI ATE GHORL3_63: -3311358178658517762
+      TAKBO SI ATE GHORL3_64: 1669223983440170771
+      TAKBO SI ATE GHORL3_65: 372064084837071254
+      TAKBO SI ATE GHORL3_66: 4984409939468519506
+      TAKBO SI ATE GHORL3_67: -8502130085392568564
+      TAKBO SI ATE GHORL3_68: -7869774295784665006
+      TAKBO SI ATE GHORL3_69: 9047712347010758408
+      TAKBO SI ATE GHORL3_7: 3552680677465889164
+      TAKBO SI ATE GHORL3_70: -7145249320248525435
+      TAKBO SI ATE GHORL3_71: -8399616529313911670
+      TAKBO SI ATE GHORL3_72: 5830220473159725125
+      TAKBO SI ATE GHORL3_73: 936795225926282290
+      TAKBO SI ATE GHORL3_74: 8036641232168231115
+      TAKBO SI ATE GHORL3_75: 4633449758660821311
+      TAKBO SI ATE GHORL3_76: -9024035243553827603
+      TAKBO SI ATE GHORL3_77: 4920709788712801678
+      TAKBO SI ATE GHORL3_78: 5913678345757863960
+      TAKBO SI ATE GHORL3_79: 1216447526681521078
+      TAKBO SI ATE GHORL3_8: -5830618788230698542
+      TAKBO SI ATE GHORL3_80: 6169749892251741783
+      TAKBO SI ATE GHORL3_81: -6422921020883211562
+      TAKBO SI ATE GHORL3_82: -3725382116598145553
+      TAKBO SI ATE GHORL3_83: 1179441893890949749
+      TAKBO SI ATE GHORL3_84: -1226564031814175090
+      TAKBO SI ATE GHORL3_85: 1886426316539776431
+      TAKBO SI ATE GHORL3_86: 2427158533030432899
+      TAKBO SI ATE GHORL3_9: -3378833841222096422
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
