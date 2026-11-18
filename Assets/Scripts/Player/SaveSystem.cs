@@ -15,6 +15,7 @@ public class SaveSystem : MonoBehaviour
     public PlayerManager playerManager;
     public InventorySO playerInventory;
     public QuestManager questManager;
+    public CameraFollow cameraFollow;
 
     [Header("Level 1 Inventory Config")]
     public ItemSO flashlightItem;
@@ -110,6 +111,8 @@ public class SaveSystem : MonoBehaviour
     {
         playerManager = PlayerManager.Instance ?? FindFirstObjectByType<PlayerManager>();
         questManager = FindFirstObjectByType<QuestManager>();
+        if (cameraFollow == null)
+            cameraFollow = FindFirstObjectByType<CameraFollow>();
     }
 
     private void ApplyDataToScene(PlayerData data)
@@ -134,20 +137,35 @@ public class SaveSystem : MonoBehaviour
             playerManager.UpdateUI();
         }
 
-        // 2. Restore Quests
-        if (questManager != null && data.questCompleted != null)
+        // 1.5 Restore Camera Bounds
+        if (cameraFollow != null && data.hasCameraBounds &&
+            data.cameraMinBounds != null && data.cameraMinBounds.Length == 2 &&
+            data.cameraMaxBounds != null && data.cameraMaxBounds.Length == 2)
         {
-            questManager.questCompleted = (bool[])data.questCompleted.Clone();
-            questManager.itemCollected = data.itemCollected;
+            cameraFollow.useBounds = data.useCameraBounds;
+            Vector2 loadedMin = new Vector2(data.cameraMinBounds[0], data.cameraMinBounds[1]);
+            Vector2 loadedMax = new Vector2(data.cameraMaxBounds[0], data.cameraMaxBounds[1]);
+            cameraFollow.SetBounds(loadedMin, loadedMax);
+
+            if (playerManager != null)
+            {
+                Vector3 targetPos = playerManager.transform.position + cameraFollow.offset;
+                if (cameraFollow.useBounds)
+                {
+                    targetPos.x = Mathf.Clamp(targetPos.x, loadedMin.x, loadedMax.x);
+                    targetPos.y = Mathf.Clamp(targetPos.y, loadedMin.y, loadedMax.y);
+                }
+                cameraFollow.transform.position = targetPos;
+            }
         }
 
-        // 3. Restore Inventory
+        // 2. Restore Inventory
         if (playerInventory != null)
         {
             playerInventory.RestoreFromSaveData(data.inventoryIndices, data.inventoryItemNames, itemDatabase, flashlightItem);
         }
 
-        // 4. Restore World Objects & Doors
+        // 3. Restore World Objects, Doors, QuestObjects & QuestTriggers
         if (data.savedWorldStates != null)
         {
             SaveableWorldObject[] worldObjects = FindObjectsByType<SaveableWorldObject>(
@@ -171,6 +189,12 @@ public class SaveSystem : MonoBehaviour
                 }
             }
         }
+
+        // 4. Restore Quests & Sync Quest UI after world states are restored
+        if (questManager != null)
+        {
+            questManager.ApplyLoadedQuests(data.questCompleted, data.itemCollected);
+        }
     }
 
     public void SaveGame()
@@ -179,7 +203,7 @@ public class SaveSystem : MonoBehaviour
 
         try
         {
-            PlayerData data = new PlayerData(playerManager, playerInventory, questManager);
+            PlayerData data = new PlayerData(playerManager, playerInventory, questManager, cameraFollow);
             string json = JsonUtility.ToJson(data, true);
 
             File.WriteAllText(saveFilePath, json);

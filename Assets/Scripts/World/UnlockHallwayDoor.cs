@@ -15,13 +15,8 @@ public class UnlockHallwayDoor : MonoBehaviour
     [Tooltip("Single GameObject reference for this door's inspection UI image panel.")]
     public GameObject doorInspectUI;
 
-    [Header("BLACK FADE ANIMATOR")]
-    public Animator fadeAnimator;
-    public GameObject fader;                    // Drag the 'Black' GameObject here
-    public string fadeOutAnimation = "Fadeout"; // State/Clip name that fades screen to black
-    public string fadeInAnimation = "FadeIn";   // State/Clip name that fades screen back in
-    public float fadeDuration = 1f;             // Duration of the fade animation in seconds
-    public float fadeHoldDuration = 0.2f;       // Default hold duration on full black screen
+    [Header("FADE SETTINGS")]
+    public bool useFade = true;
 
     [Header("KEY SETTINGS")]
     public ItemSO requiredKey;
@@ -38,6 +33,10 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     [Header("LOCKED DOOR DIALOGUE")]
     public Dialogue lockedDialogue;
+    [Tooltip("Optional list of GameObjects to enable once after the locked dialogue plays.")]
+    public List<GameObject> objectsToEnableAfterDialogue = new List<GameObject>();
+    [Tooltip("Optional list of GameObjects to disable once after the locked dialogue plays.")]
+    public List<GameObject> objectsToDisableAfterDialogue = new List<GameObject>();
 
     [Header("AUDIO & TRANSITION SETTINGS")]
     public AudioSource audioSource;
@@ -57,6 +56,9 @@ public class UnlockHallwayDoor : MonoBehaviour
     private bool isUnlocked = false;
     private bool isInspecting = false;
     private bool isTransitioning = false;
+    private bool isWaitingForDialogue = false;
+    private bool hasTriggeredPostDialogueToggles = false;
+    private int ignoreInputUntilFrame = -1;
     private GameObject playerRef;
 
     public bool IsUnlocked => isUnlocked;
@@ -68,8 +70,6 @@ public class UnlockHallwayDoor : MonoBehaviour
 
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
-
-        EnsureFadeReferences();
     }
 
     private void Start()
@@ -78,9 +78,6 @@ public class UnlockHallwayDoor : MonoBehaviour
         {
             SetUnlockedState(true);
         }
-
-        EnsureFadeReferences();
-        if (fader != null) fader.SetActive(false);
 
         HideAllAlerts();
 
@@ -93,15 +90,21 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void OnDisable()
     {
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= OnLockedDialogueEnded;
+        }
+
         isInspecting = false;
         isTransitioning = false;
+        isWaitingForDialogue = false;
         SetPlayerPauseState(false);
-        if (fader != null) fader.SetActive(false);
     }
 
     private void Update()
     {
-        if (isUnlocked || !isPlayerInRange || isTransitioning) return;
+        if (isUnlocked || !isPlayerInRange || isTransitioning || isWaitingForDialogue) return;
+        if (Time.frameCount <= ignoreInputUntilFrame) return;
 
         if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive) return;
 
@@ -109,12 +112,6 @@ public class UnlockHallwayDoor : MonoBehaviour
         {
             InteractWithDoor();
         }
-    }
-
-    private void EnsureFadeReferences()
-    {
-        if (fader == null && fadeAnimator != null) fader = fadeAnimator.gameObject;
-        if (fadeAnimator == null && fader != null) fadeAnimator = fader.GetComponent<Animator>();
     }
 
     private InventorySO GetActiveInventory()
@@ -208,90 +205,90 @@ public class UnlockHallwayDoor : MonoBehaviour
         SetPlayerPauseState(false);
     }
 
-    private static readonly int FadeInStateHash = Animator.StringToHash("FadeIn");
-    private static readonly int FadeOutStateHash = Animator.StringToHash("FadeOut");
-
-    private async Task PlayFadeToBlack()
-    {
-        EnsureFadeReferences();
-
-        if (fader != null)
-            fader.SetActive(true);
-
-        if (fadeAnimator != null)
-        {
-            fadeAnimator.CrossFade(FadeInStateHash, 0f);
-            await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
-        }
-    }
-
-    private async Task PlayFadeFromBlack()
-    {
-        EnsureFadeReferences();
-
-        if (fadeAnimator != null)
-        {
-            fadeAnimator.CrossFade(FadeOutStateHash, 0f);
-            await Task.Delay(Mathf.RoundToInt(fadeDuration * 1000f));
-        }
-
-        if (fader != null)
-            fader.SetActive(false);
-    }
-
     private async Task OpenInspectionWithFade()
     {
+        if (isTransitioning) return;
         isTransitioning = true;
         HideProximityAlerts();
 
-        await PlayFadeToBlack();
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+        }
+
         EnableInspectUI();
 
-        if (CheckHasKey() && doorAlert != null)
+        bool hasKey = CheckHasKey();
+        if (hasKey && doorAlert != null)
         {
             doorAlert.SetActive(true);
         }
 
-        if (fadeHoldDuration > 0f)
-            await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
-
-        await PlayFadeFromBlack();
-
-        if (!CheckHasKey())
+        if (useFade && ScreenFader.Instance != null)
         {
-            TriggerLockedDialogue();
+            await ScreenFader.Instance.FadeIn();
         }
 
         isTransitioning = false;
+
+        if (!hasKey)
+        {
+            TriggerLockedDialogue();
+        }
     }
 
-    private async Task CloseInspectionWithFade()
+    private async Task CloseInspectionWithFade(bool applyPostDialogueToggles = false)
     {
+        if (isTransitioning) return;
         isTransitioning = true;
 
         if (doorAlert != null)
             doorAlert.SetActive(false);
 
-        await PlayFadeToBlack();
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+        }
+
         DisableInspectUI();
 
-        if (fadeHoldDuration > 0f)
-            await Task.Delay(Mathf.RoundToInt(fadeHoldDuration * 1000f));
+        // First pass: apply enable/disable toggles while screen is faded out
+        if (applyPostDialogueToggles && !hasTriggeredPostDialogueToggles)
+        {
+            EnablePostDialogueObjects();
+            DisablePostDialogueObjects();
+        }
 
-        await PlayFadeFromBlack();
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeIn();
+        }
 
-        if (isPlayerInRange)
+        // Second pass (double call): re-apply enable list after fade completes
+        if (applyPostDialogueToggles && !hasTriggeredPostDialogueToggles)
+        {
+            EnablePostDialogueObjects();
+            hasTriggeredPostDialogueToggles = true;
+        }
+
+        if (isPlayerInRange && !isUnlocked)
             UpdateAlertState();
 
+        ignoreInputUntilFrame = Time.frameCount + 1;
         isTransitioning = false;
     }
 
     private async Task PerformUnlockAndTransition()
     {
+        if (isTransitioning) return;
         isTransitioning = true;
         HideAllAlerts();
 
-        await PlayFadeToBlack();
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+        }
+
         DisableInspectUI();
 
         if (audioSource != null && unlockSound != null)
@@ -299,46 +296,45 @@ public class UnlockHallwayDoor : MonoBehaviour
             audioSource.PlayOneShot(unlockSound);
         }
 
-        GameObject playerToMove = playerRef;
-
-        if (playerToMove == null)
-            playerToMove = GameObject.FindGameObjectWithTag("Player");
+        GameObject playerToMove = playerRef != null ? playerRef : GameObject.FindGameObjectWithTag("Player");
 
         if (movePlayerOnUnlock && playerToMove != null && transitionPoint != null)
         {
             playerToMove.transform.position = transitionPoint.position;
 
             CameraFollow cam = FindAnyObjectByType<CameraFollow>();
-
             if (cam != null)
                 cam.SetBounds(newMinBounds, newMaxBounds);
         }
 
-        await Task.Delay(Mathf.RoundToInt(2f * 1000f));
-
-        await PlayFadeFromBlack();
         RemoveKeyFromInventory();
         UnlockDoor();
 
-        
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeIn();
+        }
 
         isTransitioning = false;
     }
 
     private async Task PerformUnlockAndTransitionNextScene()
     {
+        if (isTransitioning) return;
         isTransitioning = true;
         HideAllAlerts();
 
-        await PlayFadeToBlack();
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+        }
+
         DisableInspectUI();
 
         if (audioSource != null && unlockSound != null)
         {
             audioSource.PlayOneShot(unlockSound);
         }
-
-        await Task.Delay(Mathf.RoundToInt(2f * 1000f));
 
         RemoveKeyFromInventory();
         UnlockDoor();
@@ -347,6 +343,11 @@ public class UnlockHallwayDoor : MonoBehaviour
         while (!sceneLoad.isDone)
         {
             await Task.Yield();
+        }
+
+        if (useFade && ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeIn();
         }
 
         isTransitioning = false;
@@ -401,12 +402,18 @@ public class UnlockHallwayDoor : MonoBehaviour
 
     private void TriggerLockedDialogue()
     {
-        if (DialogueManager.Instance != null && !DialogueManager.Instance.isDialogueActive)
+        if (DialogueManager.Instance != null && lockedDialogue != null && !DialogueManager.Instance.isDialogueActive)
         {
             HideProximityAlerts();
+            isWaitingForDialogue = true;
 
+            DialogueManager.Instance.OnDialogueEnded -= OnLockedDialogueEnded;
             DialogueManager.Instance.OnDialogueEnded += OnLockedDialogueEnded;
             DialogueManager.Instance.StartDialogue(lockedDialogue, null);
+        }
+        else
+        {
+            _ = CloseInspectionWithFade(true);
         }
     }
 
@@ -417,7 +424,52 @@ public class UnlockHallwayDoor : MonoBehaviour
             DialogueManager.Instance.OnDialogueEnded -= OnLockedDialogueEnded;
         }
 
-        _ = CloseInspectionWithFade();
+        isWaitingForDialogue = false;
+        ignoreInputUntilFrame = Time.frameCount + 1;
+
+        // Immediate call on dialogue end before fade starts
+        if (!hasTriggeredPostDialogueToggles)
+        {
+            EnablePostDialogueObjects();
+        }
+
+        _ = CloseInspectionWithFade(true);
+    }
+
+    private void EnablePostDialogueObjects()
+    {
+        if (objectsToEnableAfterDialogue == null) return;
+
+        foreach (GameObject obj in objectsToEnableAfterDialogue)
+        {
+            if (obj == null) continue;
+
+            // Ensure any inactive parent in the hierarchy is also enabled so the object actually becomes visible
+            Transform parent = obj.transform.parent;
+            while (parent != null)
+            {
+                if (!parent.gameObject.activeSelf)
+                {
+                    parent.gameObject.SetActive(true);
+                }
+                parent = parent.parent;
+            }
+
+            obj.SetActive(true);
+        }
+    }
+
+    private void DisablePostDialogueObjects()
+    {
+        if (objectsToDisableAfterDialogue == null) return;
+
+        foreach (GameObject obj in objectsToDisableAfterDialogue)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -439,7 +491,10 @@ public class UnlockHallwayDoor : MonoBehaviour
             isPlayerInRange = false;
             playerRef = null;
             HideAllAlerts();
-            DisableInspectUI();
+            if (!isTransitioning)
+            {
+                DisableInspectUI();
+            }
         }
     }
 

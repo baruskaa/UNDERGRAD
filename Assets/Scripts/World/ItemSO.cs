@@ -39,6 +39,7 @@ public class ItemSO : ScriptableObject
         if (player != null)
         {
             player.RestoreHunger(restoreAmount);
+            player.Heal(restoreAmount-2);
         }
     }
 

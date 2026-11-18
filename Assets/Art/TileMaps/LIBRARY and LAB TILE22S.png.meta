@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: ae23183a1df33374ab97ce63396577db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4667953788302275945
+    second: LIBRARY and LAB TILE22S_0
+  - first:
+      213: 7292230440133977841
+    second: LIBRARY and LAB TILE22S_1
+  - first:
+      213: 8678230451307522703
+    second: LIBRARY and LAB TILE22S_2
+  - first:
+      213: 5448929676050854356
+    second: LIBRARY and LAB TILE22S_3
+  - first:
+      213: 1428318953961186427
+    second: LIBRARY and LAB TILE22S_4
+  - first:
+      213: -1748946072820255013
+    second: LIBRARY and LAB TILE22S_5
+  - first:
+      213: 3575535523194741291
+    second: LIBRARY and LAB TILE22S_6
+  - first:
+      213: -6407870761948922176
+    second: LIBRARY and LAB TILE22S_7
+  - first:
+      213: 1574047250535210853
+    second: LIBRARY and LAB TILE22S_8
+  - first:
+      213: -2341879976558800884
+    second: LIBRARY and LAB TILE22S_9
+  - first:
+      213: 855783736936835970
+    second: LIBRARY and LAB TILE22S_10
+  - first:
+      213: 4682046776254946880
+    second: LIBRARY and LAB TILE22S_11
+  - first:
+      213: -2780513701795727474
+    second: LIBRARY and LAB TILE22S_12
+  - first:
+      213: -48330980836966788
+    second: LIBRARY and LAB TILE22S_13
+  - first:
+      213: -8438416563345277972
+    second: LIBRARY and LAB TILE22S_14
+  - first:
+      213: 7905184834323184085
+    second: LIBRARY and LAB TILE22S_15
+  - first:
+      213: 2512876580086399154
+    second: LIBRARY and LAB TILE22S_16
+  - first:
+      213: 5490133575632652509
+    second: LIBRARY and LAB TILE22S_17
+  - first:
+      213: -5198649918413812726
+    second: LIBRARY and LAB TILE22S_18
+  - first:
+      213: 5686068007121365623
+    second: LIBRARY and LAB TILE22S_19
+  - first:
+      213: 8434936754672108990
+    second: LIBRARY and LAB TILE22S_20
+  - first:
+      213: -3609420592630751329
+    second: LIBRARY and LAB TILE22S_21
+  - first:
+      213: 2197494670515242450
+    second: LIBRARY and LAB TILE22S_22
+  - first:
+      213: -4086973925147622864
+    second: LIBRARY and LAB TILE22S_23
+  - first:
+      213: -5640727241183830426
+    second: LIBRARY and LAB TILE22S_24
+  - first:
+      213: -4073153356685226876
+    second: LIBRARY and LAB TILE22S_25
+  - first:
+      213: -8782950847191898048
+    second: LIBRARY and LAB TILE22S_26
+  - first:
+      213: -2789048821202135069
+    second: LIBRARY and LAB TILE22S_27
+  - first:
+      213: 627765412218235681
+    second: LIBRARY and LAB TILE22S_28
+  - first:
+      213: -7444215522936476758
+    second: LIBRARY and LAB TILE22S_29
+  - first:
+      213: -1492023698196967519
+    second: LIBRARY and LAB TILE22S_30
+  - first:
+      213: -2119797216653984240
+    second: LIBRARY and LAB TILE22S_31
+  - first:
+      213: -5636543639874403254
+    second: LIBRARY and LAB TILE22S_32
+  - first:
+      213: 2211385233413516350
+    second: LIBRARY and LAB TILE22S_33
+  - first:
+      213: -6446782379020137224
+    second: LIBRARY and LAB TILE22S_34
+  - first:
+      213: -7697593574889484416
+    second: LIBRARY and LAB TILE22S_35
+  - first:
+      213: -8628588029015887527
+    second: LIBRARY and LAB TILE22S_36
+  - first:
+      213: 7923098296287169833
+    second: LIBRARY and LAB TILE22S_37
+  - first:
+      213: 1882712003915285893
+    second: LIBRARY and LAB TILE22S_38
+  - first:
+      213: 7187485593971067854
+    second: LIBRARY and LAB TILE22S_39
+  - first:
+      213: -528093091659735390
+    second: LIBRARY and LAB TILE22S_40
+  - first:
+      213: -6259635134673355616
+    second: LIBRARY and LAB TILE22S_41
+  - first:
+      213: 3679972001693949104
+    second: LIBRARY and LAB TILE22S_42
+  - first:
+      213: 3013297953105190995
+    second: LIBRARY and LAB TILE22S_43
+  - first:
+      213: -112905977438178045
+    second: LIBRARY and LAB TILE22S_44
+  - first:
+      213: 4042849994131818798
+    second: LIBRARY and LAB TILE22S_45
+  - first:
+      213: -7669611420118016662
+    second: LIBRARY and LAB TILE22S_46
+  - first:
+      213: 8774573212813451719
+    second: LIBRARY and LAB TILE22S_47
+  - first:
+      213: -2954122759692201228
+    second: LIBRARY and LAB TILE22S_48
+  - first:
+      213: -8074243759369942773
+    second: LIBRARY and LAB TILE22S_49
+  - first:
+      213: 7937585044767163975
+    second: LIBRARY and LAB TILE22S_50
+  - first:
+      213: -560362688174809269
+    second: LIBRARY and LAB TILE22S_51
+  - first:
+      213: -5268776450682503065
+    second: LIBRARY and LAB TILE22S_52
+  - first:
+      213: -7197399031948316194
+    second: LIBRARY and LAB TILE22S_53
+  - first:
+      213: -5540922266886587602
+    second: LIBRARY and LAB TILE22S_54
+  - first:
+      213: -8027132254076552339
+    second: LIBRARY and LAB TILE22S_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_1
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6e97c03f4333560800000000000000
+      internalID: 7292230440133977841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8aa921cd944f6870800000000000000
+      internalID: 8678230451307522703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_3
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d17813bbac7e9b40800000000000000
+      internalID: 5448929676050854356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7460d4658862d310800000000000000
+      internalID: 1428318953961186427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2220d54d9ade9130800000000000000
+      internalID: 3575535523194741291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_7
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce3c6b0e7ba217a0800000000000000
+      internalID: -6407870761948922176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_8
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fd4db72a328d510800000000000000
+      internalID: 1574047250535210853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_9
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00dc92b198ff7fd0800000000000000
+      internalID: -2341879976558800884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_0
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cfbe6a1ae10274797067f137312286
+      internalID: -4667953788302275945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ad65a821fa2304a8f706967bb1531a
+      internalID: -1748946072820255013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87aa40e8c181af49bea905df717224f
+      internalID: 855783736936835970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIBRARY and LAB TILE22S_11
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9533b4d383bcb40a8580864e9cf2d7
+      internalID: 4682046776254946880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f0d64e2affbf7a4dbf45443ab21bbd4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LIBRARY and LAB TILE22S_0: -4667953788302275945
+      LIBRARY and LAB TILE22S_1: 7292230440133977841
+      LIBRARY and LAB TILE22S_10: 855783736936835970
+      LIBRARY and LAB TILE22S_11: 4682046776254946880
+      LIBRARY and LAB TILE22S_12: -2780513701795727474
+      LIBRARY and LAB TILE22S_13: -48330980836966788
+      LIBRARY and LAB TILE22S_14: -8438416563345277972
+      LIBRARY and LAB TILE22S_15: 7905184834323184085
+      LIBRARY and LAB TILE22S_16: 2512876580086399154
+      LIBRARY and LAB TILE22S_17: 5490133575632652509
+      LIBRARY and LAB TILE22S_18: -5198649918413812726
+      LIBRARY and LAB TILE22S_19: 5686068007121365623
+      LIBRARY and LAB TILE22S_2: 8678230451307522703
+      LIBRARY and LAB TILE22S_20: 8434936754672108990
+      LIBRARY and LAB TILE22S_21: -3609420592630751329
+      LIBRARY and LAB TILE22S_22: 2197494670515242450
+      LIBRARY and LAB TILE22S_23: -4086973925147622864
+      LIBRARY and LAB TILE22S_24: -5640727241183830426
+      LIBRARY and LAB TILE22S_25: -4073153356685226876
+      LIBRARY and LAB TILE22S_26: -8782950847191898048
+      LIBRARY and LAB TILE22S_27: -2789048821202135069
+      LIBRARY and LAB TILE22S_28: 627765412218235681
+      LIBRARY and LAB TILE22S_29: -7444215522936476758
+      LIBRARY and LAB TILE22S_3: 5448929676050854356
+      LIBRARY and LAB TILE22S_30: -1492023698196967519
+      LIBRARY and LAB TILE22S_31: -2119797216653984240
+      LIBRARY and LAB TILE22S_32: -5636543639874403254
+      LIBRARY and LAB TILE22S_33: 2211385233413516350
+      LIBRARY and LAB TILE22S_34: -6446782379020137224
+      LIBRARY and LAB TILE22S_35: -7697593574889484416
+      LIBRARY and LAB TILE22S_36: -8628588029015887527
+      LIBRARY and LAB TILE22S_37: 7923098296287169833
+      LIBRARY and LAB TILE22S_38: 1882712003915285893
+      LIBRARY and LAB TILE22S_39: 7187485593971067854
+      LIBRARY and LAB TILE22S_4: 1428318953961186427
+      LIBRARY and LAB TILE22S_40: -528093091659735390
+      LIBRARY and LAB TILE22S_41: -6259635134673355616
+      LIBRARY and LAB TILE22S_5: -1748946072820255013
+      LIBRARY and LAB TILE22S_6: 3575535523194741291
+      LIBRARY and LAB TILE22S_7: -6407870761948922176
+      LIBRARY and LAB TILE22S_8: 1574047250535210853
+      LIBRARY and LAB TILE22S_9: -2341879976558800884
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

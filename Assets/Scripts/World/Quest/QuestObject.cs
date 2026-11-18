@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class QuestObject : MonoBehaviour
 {
-
     public int questNumber;
     public QuestManager theQM;
     public QuestBoxManager theQMBox;
@@ -15,18 +14,18 @@ public class QuestObject : MonoBehaviour
     public bool isItemQuest;
     public string targetItem;
 
-    // Start is called before the first frame update
-    void Start()
+    private SaveableWorldObject saveable;
+
+    private void Awake()
     {
-        
+        saveable = GetComponent<SaveableWorldObject>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isItemQuest)
+        if (isItemQuest && theQM != null)
         {
-            if(theQM.itemCollected == targetItem)
+            if (theQM.itemCollected == targetItem)
             {
                 theQM.itemCollected = null;
                 EndQuest();
@@ -36,16 +35,39 @@ public class QuestObject : MonoBehaviour
 
     public void StartQuest()
     {
-        theQM.ShowQuestText(startText);
+        if (theQM != null)
+        {
+            theQM.ShowQuestText(startText);
+        }
+
+        if (saveable != null)
+        {
+            saveable.SetStateChanged(true);
+        }
     }
+
     public void EndQuest()
     {
-        theQM.ShowQuestText(endText);
+        if (theQM != null)
+        {
+            theQM.ShowQuestText(endText);
+            if (questNumber >= 0 && questNumber < theQM.questCompleted.Length)
+            {
+                theQM.questCompleted[questNumber] = true;
+            }
+        }
 
-        theQM.questCompleted[questNumber] = true;
-        theQMBox.CloseAfterDelay(3f);
+        if (theQMBox != null)
+        {
+            theQMBox.CloseAfterDelay(3f);
+        }
+
+        if (saveable != null)
+        {
+            saveable.SetStateChanged(true);
+        }
+
         // Disable quest object and its trigger so it doesn't repeat
         gameObject.SetActive(false);
     }
-
 }

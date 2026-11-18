@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: cc8a15c357ca43c4f8f8aab46504c3bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7214152341303690084
+    second: LIBRARY and LAB TILES_0
+  - first:
+      213: -2911208907958996265
+    second: LIBRARY and LAB TILES_1
+  - first:
+      213: -2245016625533786427
+    second: LIBRARY and LAB TILES_2
+  - first:
+      213: 2390811859419621411
+    second: LIBRARY and LAB TILES_3
+  - first:
+      213: 761828009726151820
+    second: LIBRARY and LAB TILES_4
+  - first:
+      213: -7902425966820990131
+    second: LIBRARY and LAB TILES_5
+  - first:
+      213: -1413966399317298107
+    second: LIBRARY and LAB TILES_6
+  - first:
+      213: -5457214136853416725
+    second: LIBRARY and LAB TILES_7
+  - first:
+      213: 3785152085160095081
+    second: LIBRARY and LAB TILES_8
+  - first:
+      213: 5311242820344371966
+    second: LIBRARY and LAB TILES_9
+  - first:
+      213: -1778146147919912377
+    second: LIBRARY and LAB TILES_10
+  - first:
+      213: 1932923227774189948
+    second: LIBRARY and LAB TILES_11
+  - first:
+      213: -6843417218991734255
+    second: LIBRARY and LAB TILES_12
+  - first:
+      213: -738001265619975448
+    second: LIBRARY and LAB TILES_13
+  - first:
+      213: -1526512248076356247
+    second: LIBRARY and LAB TILES_14
+  - first:
+      213: -5672758266922808178
+    second: LIBRARY and LAB TILES_15
+  - first:
+      213: 2190014727015933424
+    second: LIBRARY and LAB TILES_16
+  - first:
+      213: -3000648729699785850
+    second: LIBRARY and LAB TILES_17
+  - first:
+      213: -3673976690458487833
+    second: LIBRARY and LAB TILES_18
+  - first:
+      213: 1823413258870604697
+    second: LIBRARY and LAB TILES_19
+  - first:
+      213: 2428111237916014260
+    second: LIBRARY and LAB TILES_20
+  - first:
+      213: 7605294617314923626
+    second: LIBRARY and LAB TILES_21
+  - first:
+      213: -5517756323903894255
+    second: LIBRARY and LAB TILES_22
+  - first:
+      213: 8163139365271127326
+    second: LIBRARY and LAB TILES_23
+  - first:
+      213: -4091327781914080091
+    second: LIBRARY and LAB TILES_24
+  - first:
+      213: -3987107088454346088
+    second: LIBRARY and LAB TILES_25
+  - first:
+      213: -3180254284484537364
+    second: LIBRARY and LAB TILES_26
+  - first:
+      213: 1170217596532084913
+    second: LIBRARY and LAB TILES_27
+  - first:
+      213: -2179813627685033154
+    second: LIBRARY and LAB TILES_28
+  - first:
+      213: -8789500724932307198
+    second: LIBRARY and LAB TILES_29
+  - first:
+      213: 677417557129290838
+    second: LIBRARY and LAB TILES_30
+  - first:
+      213: 2970651582826211009
+    second: LIBRARY and LAB TILES_31
+  - first:
+      213: -7751031018666537312
+    second: LIBRARY and LAB TILES_32
+  - first:
+      213: -630056338939835125
+    second: LIBRARY and LAB TILES_33
+  - first:
+      213: 9042191823008456741
+    second: LIBRARY and LAB TILES_34
+  - first:
+      213: -6813680660691951270
+    second: LIBRARY and LAB TILES_35
+  - first:
+      213: 8390476749422130164
+    second: LIBRARY and LAB TILES_36
+  - first:
+      213: -2928937610637829677
+    second: LIBRARY and LAB TILES_37
+  - first:
+      213: 8114089503158275810
+    second: LIBRARY and LAB TILES_38
+  - first:
+      213: -5191258194762116560
+    second: LIBRARY and LAB TILES_39
+  - first:
+      213: -7118964195680127562
+    second: LIBRARY and LAB TILES_40
+  - first:
+      213: -1021866534751951723
+    second: LIBRARY and LAB TILES_41
+  - first:
+      213: 8733395781209823193
+    second: LIBRARY and LAB TILES_42
+  - first:
+      213: -6253730136915312376
+    second: LIBRARY and LAB TILES_43
+  - first:
+      213: -1324373448643125519
+    second: LIBRARY and LAB TILES_44
+  - first:
+      213: 4805444316242471108
+    second: LIBRARY and LAB TILES_45
+  - first:
+      213: 7929680081737794018
+    second: LIBRARY and LAB TILES_46
+  - first:
+      213: 7078656239822557203
+    second: LIBRARY and LAB TILES_47
+  - first:
+      213: 5572491407618853012
+    second: LIBRARY and LAB TILES_48
+  - first:
+      213: -2043295540895620052
+    second: LIBRARY and LAB TILES_49
+  - first:
+      213: 4671845234280452960
+    second: LIBRARY and LAB TILES_50
+  - first:
+      213: 978868112139302770
+    second: LIBRARY and LAB TILES_51
+  - first:
+      213: -3357283818518965243
+    second: LIBRARY and LAB TILES_52
+  - first:
+      213: 6583265381251309533
+    second: LIBRARY and LAB TILES_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: librari_4
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 228
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5724190b9335b014da9633f8b42a635b
+      internalID: 317420426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: librari_53
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 9
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba95eccae3866b46956af9a88f3c5fd
+      internalID: -490449653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a795b68476c528c4398998f4fed57cec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      librari_0: -373088041
+      librari_1: 1192631716
+      librari_10: -990531599
+      librari_11: 1946394581
+      librari_12: -1611625297
+      librari_13: -358095237
+      librari_14: -29829830
+      librari_15: 1905572316
+      librari_16: -1428231603
+      librari_17: 534589571
+      librari_18: -616199132
+      librari_19: 908029911
+      librari_2: -1651775243
+      librari_20: -1325101947
+      librari_21: 56115430
+      librari_22: -709313990
+      librari_23: -467251906
+      librari_24: -1341912161
+      librari_25: -896323028
+      librari_26: -1146125159
+      librari_27: 2035920416
+      librari_28: -1077523597
+      librari_29: -956779869
+      librari_3: 461792739
+      librari_30: 1932011293
+      librari_31: 1455414123
+      librari_32: 2070986771
+      librari_33: -1167020030
+      librari_34: 191378115
+      librari_35: -752686216
+      librari_36: -1847924587
+      librari_37: -598831783
+      librari_38: 672879305
+      librari_39: 1891568237
+      librari_4: 317420426
+      librari_40: 1718237172
+      librari_41: 2031375440
+      librari_42: -1165304882
+      librari_43: -757852832
+      librari_44: 515959060
+      librari_45: 684645628
+      librari_46: 1583721148
+      librari_47: -2088470802
+      librari_48: 1032460458
+      librari_49: 1753448788
+      librari_5: -424197868
+      librari_50: 1708854518
+      librari_51: -524499386
+      librari_52: -410218112
+      librari_53: -490449653
+      librari_54: 1521743085
+      librari_55: 1049264571
+      librari_6: 669002973
+      librari_7: 322009803
+      librari_8: 891809121
+      librari_9: 1981614170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

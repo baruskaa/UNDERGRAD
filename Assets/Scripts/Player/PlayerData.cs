@@ -19,6 +19,13 @@ public class PlayerData
     public int health;
     public int hunger;
     public float[] position = new float[3];
+
+    // Camera bounds data
+    public bool hasCameraBounds;
+    public bool useCameraBounds;
+    public float[] cameraMinBounds = new float[2];
+    public float[] cameraMaxBounds = new float[2];
+
     public bool[] questCompleted;
     public string itemCollected;
     public List<WorldObjectState> savedWorldStates = new List<WorldObjectState>();
@@ -27,7 +34,7 @@ public class PlayerData
     public List<int> inventoryIndices = new List<int>();
     public List<string> inventoryItemNames = new List<string>();
 
-    public PlayerData(PlayerManager pm, InventorySO inv, QuestManager qm)
+    public PlayerData(PlayerManager pm, InventorySO inv, QuestManager qm, CameraFollow cam = null)
     {
         // Record currently active scene
         sceneName = SceneManager.GetActiveScene().name;
@@ -37,6 +44,14 @@ public class PlayerData
             health = pm.currentHealth;
             hunger = pm.currentHunger;
             position = new float[] { pm.transform.position.x, pm.transform.position.y, pm.transform.position.z };
+        }
+
+        if (cam != null)
+        {
+            hasCameraBounds = true;
+            useCameraBounds = cam.useBounds;
+            cameraMinBounds = new float[] { cam.minBounds.x, cam.minBounds.y };
+            cameraMaxBounds = new float[] { cam.maxBounds.x, cam.maxBounds.y };
         }
 
         if (qm != null)
