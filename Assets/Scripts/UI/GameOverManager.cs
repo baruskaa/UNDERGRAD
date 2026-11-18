@@ -35,7 +35,7 @@ public class GameOverManager : MonoBehaviour
         {
             Instance = this;
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -78,7 +78,15 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Reset time scale before scene load
 
-        // 1. Check if a save file exists -> Load Save State
+        // Kung ang kasalukuyang scene ay BossFight, i-restart agad ang BossFight scene nang hindi binabasa ang save file ng CH 3
+        if (SceneManager.GetActiveScene().name == "BossFight")
+        {
+            Debug.Log("[GameOverManager] Boss Fight detected. Restarting BossFight scene directly...");
+            RestartScene();
+            return;
+        }
+
+        // 1. Check if a save file exists -> Load Save State para sa ibang normal scenes
         if (SaveSystem.Instance != null && SaveSystem.Instance.HasSaveFile())
         {
             Debug.Log("[GameOverManager] Save file found. Loading saved game...");
